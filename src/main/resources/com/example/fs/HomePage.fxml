@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="4667.0" prefWidth="1336.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.HomePageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3181.0" prefWidth="1336.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.HomePageController">
    <children>
       <Pane layoutX="3.0" layoutY="5.0" prefHeight="315.0" prefWidth="1327.0" style="-fx-background-color: #90ADC5;">
          <children>
@@ -42,16 +42,11 @@
                         <Image url="@../../../images/23.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="enterShopButton" layoutX="545.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" styleClass="enter-shop-button" stylesheets="@All.css" text="Shop Now" textFill="#474747">
-                     <font>
-                        <Font name="Century Gothic" size="18.0" />
-                     </font>
-                  </Button>
                </children>
             </VBox>
          </children>
       </Pane>
-      <AnchorPane layoutX="1.0" layoutY="4363.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="1342.0" style="-fx-background-color: #45595B;" stylesheets="@All.css">
+      <AnchorPane layoutX="-3.0" layoutY="2869.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="1342.0" style="-fx-background-color: #45595B;" stylesheets="@All.css">
          <children>
             <TextField layoutX="425.0" layoutY="39.0" prefHeight="37.0" prefWidth="336.0" styleClass="search-box" />
             <Button layoutX="718.0" layoutY="37.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="128.0" styleClass="search-button" stylesheets="@All.css" text="Subscribe Now!" />
@@ -441,316 +436,96 @@
             </Pane>
          </children>
       </HBox>
-      <Pane layoutX="4.0" layoutY="1687.0" prefHeight="93.0" prefWidth="1330.0" style="-fx-background-color: #F6E8B2;">
+      <Label layoutX="534.0" layoutY="1113.0" text="New Arrival">
+         <font>
+            <Font name="Times New Roman Bold" size="52.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="58.0" layoutY="1233.0" prefHeight="278.0" prefWidth="1212.0">
          <children>
-            <Label alignment="CENTER" layoutX="1.0" layoutY="14.0" prefHeight="69.0" prefWidth="1342.0" style="-fx-text-fill: #404040;" styleClass="shadow" stylesheets="@All.css" text="Why Choose Us?">
-               <font>
-                  <Font name="Times New Roman Bold" size="54.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
-      <AnchorPane layoutX="102.0" layoutY="1123.0" prefHeight="558.0" prefWidth="1178.0">
-         <children>
-            <VBox layoutX="619.0" layoutY="85.0">
+            <Pane prefHeight="281.0" prefWidth="260.0" style="-fx-background-color: #E8D7E7;" styleClass="search-button">
                <children>
-                  <Label prefHeight="26.0" prefWidth="458.0" text="Welcome to Fauget Crochet Studio ">
-                     <font>
-                        <Font name="Century Gothic Italic" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="ESTABLISHED IN 2024" textFill="#617946">
-                     <font>
-                        <Font name="Arial Black" size="44.0" />
-                     </font>
-                  </Label>
-                  <Text fill="#404040" fontSmoothingType="LCD" lineSpacing="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="    We offer crocheted flowers that blend charm, versatility, and sustainability, a unique blend unmatched by traditional blooms. Handcrafted with precision, each piece embodies artisanal detail, promising timeless beauty without wilting. Our commitment to sustainability extends to offering eco-friendly options, reducing environmental impact. Available in-store and on wheels, our customizable bouquets cater to any occasion, infusing elegance and personality into every setting. Choose our crocheted flowers for a sustainable, enchanting alternative, celebrating life's moments with grace." textAlignment="JUSTIFY" wrappingWidth="556.0755615234375">
-                     <font>
-                        <Font name="Century Gothic" size="18.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <HBox layoutX="-52.0" layoutY="38.0" prefWidth="237.0">
-               <children>
-                  <ImageView fitHeight="411.0" fitWidth="310.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="236.0" fitWidth="209.0" layoutX="18.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" styleClass="search-button">
                      <image>
-                        <Image url="@../../../images/crochetshopimg3.jpg" />
+                        <Image url="@../../../images/lavenderflower.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="474.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="heartIcon1" fitHeight="40.0" fitWidth="46.0" layoutX="15.0" layoutY="223.0" onMouseClicked="#clickHeart1" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../images/crochetshopimg2.jpeg" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="20.0" />
-                     </HBox.margin>
-                  </ImageView>
+                        <Image url="@../../../images/grayheart.png" />
+                     </image></ImageView>
                </children>
-            </HBox>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="556.0" layoutY="1882.0" prefHeight="416.0" prefWidth="674.0">
-         <children>
-            <AnchorPane fx:id="pane1Set1" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane prefHeight="278.0" prefWidth="260.0" style="-fx-background-color: #C9DBC2;" styleClass="search-button">
                <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <ImageView fitHeight="283.0" fitWidth="261.0" layoutX="2.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../images/hc4.png" />
+                        <Image url="@../../../images/greenflowers2.png" />
                      </image>
                   </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="pane2Set1" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="heartIcon2" fitHeight="40.0" fitWidth="46.0" layoutX="15.0" layoutY="223.0" onMouseClicked="#clickHeart2" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../images/hc2.png" />
+                        <Image url="@../../../images/grayheart.png" />
+                     </image></ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane prefHeight="278.0" prefWidth="260.0" style="-fx-background-color: #FFD55A;" styleClass="search-button">
+               <children>
+                  <ImageView fitHeight="265.0" fitWidth="278.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/sunflowers.png" />
                      </image>
                   </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="pane3Set1" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="heartIcon3" fitHeight="40.0" fitWidth="46.0" layoutX="17.0" layoutY="224.0" onMouseClicked="#clickHeart3" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../images/hc3.png" />
+                        <Image url="@../../../images/grayheart.png" />
+                     </image></ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane prefHeight="278.0" prefWidth="260.0" style="-fx-background-color: #FFE0D8;" styleClass="search-button">
+               <children>
+                  <ImageView fitHeight="240.0" fitWidth="252.0" layoutX="2.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/pinkboquet2.png" />
                      </image>
                   </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="pane4Set1" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="heartIcon4" fitHeight="40.0" fitWidth="46.0" layoutX="15.0" layoutY="223.0" onMouseClicked="#clickHeart4" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../images/hc1.png" />
+                        <Image url="@../../../images/grayheart.png" />
                      </image>
                   </ImageView>
-               </children>
-            </AnchorPane>
-            <Pane layoutX="-0.8" layoutY="1.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-0.8" AnchorPane.rightAnchor="0.7999999999999545" AnchorPane.topAnchor="1.0">
-               <children>
-                  <Button fx:id="backButton" layoutX="3.0" layoutY="172.0" mnemonicParsing="false" onAction="#backSet1" prefHeight="73.0" prefWidth="49.0" style="-fx-background-color: #F6E8B2;" text="&lt;">
-                     <font>
-                        <Font size="23.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="nextButton" layoutX="623.0" layoutY="173.0" mnemonicParsing="false" onAction="#nextSet1" prefHeight="73.0" prefWidth="49.0" style="-fx-background-color: #F6E8B2;" text="&gt;">
-                     <font>
-                        <Font size="23.0" />
-                     </font>
-                  </Button>
                </children>
             </Pane>
          </children>
-      </AnchorPane>
-      <Pane layoutX="1.0" layoutY="1877.0" prefHeight="423.0" prefWidth="555.0" style="-fx-background-color: #FAF4DB;">
-         <children>
-            <VBox alignment="CENTER" layoutX="80.0" layoutY="6.0" prefHeight="408.0" prefWidth="403.0">
-               <children>
-                  <Text fill="#617946" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Handcrafted Excellence">
-                     <font>
-                        <Font name="Times New Roman Bold" size="33.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fill="#404040" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="    Each flower in our collection is lovingly crafted by skilled artisans, ensuring meticulous attention to detail and a truly unique touch. Our commitment to handcrafting ensures that every petal and stitch is delicately placed, resulting in a bouquet that exudes quality and artistry." textAlignment="JUSTIFY" wrappingWidth="356.5368347167969">
-                     <font>
-                        <Font name="Century Gothic" size="18.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-         </children>
-      </Pane>
-      <Pane layoutX="1230.0" layoutY="1872.0" prefHeight="434.0" prefWidth="114.0" style="-fx-background-color: #FAF4DB;" />
-      <AnchorPane layoutX="117.0" layoutY="2725.0" prefHeight="416.0" prefWidth="674.0">
-         <children>
-            <AnchorPane fx:id="pane1Set2" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <image>
-                        <Image url="@../../../images/co4.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="pane2Set2" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/co2.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="pane3Set2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/co1.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="pane4Set2" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/co3.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <Pane layoutY="1.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
-               <children>
-                  <Button fx:id="backButton" layoutX="3.0" layoutY="172.0" mnemonicParsing="false" onAction="#backSet2" prefHeight="73.0" prefWidth="49.0" style="-fx-background-color: #F6E8B2;" text="&lt;">
-                     <font>
-                        <Font size="23.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="nextButton" layoutX="622.0" layoutY="173.0" mnemonicParsing="false" onAction="#nextSet2" prefHeight="73.0" prefWidth="49.0" style="-fx-background-color: #F6E8B2;" text="&gt;">
-                     <font>
-                        <Font size="23.0" />
-                     </font>
-                  </Button>
-               </children>
-            </Pane>
-         </children>
-      </AnchorPane>
-      <Pane layoutX="790.0" layoutY="2720.0" prefHeight="423.0" prefWidth="555.0" style="-fx-background-color: #FAF4DB;">
-         <children>
-            <VBox alignment="CENTER" layoutX="66.0" layoutY="71.0">
-               <children>
-                  <Text fill="#617946" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Customization Options">
-                     <font>
-                        <Font name="Times New Roman Bold" size="33.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fill="#404040" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="From elegant centerpieces to whimsical boutonnieres, our blooms effortlessly elevate any setting with their timeless allure. Crafted with meticulous attention to detail, each crocheted flower exudes a unique charm and beauty that captivates admirers. With our versatile range of designs and styles, you'll find the perfect floral accent to enhance the ambiance and create lasting memories for any occasion." textAlignment="JUSTIFY" wrappingWidth="414.1368408203125">
-                     <font>
-                        <Font name="Century Gothic" size="18.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-         </children>
-      </Pane>
-      <Pane layoutX="3.0" layoutY="2714.0" prefHeight="434.0" prefWidth="114.0" style="-fx-background-color: #FAF4DB;" />
-      <VBox alignment="CENTER" layoutX="468.0" layoutY="2418.0">
-         <children>
-            <Text fill="#617946" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Timeless Beauty">
-               <font>
-                  <Font name="Times New Roman Bold" size="33.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="20.0" />
-               </VBox.margin>
-            </Text>
-            <Text fill="#404040" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="    Our crocheted flowers are not just fleeting blossoms; they are enduring pieces of beauty that withstand the test of time. With no wilting or fading, you can enjoy the everlasting elegance of our bouquets for years to come, preserving precious memories and moments without worry." textAlignment="JUSTIFY" wrappingWidth="406.1368408203125">
-               <font>
-                  <Font name="Century Gothic" size="18.0" />
-               </font>
-            </Text>
-         </children>
-      </VBox>
-      <VBox alignment="CENTER" layoutX="410.0" layoutY="3267.0">
-         <children>
-            <Text fill="#617946" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Versatility">
-               <font>
-                  <Font name="Times New Roman Bold" size="33.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="20.0" />
-               </VBox.margin>
-            </Text>
-            <Text fill="#404040" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="    Whether it's a wedding, a special event, or simply adding a touch of charm to your home décor, our crocheted flowers are versatile enough to suit any occasion. From elegant centerpieces to whimsical boutonnieres, our blooms effortlessly elevate any setting with their timeless allure. Crafted with meticulous attention to detail, each crocheted flower exudes a unique charm and beauty that captivates admirers. With our versatile range of designs and styles, you'll find the perfect floral accent to enhance the ambiance and create lasting memories for any occasion." textAlignment="JUSTIFY" wrappingWidth="487.73681640625">
-               <font>
-                  <Font name="Century Gothic" size="18.0" />
-               </font>
-            </Text>
-         </children>
-      </VBox>
-      <AnchorPane layoutX="557.0" layoutY="3659.0" prefHeight="416.0" prefWidth="674.0">
-         <children>
-            <AnchorPane fx:id="pane1Set3" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <image>
-                        <Image url="@../../../images/sae4.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="pane2Set3" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/sae3.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="pane3Set3" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/sae2.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="pane4Set3" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/sae1.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <Pane layoutX="-0.8" layoutY="1.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-0.8" AnchorPane.rightAnchor="0.7999999999999545" AnchorPane.topAnchor="1.0">
-               <children>
-                  <Button fx:id="backButton1" layoutX="3.0" layoutY="172.0" mnemonicParsing="false" onAction="#backSet3" prefHeight="73.0" prefWidth="49.0" style="-fx-background-color: #F6E8B2;" text="&lt;">
-                     <font>
-                        <Font size="23.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="nextButton1" layoutX="623.0" layoutY="173.0" mnemonicParsing="false" onAction="#nextSet3" prefHeight="73.0" prefWidth="49.0" style="-fx-background-color: #F6E8B2;" text="&gt;">
-                     <font>
-                        <Font size="23.0" />
-                     </font>
-                  </Button>
-               </children>
-            </Pane>
-         </children>
-      </AnchorPane>
-      <Pane layoutX="1226.0" layoutY="3546.0" prefHeight="434.0" prefWidth="114.0" style="-fx-background-color: #FAF4DB;" />
-      <Pane layoutY="3659.0" prefHeight="423.0" prefWidth="555.0" style="-fx-background-color: #FAF4DB;">
-         <children>
-            <VBox alignment="CENTER" layoutX="70.0" layoutY="6.0" prefHeight="408.0" prefWidth="403.0">
-               <children>
-                  <Text fill="#617946" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Sustainable and Eco-Friendly">
-                     <font>
-                        <Font name="Times New Roman Bold" size="33.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fill="#404040" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="    By opting for crocheted flowers, you're not only choosing beauty but also sustainability. Our commitment to eco-friendly practices means that each bouquet is crafted with the environment in mind, offering a guilt-free alternative to traditional blooms and reducing waste in the process. We practice the use of eco-friendly boxes and wrapping, ensuring that our packaging aligns with our values of sustainability. Moreover, we cater to the wants of the customer's preference, allowing them to further customize their bouquet experience while staying true to their eco-conscious choices." textAlignment="JUSTIFY" wrappingWidth="431.7369079589844">
-                     <font>
-                        <Font name="Century Gothic" size="18.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-         </children>
-      </Pane>
+      </HBox>
+      <Label layoutX="165.0" layoutY="1192.0" text="Lavender " textFill="#635e5e">
+         <font>
+            <Font name="Century Gothic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="485.0" layoutY="1191.0" text="Green" textFill="#635e5e">
+         <font>
+            <Font name="Century Gothic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="756.0" layoutY="1194.0" text="Sunflower" textFill="#635e5e">
+         <font>
+            <Font name="Century Gothic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="1036.0" layoutY="1193.0" text="PinkShit" textFill="#635e5e">
+         <font>
+            <Font name="Century Gothic" size="26.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

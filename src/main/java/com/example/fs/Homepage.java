@@ -5,15 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
-import java.util.Objects;
 
-public class HomePage extends Application {
+public class Homepage extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Homepage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("HomePage.fxml"));
         Parent root = loader.load();
         HomePageController controller = loader.getController();
         controller.initialize();

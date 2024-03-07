@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3181.0" prefWidth="1336.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.HomePageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clickheart3" prefHeight="3181.0" prefWidth="1336.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.HomePageController">
    <children>
       <Pane layoutX="3.0" layoutY="5.0" prefHeight="315.0" prefWidth="1327.0" style="-fx-background-color: #90ADC5;">
          <children>
@@ -42,6 +42,11 @@
                         <Image url="@../../../images/23.png" />
                      </image>
                   </ImageView>
+                  <Button fx:id="enterShopButton" layoutX="545.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" styleClass="enter-shop-button" stylesheets="@All.css" text="Shop Now" textFill="#474747">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                  </Button>
                </children>
             </VBox>
          </children>
@@ -436,69 +441,55 @@
             </Pane>
          </children>
       </HBox>
-      <Label layoutX="534.0" layoutY="1113.0" text="New Arrival">
+      <Label layoutX="114.0" layoutY="1117.0" text="New Arrival">
          <font>
             <Font name="Times New Roman Bold" size="52.0" />
          </font>
       </Label>
-      <HBox alignment="CENTER" layoutX="58.0" layoutY="1233.0" prefHeight="278.0" prefWidth="1212.0">
+      <HBox alignment="CENTER" layoutX="111.0" layoutY="1213.0" prefHeight="320.0" prefWidth="1159.0">
          <children>
-            <Pane prefHeight="281.0" prefWidth="260.0" style="-fx-background-color: #E8D7E7;" styleClass="search-button">
+            <Pane prefHeight="320.0" prefWidth="322.0" style="-fx-background-color: #E8D7E7;" styleClass="search-button">
                <children>
-                  <ImageView fitHeight="236.0" fitWidth="209.0" layoutX="18.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" styleClass="search-button">
+                  <ImageView fitHeight="320.0" fitWidth="307.0" layoutX="18.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" styleClass="search-button">
                      <image>
                         <Image url="@../../../images/lavenderflower.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="heartIcon1" fitHeight="40.0" fitWidth="46.0" layoutX="15.0" layoutY="223.0" onMouseClicked="#clickHeart1" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="heart1" fitHeight="40.0" fitWidth="46.0" layoutX="13.0" layoutY="264.0" onMouseClicked="#clickheart1" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/grayheart.png" />
-                     </image></ImageView>
+                     </image>
+                  </ImageView>
                </children>
                <HBox.margin>
                   <Insets right="30.0" />
                </HBox.margin>
             </Pane>
-            <Pane prefHeight="278.0" prefWidth="260.0" style="-fx-background-color: #C9DBC2;" styleClass="search-button">
+            <Pane style="-fx-background-color: #C9DBC2;" styleClass="search-button">
                <children>
-                  <ImageView fitHeight="283.0" fitWidth="261.0" layoutX="2.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="320.0" fitWidth="335.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/greenflowers2.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="heartIcon2" fitHeight="40.0" fitWidth="46.0" layoutX="15.0" layoutY="223.0" onMouseClicked="#clickHeart2" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="heart2" fitHeight="40.0" fitWidth="46.0" layoutX="14.0" layoutY="266.0" onMouseClicked="#clickheart2" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/grayheart.png" />
-                     </image></ImageView>
+                     </image>
+                  </ImageView>
                </children>
                <HBox.margin>
                   <Insets right="30.0" />
                </HBox.margin>
             </Pane>
-            <Pane prefHeight="278.0" prefWidth="260.0" style="-fx-background-color: #FFD55A;" styleClass="search-button">
+            <Pane style="-fx-background-color: #FFD55A;" styleClass="search-button">
                <children>
-                  <ImageView fitHeight="265.0" fitWidth="278.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="320.0" fitWidth="335.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/sunflowers.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="heartIcon3" fitHeight="40.0" fitWidth="46.0" layoutX="17.0" layoutY="224.0" onMouseClicked="#clickHeart3" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/grayheart.png" />
-                     </image></ImageView>
-               </children>
-               <HBox.margin>
-                  <Insets right="30.0" />
-               </HBox.margin>
-            </Pane>
-            <Pane prefHeight="278.0" prefWidth="260.0" style="-fx-background-color: #FFE0D8;" styleClass="search-button">
-               <children>
-                  <ImageView fitHeight="240.0" fitWidth="252.0" layoutX="2.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/pinkboquet2.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="heartIcon4" fitHeight="40.0" fitWidth="46.0" layoutX="15.0" layoutY="223.0" onMouseClicked="#clickHeart4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="heart" fitHeight="40.0" fitWidth="46.0" layoutX="19.0" layoutY="267.0" onMouseClicked="#clickheart3" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/grayheart.png" />
                      </image>
@@ -507,25 +498,5 @@
             </Pane>
          </children>
       </HBox>
-      <Label layoutX="165.0" layoutY="1192.0" text="Lavender " textFill="#635e5e">
-         <font>
-            <Font name="Century Gothic" size="26.0" />
-         </font>
-      </Label>
-      <Label layoutX="485.0" layoutY="1191.0" text="Green" textFill="#635e5e">
-         <font>
-            <Font name="Century Gothic" size="26.0" />
-         </font>
-      </Label>
-      <Label layoutX="756.0" layoutY="1194.0" text="Sunflower" textFill="#635e5e">
-         <font>
-            <Font name="Century Gothic" size="26.0" />
-         </font>
-      </Label>
-      <Label layoutX="1036.0" layoutY="1193.0" text="PinkShit" textFill="#635e5e">
-         <font>
-            <Font name="Century Gothic" size="26.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

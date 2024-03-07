@@ -13,22 +13,15 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
-import model.Checkout;
 import model.Flower;
-import model.Products;
 import javafx.application.Platform;
-import javafx.util.Duration;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
+
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.sql.*;
 import java.util.*;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 public class MarketController implements Initializable {
     @FXML
@@ -105,7 +98,7 @@ public class MarketController implements Initializable {
 
     public void setHomePage(){
 
-        replaceMarketContent(getClass().getResource("HomePage.fxml"), HomePageController.class);
+        replaceMarketContent(getClass().getResource("AboutUsPage.fxml"), AboutUsController.class);
     }
     public void setAboutUsPage(){
         //replaceMarketContent();
