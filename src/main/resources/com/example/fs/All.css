@@ -1,0 +1,58 @@
+.search-box {
+    -fx-background-color: #FAF6EE;
+    -fx-background-radius: 100;
+    -fx-border-color: transparent;
+}
+
+.transparent{
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-border-color: transparent;
+}
+
+.search-button{
+    -fx-background-color: #EDA812;
+    -fx-background-radius: 30;
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5.0, 0.0, -5.0, 5.0);
+}
+
+
+.header-words{
+    -fx-text-fill:  #424040;
+}
+
+.colored-text {
+    -fx-fill: #e1e0dc;
+    -fx-text-fill: #e1e0dc;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+
+.colored-title {
+    -fx-fill: #FAF6EE;
+}
+
+.message-box{
+    -fx-background-color:  #FAF6EE;
+}
+
+.custom-image {
+    -fx-shape: "M0,0 L100,0 L100,100 L0,100 Z";
+    -fx-scale-shape: false;
+    -fx-background-size: cover;
+}
+
+.enter-shop-button {
+    -fx-border-color: transparent;
+    -fx-background-radius: 30;
+    -fx-background-color: #e1e0dc;
+    -fx-background-position: left;
+    -fx-transition: -fx-background-color 0.5s;
+}
+
+.enter-shop-button:hover {
+    -fx-background-color: #FAD02C;
+}
+
