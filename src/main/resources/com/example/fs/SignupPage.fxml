@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.SignUpController">
+    <AnchorPane fx:id="signin_page" prefHeight="200.0" prefWidth="200.0">
+        <AnchorPane layoutX="317.0" layoutY="2.0" prefHeight="510.0" prefWidth="482.0" style="-fx-background-color: #FAF6EE;">
+         <ImageView fitHeight="334.0" fitWidth="200.0" layoutX="-21.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../images/girl9.gif" />
+            </image>
+         </ImageView>
+            <ImageView fx:id="faugetlogo_signin" fitHeight="152.0" fitWidth="262.0" layoutX="151.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../../../images/2.png" />
+            </ImageView>
+            <VBox layoutX="127.0" layoutY="243.0">
+            <TextField fx:id="email_signup" layoutX="20.0" layoutY="65.0" prefHeight="35.0" prefWidth="270.0" promptText="Email" style="-fx-background-color: #FFFFFF; -fx-background-radius: 50;" styleClass="shadow" stylesheets="@All.css">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="username_signup" prefHeight="35.0" prefWidth="270.0" promptText="Username" style="-fx-background-color: #FFFFFF; -fx-background-radius: 50;" styleClass="shadow" stylesheets="@All.css">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+                <PasswordField fx:id="password_signup" prefHeight="35.0" prefWidth="270.0" promptText="Password" style="-fx-background-color: #FFFFFF; -fx-background-radius: 50;" styleClass="shadow" stylesheets="@All.css">
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </PasswordField>
+                <Button fx:id="signinBTN" mnemonicParsing="false" onAction="#signUp" prefHeight="35.0" prefWidth="270.0" style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" styleClass="shadow" stylesheets="@All.css" text="Sign Up">
+                    <font>
+                        <Font name="Century Gothic" size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+            </VBox>
+         <Label fx:id="emailValidation" alignment="CENTER" layoutX="176.0" layoutY="226.0" prefHeight="16.0" prefWidth="192.0" textFill="RED" />
+        </AnchorPane>
+        <AnchorPane layoutY="2.0" prefHeight="510.0" prefWidth="311.0" style="-fx-background-color: #90ADC5;">
+         <VBox alignment="CENTER" layoutY="-1.0" prefHeight="510.0" prefWidth="311.0">
+            <children>
+                  <VBox alignment="CENTER" />
+                   <ImageView fitHeight="94.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true">
+                       <Image url="@../../../images/22.png" />
+                  <VBox.margin>
+                     <Insets top="20.0" />
+                  </VBox.margin>
+                   </ImageView>
+                   <ImageView fitHeight="114.0" fitWidth="254.0" pickOnBounds="true" preserveRatio="true">
+                       <Image url="@../../../images/24.png" />
+                  <VBox.margin>
+                     <Insets top="10.0" />
+                  </VBox.margin>
+                   </ImageView>
+                   <ImageView fitHeight="110.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+                       <Image url="@../../../images/23.png" />
+                  <VBox.margin>
+                     <Insets top="10.0" />
+                  </VBox.margin>
+                   </ImageView>
+                  <Button fx:id="signupBTN" mnemonicParsing="false" onAction="#signIn" prefHeight="35.0" prefWidth="138.0" style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" styleClass="shadow" stylesheets="@All.css" text="Sign In">
+                      <font>
+                          <Font name="Century Gothic" size="13.0" />
+                      </font>
+                  <VBox.margin>
+                     <Insets top="30.0" />
+                  </VBox.margin>
+                  </Button>
+               <Hyperlink text="Already have an account?" textFill="#434343">
+                  <font>
+                     <Font size="11.0" />
+                  </font>
+               </Hyperlink>
+                  <Label text="2024 Fauget. All Rights Served.">
+                      <font>
+                          <Font size="9.0" />
+                      </font>
+                  <VBox.margin>
+                     <Insets top="50.0" />
+                  </VBox.margin>
+                  </Label>
+            </children>
+         </VBox>
+        </AnchorPane>
+    </AnchorPane>
+</StackPane>
