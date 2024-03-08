@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane onMouseClicked="#clickEvent" prefHeight="259.0" prefWidth="226.0" stylesheets="@market.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.ItemController">
+<AnchorPane onMouseClicked="#clickEvent" prefHeight="259.0" prefWidth="226.0" style="-fx-background-color: #FAF4DB;" stylesheets="@market.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.ItemController">
    <styleClass>
       <String fx:value="fruit-item" />
       <String fx:value="shadow" />
@@ -20,14 +20,14 @@
          <VBox.margin>
             <Insets left="20.0" top="20.0" />
          </VBox.margin>
-         <Label fx:id="nameLabel" prefHeight="46.0" prefWidth="155.0" text="Tulips">
+         <Label fx:id="nameLabel" prefHeight="46.0" prefWidth="155.0" text="Tulips" textFill="#565656">
             <font>
-               <Font name="Cambria" size="24.0" />
+               <Font name="Century Gothic" size="17.0" />
             </font>
          </Label>
-         <Label fx:id="priceLabel" prefHeight="50.0" prefWidth="90.0" text="\$0.99">
+         <Label fx:id="priceLabel" prefHeight="50.0" prefWidth="90.0" text="\$0.99" textFill="#565656">
             <font>
-               <Font name="Cambria Bold" size="18.0" />
+               <Font name="Century Gothic Bold" size="21.0" />
             </font>
          </Label>
       </HBox>

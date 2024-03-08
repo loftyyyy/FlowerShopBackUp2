@@ -1,14 +1,20 @@
 package com.example.fs;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Region;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
 import model.Checkout;
 import model.Flower;
 
@@ -137,6 +143,24 @@ public class PlaceOrderController implements Initializable {
             throw new RuntimeException(e);
         }
     }
+    @FXML
+    private Button PlaceOrderButton;
+
+    private void playPumpAnimation(Button button) {
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.ZERO, new KeyValue(button.scaleXProperty(), 1), new KeyValue(button.scaleYProperty(), 1)),
+                new KeyFrame(Duration.seconds(0.1), new KeyValue(button.scaleXProperty(), 1.2), new KeyValue(button.scaleYProperty(), 1.2)),
+                new KeyFrame(Duration.seconds(0.2), new KeyValue(button.scaleXProperty(), 1), new KeyValue(button.scaleYProperty(), 1))
+        );
+        timeline.play();
+    }
+
+    @FXML
+    void placeOrderClick(MouseEvent event) {
+        playPumpAnimation(PlaceOrderButton);
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         checkouts.addAll(getCheckout());

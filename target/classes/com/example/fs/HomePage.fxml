@@ -2,7 +2,6 @@
 
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
@@ -17,625 +16,587 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3181.0" prefWidth="1336.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.HomePageController">
-   <children>
-      <Pane layoutX="3.0" layoutY="5.0" prefHeight="315.0" prefWidth="1327.0" style="-fx-background-color: #90ADC5;">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3181.0"
+            prefWidth="1336.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.fs.HomePageController">
+   <Pane layoutX="3.0" layoutY="5.0" prefHeight="315.0" prefWidth="1327.0" style="-fx-background-color: #90ADC5;">
+      <ImageView fitHeight="598.0" fitWidth="1340.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <Image url="@../../../images/homepage.png"/>
+      </ImageView>
+      <VBox layoutX="249.0" layoutY="227.0"/>
+      <VBox alignment="CENTER" layoutX="-2.0" layoutY="13.0" prefHeight="566.0" prefWidth="1326.0">
+         <ImageView fitHeight="144.0" fitWidth="344.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../images/22.png"/>
+         </ImageView>
+         <ImageView fitHeight="121.0" fitWidth="734.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../images/titlelogo.png"/>
+         </ImageView>
+         <ImageView fitHeight="129.0" fitWidth="304.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../images/23.png"/>
+         </ImageView>
+      </VBox>
+   </Pane>
+   <AnchorPane layoutX="-3.0" layoutY="2869.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+               minWidth="-Infinity" prefHeight="304.0" prefWidth="1342.0" style="-fx-background-color: #45595B;"
+               stylesheets="@All.css">
+      <TextField layoutX="425.0" layoutY="39.0" prefHeight="37.0" prefWidth="336.0" styleClass="search-box"/>
+      <Button layoutX="718.0" layoutY="37.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="128.0"
+              styleClass="search-button" stylesheets="@All.css" text="Subscribe Now!"/>
+      <HBox alignment="TOP_CENTER" layoutX="-4.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="192.0" prefWidth="1344.0">
+         <Pane prefHeight="192.0" prefWidth="0.0"/>
+         <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+               minWidth="-Infinity" prefHeight="174.0" prefWidth="242.0">
+            <HBox.margin>
+               <Insets top="10.0"/>
+            </HBox.margin>
+            <Text fill="#383838" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
+                  styleClass="colored-title" text="Why People Like us!">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0"/>
+               </font>
+            </Text>
+            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
+                  text="People choose us for the exquisite  craftsmanship and personalized  attention they receive at Fauget Crochet Studio."
+                  textAlignment="CENTER" wrappingWidth="162.54803466796875">
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0"/>
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="colored-text"/>
+                  <String fx:value="colored-text"/>
+               </styleClass>
+            </Text>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" styleClass="search-button"
+                    text="READ MORE!">
+               <VBox.margin>
+                  <Insets top="20.0"/>
+               </VBox.margin>
+            </Button>
+         </VBox>
+         <Pane prefHeight="288.0" prefWidth="28.0"/>
+         <VBox alignment="TOP_CENTER" prefHeight="278.0" prefWidth="206.0">
+            <HBox.margin>
+               <Insets top="10.0"/>
+            </HBox.margin>
+            <Text fill="#383838" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
+                  styleClass="colored-title" text="Shop Info">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0"/>
+               </font>
+            </Text>
+            <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="About Us">
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0"/>
+               </VBox.margin>
+            </Hyperlink>
+            <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Contact Us">
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+               <VBox.margin>
+                  <Insets/>
+               </VBox.margin>
+            </Hyperlink>
+            <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Privacy Policy">
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+               <VBox.margin>
+                  <Insets/>
+               </VBox.margin>
+            </Hyperlink>
+            <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Terms &amp; Condition">
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+               <VBox.margin>
+                  <Insets/>
+               </VBox.margin>
+            </Hyperlink>
+            <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Return Policy">
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+               <VBox.margin>
+                  <Insets/>
+               </VBox.margin>
+            </Hyperlink>
+            <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="FAQs &amp; Help">
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+               <VBox.margin>
+                  <Insets/>
+               </VBox.margin>
+            </Hyperlink>
+         </VBox>
+         <Pane prefHeight="288.0" prefWidth="33.0"/>
+         <VBox alignment="TOP_CENTER" prefHeight="278.0" prefWidth="192.0">
+            <HBox.margin>
+               <Insets top="10.0"/>
+            </HBox.margin>
+            <Text fill="#e1e0dc" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
+                  styleClass="colored-title" text="Account">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0"/>
+               </font>
+            </Text>
+            <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="My Account">
+               <VBox.margin>
+                  <Insets top="10.0"/>
+               </VBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+            </Hyperlink>
+            <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Shop Details">
+               <VBox.margin>
+                  <Insets/>
+               </VBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+            </Hyperlink>
+            <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Shopping Cart">
+               <VBox.margin>
+                  <Insets/>
+               </VBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+            </Hyperlink>
+            <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Wishlist">
+               <VBox.margin>
+                  <Insets/>
+               </VBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+            </Hyperlink>
+            <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Order History">
+               <VBox.margin>
+                  <Insets/>
+               </VBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+            </Hyperlink>
+         </VBox>
+         <Pane prefHeight="218.0" prefWidth="50.0"/>
+         <VBox alignment="TOP_CENTER" prefHeight="278.0" prefWidth="183.0">
+            <HBox.margin>
+               <Insets top="10.0"/>
+            </HBox.margin>
+            <Text fill="#383838" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
+                  styleClass="colored-title" text="Contact">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0"/>
+               </font>
+            </Text>
+            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-text"
+                  text="8000, G. Silang St, Davao City">
+               <VBox.margin>
+                  <Insets top="10.0"/>
+               </VBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+            </Text>
+            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-text"
+                  text="faugetcrochetstudio@gmail.xom">
+               <VBox.margin>
+                  <Insets top="5.0"/>
+               </VBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+            </Text>
+            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-text"
+                  text="09758787893">
+               <VBox.margin>
+                  <Insets top="5.0"/>
+               </VBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+            </Text>
+            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-text"
+                  text="Payment Accepted">
+               <VBox.margin>
+                  <Insets top="5.0"/>
+               </VBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="12.0"/>
+               </font>
+            </Text>
+            <ImageView fitHeight="21.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="10.0"/>
+               </VBox.margin>
+               <Image url="@../../../images/iconpayment.png"/>
+            </ImageView>
+         </VBox>
+         <Pane prefHeight="190.0" prefWidth="74.0"/>
+      </HBox>
+      <ImageView fitHeight="73.0" fitWidth="142.0" layoutX="244.0" layoutY="19.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <Image url="@../../../images/2.png"/>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="899.0" layoutY="40.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <Image url="@../../../images/iconfacebook.png"/>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="952.0" layoutY="41.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <Image url="@../../../images/icnoninstagram.png"/>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="1004.0" layoutY="40.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <Image url="@../../../images/icontwitter.png"/>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="1055.0" layoutY="39.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <Image url="@../../../images/iconyoutube.png"/>
+      </ImageView>
+      <Text fill="#ffbf3f" layoutX="196.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="___________________________________________________________________________________________________________________________________________________________________________________________"
+            wrappingWidth="959.5469665527344"/>
+   </AnchorPane>
+   <HBox alignment="CENTER" layoutX="-3.0" layoutY="743.0" prefHeight="258.0" prefWidth="1342.0">
+      <padding>
+         <Insets left="50.0" right="50.0"/>
+      </padding>
+      <Pane fx:id="pane1" onMouseEntered="#pane1MouseEntered" onMouseExited="#pane1MouseExited" prefHeight="200.0"
+            prefWidth="500.0" style="-fx-background-color: #F6E8B2; -fx-background-radius: 30;" styleClass="shadow">
+         <HBox.margin>
+            <Insets left="30.0" right="30.0"/>
+         </HBox.margin>
+         <Label fx:id="meaning1" layoutX="58.0" layoutY="205.0" prefHeight="22.0" prefWidth="135.0"
+                text="Free on order over $300">
+            <padding>
+               <Insets top="5.0"/>
+            </padding>
+         </Label>
+         <VBox alignment="CENTER" layoutX="-5.0" prefHeight="248.0" prefWidth="256.0">
+            <padding>
+               <Insets top="10.0"/>
+            </padding>
+            <ImageView fx:id="image1" fitHeight="137.0" fitWidth="209.0" pickOnBounds="true"
+                       preserveRatio="true" styleClass="shadow">
+               <VBox.margin>
+                  <Insets top="-10.0"/>
+               </VBox.margin>
+               <Image url="@../../../images/hpshipping.png"/>
+            </ImageView>
+            <Label fx:id="title1" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: #F6E8B2;"
+                   text="Free Shipping">
+               <font>
+                  <Font name="Century Gothic Bold" size="19.0"/>
+               </font>
+               <padding>
+                  <Insets top="10.0"/>
+               </padding>
+               <VBox.margin>
+                  <Insets top="30.0"/>
+               </VBox.margin>
+            </Label>
+         </VBox>
+      </Pane>
+      <Pane fx:id="pane2" onMouseEntered="#pane2MouseEntered" onMouseExited="#pane2MouseExited" prefHeight="200.0"
+            prefWidth="500.0" style="-fx-background-color: #F6E8B2; -fx-background-radius: 30;" styleClass="shadow">
+         <HBox.margin>
+            <Insets left="30.0" right="30.0"/>
+         </HBox.margin>
+         <Label fx:id="meaning2" layoutX="58.0" layoutY="205.0" prefHeight="22.0" prefWidth="148.0"
+                text="100% security payment">
+            <padding>
+               <Insets top="5.0"/>
+            </padding>
+         </Label>
+         <VBox alignment="CENTER" layoutX="-8.0" prefHeight="246.0" prefWidth="257.0">
+            <padding>
+               <Insets top="10.0"/>
+            </padding>
+            <ImageView fx:id="image2" fitHeight="137.0" fitWidth="219.0" pickOnBounds="true"
+                       preserveRatio="true" styleClass="shadow">
+               <VBox.margin>
+                  <Insets top="-10.0"/>
+               </VBox.margin>
+               <Image url="@../../../images/hpusersecure.png"/>
+            </ImageView>
+            <Label fx:id="title2" prefHeight="39.0" prefWidth="172.0" style="-fx-background-color: #F6E8B2;"
+                   text="Security Payment">
+               <font>
+                  <Font name="Century Gothic Bold" size="19.0"/>
+               </font>
+               <padding>
+                  <Insets top="10.0"/>
+               </padding>
+               <VBox.margin>
+                  <Insets top="30.0"/>
+               </VBox.margin>
+            </Label>
+         </VBox>
+      </Pane>
+      <Pane fx:id="pane3" onMouseEntered="#pane3MouseEntered" onMouseExited="#pane3MouseExited" prefHeight="200.0"
+            prefWidth="500.0" style="-fx-background-color: #F6E8B2; -fx-background-radius: 30;" styleClass="shadow">
+         <HBox.margin>
+            <Insets left="30.0" right="30.0"/>
+         </HBox.margin>
+         <Label fx:id="meaning3" layoutX="59.0" layoutY="196.0" prefHeight="34.0" prefWidth="135.0"
+                text="30 day money guarantee">
+            <padding>
+               <Insets top="5.0"/>
+            </padding>
+         </Label>
+         <VBox alignment="CENTER" layoutX="-1.0" layoutY="-1.0" prefHeight="246.0" prefWidth="253.0">
+            <padding>
+               <Insets top="10.0"/>
+            </padding>
+            <ImageView fx:id="image3" fitHeight="137.0" fitWidth="231.0" pickOnBounds="true"
+                       preserveRatio="true" styleClass="shadow">
+               <VBox.margin>
+                  <Insets top="-10.0"/>
+               </VBox.margin>
+               <Image url="@../../../images/hp30daysrturn.png"/>
+            </ImageView>
+            <Label fx:id="title3" alignment="CENTER" prefHeight="34.0" prefWidth="137.0"
+                   style="-fx-background-color: #F6E8B2;" text="30 Day Return">
+               <font>
+                  <Font name="Century Gothic Bold" size="19.0"/>
+               </font>
+               <padding>
+                  <Insets top="10.0"/>
+               </padding>
+               <VBox.margin>
+                  <Insets top="30.0"/>
+               </VBox.margin>
+            </Label>
+         </VBox>
+      </Pane>
+      <Pane fx:id="pane4" onMouseEntered="#pane4MouseEntered" onMouseExited="#pane4MouseExited" prefHeight="200.0"
+            prefWidth="500.0" style="-fx-background-color: #F6E8B2; -fx-background-radius: 30;" styleClass="shadow">
+         <HBox.margin>
+            <Insets left="30.0" right="30.0"/>
+         </HBox.margin>
+         <Label fx:id="meaning4" alignment="CENTER" layoutX="64.0" layoutY="198.0" prefHeight="15.0"
+                prefWidth="125.0" text="Support every time fast">
+            <padding>
+               <Insets top="5.0"/>
+            </padding>
+         </Label>
+         <VBox alignment="CENTER" layoutX="3.0" prefHeight="248.0" prefWidth="249.0">
+            <padding>
+               <Insets top="10.0"/>
+            </padding>
+            <ImageView fx:id="image4" fitHeight="140.0" fitWidth="137.0" pickOnBounds="true"
+                       preserveRatio="true" styleClass="shadow">
+               <VBox.margin>
+                  <Insets bottom="15.0" top="-10.0"/>
+               </VBox.margin>
+               <Image url="@../../../images/hpcall.png"/>
+            </ImageView>
+            <Label fx:id="title4" alignment="CENTER" prefHeight="10.0" prefWidth="126.0"
+                   style="-fx-background-color: #F6E8B2;" text="24/7 Support">
+               <font>
+                  <Font name="Century Gothic Bold" size="19.0"/>
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0"/>
+               </VBox.margin>
+            </Label>
+         </VBox>
+      </Pane>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="-2.0" layoutY="1156.0" prefHeight="59.0" prefWidth="1335.0">
+      <Separator prefHeight="0.0" prefWidth="423.0"/>
+      <Label text="New Arrival" textFill="#5b715a">
+         <font>
+            <Font name="Times New Roman Bold" size="52.0"/>
+         </font>
+      </Label>
+      <Separator prefHeight="0.0" prefWidth="423.0"/>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="12.0" layoutY="1423.0" prefHeight="283.0" prefWidth="1308.0">
+      <Pane fx:id="flowerCard1" onMouseEntered="#flowerCardEnter1" onMouseExited="#flowerCardExit1"
+            prefHeight="282.0" prefWidth="220.0" style="-fx-background-color: #E8D7E7;" styleClass="shadow">
+         <HBox.margin>
+            <Insets right="50.0"/>
+         </HBox.margin>
+         <ImageView fx:id="flower1" fitHeight="144.0" fitWidth="128.0" layoutX="46.0" layoutY="76.0"
+                    onMouseEntered="#flowerEnter1" onMouseExited="#flowerExit1" pickOnBounds="true"
+                    preserveRatio="true" styleClass="shadow">
+            <image>
+               <Image url="@../../../images/lavenderflower.png"/>
+            </image>
+         </ImageView>
+         <ImageView fx:id="heartIcon1" fitHeight="40.0" fitWidth="46.0" layoutX="16.0" layoutY="235.0"
+                    onMouseClicked="#clickHeart1" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../images/grayheart.png"/>
+            </image>
+         </ImageView>
+         <HBox layoutX="16.0" layoutY="17.0" prefHeight="34.0" prefWidth="246.0">
+            <children>
+               <Label prefHeight="28.0" prefWidth="118.0" text="Lavender " textFill="#635e5e">
+                  <font>
+                     <Font name="Century Gothic" size="15.0"/>
+                  </font>
+               </Label>
+               <Label text=" ₱299.00" textFill="#620a91">
+                  <font>
+                     <Font name="Century Gothic Bold" size="20.0"/>
+                  </font>
+               </Label>
+            </children>
+         </HBox>
+         <ImageView fx:id="cartIcon1" fitHeight="40.0" fitWidth="46.0" layoutX="159.0" layoutY="235.0"
+                    onMouseClicked="#clickCart1" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../images/cartgrey.png"/>
+            </image>
+         </ImageView>
+      </Pane>
+      <Pane fx:id="flowerCard2" onMouseEntered="#flowerCardEnter2" onMouseExited="#flowerCardExit2"
+            prefHeight="283.0" prefWidth="220.0" style="-fx-background-color: #C9DBC2;" styleClass="shadow">
+         <HBox.margin>
+            <Insets right="50.0"/>
+         </HBox.margin>
+         <ImageView fx:id="flower2" fitHeight="192.0" fitWidth="148.0" layoutX="30.0" layoutY="70.0"
+                    onMouseEntered="#flowerEnter2" onMouseExited="#flowerExit2" pickOnBounds="true"
+                    preserveRatio="true" styleClass="shadow">
+            <image>
+               <Image url="@../../../images/greenflowers2.png"/>
+            </image>
+         </ImageView>
+         <ImageView fx:id="heartIcon2" fitHeight="40.0" fitWidth="46.0" layoutX="18.0" layoutY="236.0"
+                    onMouseClicked="#clickHeart2" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../images/grayheart.png"/>
+            </image>
+         </ImageView>
+         <HBox layoutX="18.0" layoutY="20.0" prefHeight="34.0" prefWidth="242.0">
+            <children>
+               <Label prefHeight="28.0" prefWidth="109.0" text="Lily" textFill="#635e5e">
+                  <font>
+                     <Font name="Century Gothic" size="15.0"/>
+                  </font>
+               </Label>
+               <Label text=" ₱439.00" textFill="#2b7946">
+                  <font>
+                     <Font name="Century Gothic Bold" size="20.0"/>
+                  </font>
+               </Label>
+            </children>
+         </HBox>
+         <ImageView fx:id="cartIcon2" fitHeight="40.0" fitWidth="46.0" layoutX="158.0" layoutY="236.0"
+                    onMouseClicked="#clickCart2" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../images/cartgrey.png"/>
+            </image>
+         </ImageView>
+      </Pane>
+      <Pane fx:id="flowerCard3" onMouseEntered="#flowerCardEnter3" onMouseExited="#flowerCardExit3"
+            prefHeight="278.0" prefWidth="220.0" style="-fx-background-color: #FFD55A;" styleClass="shadow">
          <children>
-            <ImageView fitHeight="598.0" fitWidth="1340.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="flower3" fitHeight="148.0" fitWidth="171.0" layoutX="32.0" layoutY="83.0"
+                       onMouseEntered="#flowerEnter3" onMouseExited="#flowerExit3" pickOnBounds="true"
+                       preserveRatio="true" styleClass="shadow">
                <image>
-                  <Image url="@../../../images/homepage.png" />
+                  <Image url="@../../../images/sunflowers.png"/>
                </image>
             </ImageView>
-            <VBox layoutX="249.0" layoutY="227.0" />
-            <VBox alignment="CENTER" layoutX="-2.0" layoutY="13.0" prefHeight="566.0" prefWidth="1326.0">
+            <ImageView fx:id="heartIcon3" fitHeight="40.0" fitWidth="46.0" layoutX="14.0" layoutY="241.0"
+                       onMouseClicked="#clickHeart3" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/grayheart.png"/>
+               </image>
+            </ImageView>
+            <HBox layoutX="20.0" layoutY="18.0" prefHeight="34.0" prefWidth="218.0">
                <children>
-                  <ImageView fitHeight="144.0" fitWidth="344.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/22.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="121.0" fitWidth="734.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/titlelogo.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="129.0" fitWidth="304.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/23.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </VBox>
-         </children>
-      </Pane>
-      <AnchorPane layoutX="-3.0" layoutY="2869.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="1342.0" style="-fx-background-color: #45595B;" stylesheets="@All.css">
-         <children>
-            <TextField layoutX="425.0" layoutY="39.0" prefHeight="37.0" prefWidth="336.0" styleClass="search-box" />
-            <Button layoutX="718.0" layoutY="37.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="128.0" styleClass="search-button" stylesheets="@All.css" text="Subscribe Now!" />
-            <HBox alignment="TOP_CENTER" layoutX="-4.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="192.0" prefWidth="1344.0">
-               <children>
-                  <Pane prefHeight="192.0" prefWidth="0.0" />
-                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="174.0" prefWidth="242.0">
-                     <HBox.margin>
-                        <Insets top="10.0" />
-                     </HBox.margin>
-                     <children>
-                        <Text fill="#383838" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-title" text="Why People Like us!">
-                           <font>
-                              <Font name="Century Gothic Bold" size="20.0" />
-                           </font>
-                        </Text>
-                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="People choose us for the exquisite  craftsmanship and personalized  attention they receive at Fauget Crochet Studio." textAlignment="CENTER" wrappingWidth="162.54803466796875">
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                           <styleClass>
-                              <String fx:value="colored-text" />
-                              <String fx:value="colored-text" />
-                           </styleClass>
-                        </Text>
-                        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" styleClass="search-button" text="READ MORE!">
-                           <VBox.margin>
-                              <Insets top="20.0" />
-                           </VBox.margin>
-                        </Button>
-                     </children>
-                  </VBox>
-                  <Pane prefHeight="288.0" prefWidth="28.0" />
-                  <VBox alignment="TOP_CENTER" prefHeight="278.0" prefWidth="206.0">
-                     <HBox.margin>
-                        <Insets top="10.0" />
-                     </HBox.margin>
-                     <children>
-                        <Text fill="#383838" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-title" text="Shop Info">
-                           <font>
-                              <Font name="Century Gothic Bold" size="20.0" />
-                           </font>
-                        </Text>
-                        <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="About Us">
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                        </Hyperlink>
-                        <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Contact Us">
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Hyperlink>
-                        <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Privacy Policy">
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Hyperlink>
-                        <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Terms &amp; Condition">
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Hyperlink>
-                        <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Return Policy">
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Hyperlink>
-                        <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="FAQs &amp; Help">
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Hyperlink>
-                     </children>
-                  </VBox>
-                  <Pane prefHeight="288.0" prefWidth="33.0" />
-                  <VBox alignment="TOP_CENTER" prefHeight="278.0" prefWidth="192.0">
-                     <HBox.margin>
-                        <Insets top="10.0" />
-                     </HBox.margin>
-                     <children>
-                        <Text fill="#e1e0dc" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-title" text="Account">
-                           <font>
-                              <Font name="Century Gothic Bold" size="20.0" />
-                           </font>
-                        </Text>
-                        <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="My Account">
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                        </Hyperlink>
-                        <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Shop Details">
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                        </Hyperlink>
-                        <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Shopping Cart">
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                        </Hyperlink>
-                        <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Wishlist">
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                        </Hyperlink>
-                        <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Order History">
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                        </Hyperlink>
-                     </children>
-                  </VBox>
-                  <Pane prefHeight="218.0" prefWidth="50.0" />
-                  <VBox alignment="TOP_CENTER" prefHeight="278.0" prefWidth="183.0">
-                     <HBox.margin>
-                        <Insets top="10.0" />
-                     </HBox.margin>
-                     <children>
-                        <Text fill="#383838" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-title" text="Contact">
-                           <font>
-                              <Font name="Century Gothic Bold" size="20.0" />
-                           </font>
-                        </Text>
-                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-text" text="8000, G. Silang St, Davao City">
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                        </Text>
-                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-text" text="faugetcrochetstudio@gmail.xom">
-                           <VBox.margin>
-                              <Insets top="5.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                        </Text>
-                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-text" text="09758787893">
-                           <VBox.margin>
-                              <Insets top="5.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                        </Text>
-                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-text" text="Payment Accepted">
-                           <VBox.margin>
-                              <Insets top="5.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="21.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                           <image>
-                              <Image url="@../../../images/iconpayment.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </VBox>
-                  <Pane prefHeight="190.0" prefWidth="74.0" />
+                  <Label prefHeight="28.0" prefWidth="114.0" text="Sunflower" textFill="#635e5e">
+                     <font>
+                        <Font name="Century Gothic" size="15.0"/>
+                     </font>
+                  </Label>
+                  <Label text=" ₱359.00" textFill="#734e03">
+                     <font>
+                        <Font name="Century Gothic Bold" size="20.0"/>
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <ImageView fitHeight="73.0" fitWidth="142.0" layoutX="244.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="cartIcon3" fitHeight="40.0" fitWidth="46.0" layoutX="166.0" layoutY="241.0"
+                       onMouseClicked="#clickCart3" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/2.png" />
+                  <Image url="@../../../images/cartgrey.png"/>
                </image>
             </ImageView>
-            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="899.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/iconfacebook.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="952.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/icnoninstagram.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="1004.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/icontwitter.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="1055.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/iconyoutube.png" />
-               </image>
-            </ImageView>
-            <Text fill="#ffbf3f" layoutX="196.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="___________________________________________________________________________________________________________________________________________________________________________________________" wrappingWidth="959.5469665527344" />
          </children>
-      </AnchorPane>
-      <HBox alignment="CENTER" layoutX="-3.0" layoutY="743.0" prefHeight="258.0" prefWidth="1342.0">
-         <padding>
-            <Insets left="50.0" right="50.0" />
-         </padding>
+         <HBox.margin>
+            <Insets right="50.0"/>
+         </HBox.margin>
+      </Pane>
+      <Pane fx:id="flowerCard4" onMouseEntered="#flowerCardEnter4" onMouseExited="#flowerCardExit4"
+            prefHeight="278.0" prefWidth="220.0" style="-fx-background-color: #FFE0D8;" styleClass="shadow">
          <children>
-            <Pane fx:id="pane1" onMouseEntered="#pane1MouseEntered" onMouseExited="#pane1MouseExited" prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: #F6E8B2; -fx-background-radius: 30;" styleClass="shadow">
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
+            <ImageView fx:id="flower4" fitHeight="142.0" fitWidth="139.0" layoutX="39.0" layoutY="84.0"
+                       onMouseEntered="#flowerEnter4" onMouseExited="#flowerExit4" pickOnBounds="true"
+                       preserveRatio="true" styleClass="shadow">
+               <image>
+                  <Image url="@../../../images/pinkboquet2.png"/>
+               </image>
+            </ImageView>
+            <ImageView fx:id="heartIcon4" fitHeight="40.0" fitWidth="46.0" layoutX="9.0" layoutY="238.0"
+                       onMouseClicked="#clickHeart4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/grayheart.png"/>
+               </image>
+            </ImageView>
+            <HBox layoutX="29.0" layoutY="19.0" prefHeight="34.0" prefWidth="207.0">
                <children>
-                  <Label fx:id="meaning1" layoutX="58.0" layoutY="205.0" prefHeight="22.0" prefWidth="135.0" text="Free on order over $300">
-                     <padding>
-                        <Insets top="5.0" />
-                     </padding>
+                  <Label prefHeight="28.0" prefWidth="102.0" text="Daisy" textFill="#635e5e">
+                     <font>
+                        <Font name="Century Gothic" size="15.0"/>
+                     </font>
                   </Label>
-                  <VBox alignment="CENTER" layoutX="-5.0" prefHeight="248.0" prefWidth="256.0">
-                     <padding>
-                        <Insets top="10.0" />
-                     </padding>
-                     <children>
-                        <ImageView fx:id="image1" fitHeight="137.0" fitWidth="209.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
-                           <image>
-                              <Image url="@../../../images/hpshipping.png" />
-                           </image>
-                           <VBox.margin>
-                              <Insets top="-10.0" />
-                           </VBox.margin>
-                        </ImageView>
-                        <Label fx:id="title1" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: #F6E8B2;" text="Free Shipping">
-                           <font>
-                              <Font name="Century Gothic Bold" size="19.0" />
-                           </font>
-                           <padding>
-                              <Insets top="10.0" />
-                           </padding>
-                           <VBox.margin>
-                              <Insets top="30.0" />
-                           </VBox.margin>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
-            </Pane>
-            <Pane fx:id="pane2" onMouseEntered="#pane2MouseEntered" onMouseExited="#pane2MouseExited" prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: #F6E8B2; -fx-background-radius: 30;" styleClass="shadow">
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-               <children>
-                  <Label fx:id="meaning2" layoutX="58.0" layoutY="205.0" prefHeight="22.0" prefWidth="148.0" text="100% security payment">
-                     <padding>
-                        <Insets top="5.0" />
-                     </padding>
+                  <Label text=" ₱299.00" textFill="#ae5999">
+                     <font>
+                        <Font name="Century Gothic Bold" size="20.0"/>
+                     </font>
                   </Label>
-                  <VBox alignment="CENTER" layoutX="-8.0" prefHeight="246.0" prefWidth="257.0">
-                     <padding>
-                        <Insets top="10.0" />
-                     </padding>
-                     <children>
-                        <ImageView fx:id="image2" fitHeight="137.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
-                           <image>
-                              <Image url="@../../../images/hpusersecure.png" />
-                           </image>
-                           <VBox.margin>
-                              <Insets top="-10.0" />
-                           </VBox.margin>
-                        </ImageView>
-                        <Label fx:id="title2" prefHeight="39.0" prefWidth="172.0" style="-fx-background-color: #F6E8B2;" text="Security Payment">
-                           <font>
-                              <Font name="Century Gothic Bold" size="19.0" />
-                           </font>
-                           <padding>
-                              <Insets top="10.0" />
-                           </padding>
-                           <VBox.margin>
-                              <Insets top="30.0" />
-                           </VBox.margin>
-                        </Label>
-                     </children>
-                  </VBox>
                </children>
-            </Pane>
-            <Pane fx:id="pane3" onMouseEntered="#pane3MouseEntered" onMouseExited="#pane3MouseExited" prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: #F6E8B2; -fx-background-radius: 30;" styleClass="shadow">
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-               <children>
-                  <Label fx:id="meaning3" layoutX="59.0" layoutY="196.0" prefHeight="34.0" prefWidth="135.0" text="30 day money guarantee">
-                     <padding>
-                        <Insets top="5.0" />
-                     </padding>
-                  </Label>
-                  <VBox alignment="CENTER" layoutX="-1.0" layoutY="-1.0" prefHeight="246.0" prefWidth="253.0">
-                     <padding>
-                        <Insets top="10.0" />
-                     </padding>
-                     <children>
-                        <ImageView fx:id="image3" fitHeight="137.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
-                           <image>
-                              <Image url="@../../../images/hp30daysrturn.png" />
-                           </image>
-                           <VBox.margin>
-                              <Insets top="-10.0" />
-                           </VBox.margin>
-                        </ImageView>
-                        <Label fx:id="title3" alignment="CENTER" prefHeight="34.0" prefWidth="137.0" style="-fx-background-color: #F6E8B2;" text="30 Day Return">
-                           <font>
-                              <Font name="Century Gothic Bold" size="19.0" />
-                           </font>
-                           <padding>
-                              <Insets top="10.0" />
-                           </padding>
-                           <VBox.margin>
-                              <Insets top="30.0" />
-                           </VBox.margin>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
-            </Pane>
-            <Pane fx:id="pane4" onMouseEntered="#pane4MouseEntered" onMouseExited="#pane4MouseExited" prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: #F6E8B2; -fx-background-radius: 30;" styleClass="shadow">
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-               <children>
-                  <Label fx:id="meaning4" alignment="CENTER" layoutX="64.0" layoutY="198.0" prefHeight="15.0" prefWidth="125.0" text="Support every time fast">
-                     <padding>
-                        <Insets top="5.0" />
-                     </padding>
-                  </Label>
-                  <VBox alignment="CENTER" layoutX="3.0" prefHeight="248.0" prefWidth="249.0">
-                     <padding>
-                        <Insets top="10.0" />
-                     </padding>
-                     <children>
-                        <ImageView fx:id="image4" fitHeight="140.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
-                           <image>
-                              <Image url="@../../../images/hpcall.png" />
-                           </image>
-                           <VBox.margin>
-                              <Insets bottom="15.0" top="-10.0" />
-                           </VBox.margin>
-                        </ImageView>
-                        <Label fx:id="title4" alignment="CENTER" prefHeight="10.0" prefWidth="126.0" style="-fx-background-color: #F6E8B2;" text="24/7 Support">
-                           <font>
-                              <Font name="Century Gothic Bold" size="19.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets top="20.0" />
-                           </VBox.margin>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
-            </Pane>
+            </HBox>
+            <ImageView fx:id="cartIcon4" fitHeight="40.0" fitWidth="46.0" layoutX="167.0" layoutY="238.0"
+                       onMouseClicked="#clickCart4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/cartgrey.png"/>
+               </image>
+            </ImageView>
          </children>
-      </HBox>
-      <HBox alignment="CENTER" layoutX="3.0" layoutY="1817.0" prefHeight="59.0" prefWidth="1335.0">
-         <children>
-            <Separator prefHeight="0.0" prefWidth="423.0" />
-            <Label text="New Arrival" textFill="#5b715a">
-               <font>
-                  <Font name="Times New Roman Bold" size="52.0" />
-               </font>
-            </Label>
-            <Separator prefHeight="0.0" prefWidth="423.0" />
-         </children>
-      </HBox>
-      <HBox alignment="CENTER" layoutX="17.0" layoutY="2084.0" prefHeight="283.0" prefWidth="1308.0">
-         <children>
-            <Pane fx:id="flowerCard1" onMouseEntered="#flowerCardEnter1" onMouseExited="#flowerCardExit1" prefHeight="282.0" prefWidth="220.0" style="-fx-background-color: #E8D7E7;" styleClass="shadow">
-               <children>
-                  <ImageView fx:id="flower1" fitHeight="144.0" fitWidth="128.0" layoutX="46.0" layoutY="76.0" onMouseEntered="#flowerEnter1" onMouseExited="#flowerExit1" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
-                     <image>
-                        <Image url="@../../../images/lavenderflower.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="heartIcon1" fitHeight="40.0" fitWidth="46.0" layoutX="16.0" layoutY="235.0" onMouseClicked="#clickHeart1" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/grayheart.png" />
-                     </image></ImageView>
-                  <HBox layoutX="16.0" layoutY="17.0" prefHeight="34.0" prefWidth="246.0">
-                     <children>
-                        <Label prefHeight="28.0" prefWidth="118.0" text="Lavender " textFill="#635e5e">
-                           <font>
-                              <Font name="Century Gothic" size="15.0" />
-                           </font>
-                        </Label>
-                        <Label text=" ₱299.00" textFill="#620a91">
-                           <font>
-                              <Font name="Century Gothic Bold" size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <ImageView fx:id="cartIcon1" fitHeight="40.0" fitWidth="46.0" layoutX="159.0" layoutY="235.0" onMouseClicked="#clickCart1" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/cartgrey.png" />
-                     </image>
-                  </ImageView>
-               </children>
-               <HBox.margin>
-                  <Insets right="50.0" />
-               </HBox.margin>
-            </Pane>
-            <Pane fx:id="flowerCard2" onMouseEntered="#flowerCardEnter2" onMouseExited="#flowerCardExit2" prefHeight="283.0" prefWidth="220.0" style="-fx-background-color: #C9DBC2;" styleClass="shadow">
-               <children>
-                  <ImageView fx:id="flower2" fitHeight="192.0" fitWidth="148.0" layoutX="30.0" layoutY="70.0" onMouseEntered="#flowerEnter2" onMouseExited="#flowerExit2" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
-                     <image>
-                        <Image url="@../../../images/greenflowers2.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="heartIcon2" fitHeight="40.0" fitWidth="46.0" layoutX="18.0" layoutY="236.0" onMouseClicked="#clickHeart2" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/grayheart.png" />
-                     </image></ImageView>
-                  <HBox layoutX="18.0" layoutY="20.0" prefHeight="34.0" prefWidth="242.0">
-                     <children>
-                        <Label prefHeight="28.0" prefWidth="109.0" text="Lily" textFill="#635e5e">
-                           <font>
-                              <Font name="Century Gothic" size="15.0" />
-                           </font>
-                        </Label>
-                        <Label text=" ₱439.00" textFill="#2b7946">
-                           <font>
-                              <Font name="Century Gothic Bold" size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <ImageView fx:id="cartIcon2" fitHeight="40.0" fitWidth="46.0" layoutX="158.0" layoutY="236.0" onMouseClicked="#clickCart2" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/cartgrey.png" />
-                     </image>
-                  </ImageView>
-               </children>
-               <HBox.margin>
-                  <Insets right="50.0" />
-               </HBox.margin>
-            </Pane>
-            <Pane fx:id="flowerCard3" onMouseEntered="#flowerCardEnter3" onMouseExited="#flowerCardExit3" prefHeight="278.0" prefWidth="220.0" style="-fx-background-color: #FFD55A;" styleClass="shadow">
-               <children>
-                  <ImageView fx:id="flower3" fitHeight="148.0" fitWidth="171.0" layoutX="55.0" layoutY="83.0" onMouseEntered="#flowerEnter3" onMouseExited="#flowerExit3" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
-                     <image>
-                        <Image url="@../../../images/sunflowers.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="heartIcon3" fitHeight="40.0" fitWidth="46.0" layoutX="14.0" layoutY="241.0" onMouseClicked="#clickHeart3" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/grayheart.png" />
-                     </image></ImageView>
-                  <HBox layoutX="20.0" layoutY="18.0" prefHeight="34.0" prefWidth="218.0">
-                     <children>
-                        <Label prefHeight="28.0" prefWidth="114.0" text="Sunflower" textFill="#635e5e">
-                           <font>
-                              <Font name="Century Gothic" size="15.0" />
-                           </font>
-                        </Label>
-                        <Label text=" ₱359.00" textFill="#734e03">
-                           <font>
-                              <Font name="Century Gothic Bold" size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <ImageView fx:id="cartIcon3" fitHeight="40.0" fitWidth="46.0" layoutX="166.0" layoutY="241.0" onMouseClicked="#clickCart3" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/cartgrey.png" />
-                     </image>
-                  </ImageView>
-               </children>
-               <HBox.margin>
-                  <Insets right="50.0" />
-               </HBox.margin>
-            </Pane>
-            <Pane fx:id="flowerCard4" onMouseEntered="#flowerCardEnter4" onMouseExited="#flowerCardExit4" prefHeight="278.0" prefWidth="220.0" style="-fx-background-color: #FFE0D8;" styleClass="shadow">
-               <children>
-                  <ImageView fx:id="flower4" fitHeight="148.0" fitWidth="148.0" layoutX="39.0" layoutY="84.0" onMouseEntered="#flowerEnter4" onMouseExited="#flowerExit4" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
-                     <image>
-                        <Image url="@../../../images/pinkboquet2.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="heartIcon4" fitHeight="40.0" fitWidth="46.0" layoutX="9.0" layoutY="238.0" onMouseClicked="#clickHeart4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/grayheart.png" />
-                     </image>
-                  </ImageView>
-                  <HBox layoutX="29.0" layoutY="19.0" prefHeight="34.0" prefWidth="207.0">
-                     <children>
-                        <Label prefHeight="28.0" prefWidth="102.0" text="Daisy" textFill="#635e5e">
-                           <font>
-                              <Font name="Century Gothic" size="15.0" />
-                           </font>
-                        </Label>
-                        <Label text=" ₱299.00" textFill="#ae5999">
-                           <font>
-                              <Font name="Century Gothic Bold" size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <ImageView fx:id="cartIcon4" fitHeight="40.0" fitWidth="46.0" layoutX="167.0" layoutY="238.0" onMouseClicked="#clickCart4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/cartgrey.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
-         </children>
-      </HBox>
-      <Text fontSmoothingType="LCD" layoutX="152.0" layoutY="1915.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dive into our online boutique's latest treasure trove of crochet wonders! Experience the thrill of discovery as you explore our freshly unveiled collection, where each piece tells a story of craftsmanship and creativity. Discover the allure of handmade elegance with our new arrivals, waiting to be cherished and adorned in your stylish creations. Embark on a journey of inspiration and delight as you browse our virtual shelves, where every click unveils a world of endless possibilities. Welcome to a realm where innovation meets tradition, and every stitch is a testament to the artistry of crochet. Explore, indulge, and elevate your crafting experience with our captivating new arrivals—exclusively online, just for you. " textAlignment="JUSTIFY" wrappingWidth="1012.53662109375">
-         <font>
-            <Font name="Century Gothic" size="15.0" />
-         </font>
-      </Text>
-      <AnchorPane layoutX="63.0" layoutY="1197.0" prefHeight="416.0" prefWidth="674.0">
-         <children>
-            <AnchorPane fx:id="pane1Set1" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <image>
-                        <Image url="@../../../images/sae2.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="pane2Set1" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/co1.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="pane3Set1" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/sae1.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="pane4Set1" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/co2.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-      <Accordion layoutX="154.0" layoutY="2385.0" prefHeight="51.0" prefWidth="218.0" styleClass="transparent" stylesheets="@All.css" />
-   </children>
+      </Pane>
+   </HBox>
+   <Text fontSmoothingType="LCD" layoutX="147.0" layoutY="1254.0" lineSpacing="5.0" strokeType="OUTSIDE"
+         strokeWidth="0.0"
+         text="Dive into our online boutique's latest treasure trove of crochet wonders! Experience the thrill of discovery as you explore our freshly unveiled collection, where each piece tells a story of craftsmanship and creativity. Discover the allure of handmade elegance with our new arrivals, waiting to be cherished and adorned in your stylish creations. Embark on a journey of inspiration and delight as you browse our virtual shelves, where every click unveils a world of endless possibilities. Welcome to a realm where innovation meets tradition, and every stitch is a testament to the artistry of crochet. Explore, indulge, and elevate your crafting experience with our captivating new arrivals—exclusively online, just for you. "
+         textAlignment="JUSTIFY" wrappingWidth="1012.53662109375">
+      <font>
+         <Font name="Century Gothic" size="15.0"/>
+      </font>
+   </Text>
+   <AnchorPane layoutX="63.0" layoutY="1197.0" prefHeight="416.0" prefWidth="674.0">
+      <children>
+         <AnchorPane fx:id="pane1Set1" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                     AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+      </children>
+   </AnchorPane>
 </AnchorPane>

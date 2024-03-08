@@ -16,6 +16,18 @@ public class HomePageController {
 
 
     @FXML
+    private Label title1;
+
+    @FXML
+    private Label title2;
+
+    @FXML
+    private Label title3;
+
+    @FXML
+    private Label title4;
+
+    @FXML
     private Pane pane1;
 
     @FXML
@@ -34,25 +46,16 @@ public class HomePageController {
     private Label meaning1;
 
     @FXML
-    private Label title1;
-
-    @FXML
     private ImageView image2;
 
     @FXML
     private Label meaning2;
 
     @FXML
-    private Label title2;
-
-    @FXML
     private ImageView image3;
 
     @FXML
     private Label meaning3;
-
-    @FXML
-    private Label title3;
 
     @FXML
     private ImageView image4;
@@ -376,29 +379,31 @@ public class HomePageController {
                 heartIcon.setImage(redHeartImage);
                 isRed1 = true;
             }
-        } else if (heartIcon.equals(heartIcon2)) {
-            if (isRed2) {
-                heartIcon.setImage(grayHeartImage);
-                isRed2 = false;
-            } else {
-                heartIcon.setImage(redHeartImage);
-                isRed2 = true;
-            }
-        } else if (heartIcon.equals(heartIcon3)) {
-            if (isRed3) {
-                heartIcon.setImage(grayHeartImage);
-                isRed3 = false;
-            } else {
-                heartIcon.setImage(redHeartImage);
-                isRed3 = true;
-            }
-        } else if (heartIcon.equals(heartIcon4)) {
-            if (isRed4) {
-                heartIcon.setImage(grayHeartImage);
-                isRed4 = false;
-            } else {
-                heartIcon.setImage(redHeartImage);
-                isRed4 = true;
+        } else {
+            if (heartIcon.equals(heartIcon2)) {
+                if (isRed2) {
+                    heartIcon.setImage(grayHeartImage);
+                    isRed2 = false;
+                } else {
+                    heartIcon.setImage(redHeartImage);
+                    isRed2 = true;
+                }
+            } else if (heartIcon.equals(heartIcon3)) {
+                if (isRed3) {
+                    heartIcon.setImage(grayHeartImage);
+                    isRed3 = false;
+                } else {
+                    heartIcon.setImage(redHeartImage);
+                    isRed3 = true;
+                }
+            } else if (heartIcon.equals(heartIcon4)) {
+                if (isRed4) {
+                    heartIcon.setImage(grayHeartImage);
+                    isRed4 = false;
+                } else {
+                    heartIcon.setImage(redHeartImage);
+                    isRed4 = true;
+                }
             }
         }
     }

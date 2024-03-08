@@ -435,12 +435,12 @@
                               <Font name="Century Gothic" size="17.0" />
                            </font>
                         </Hyperlink>
-                        <Hyperlink prefHeight="34.0" prefWidth="133.0" styleClass="header-words" stylesheets="@All.css" text="Contact Us">
+                        <Hyperlink onMouseClicked="#setShopNowPage" prefHeight="34.0" prefWidth="126.0" styleClass="header-words" stylesheets="@All.css" text="Shop Now">
                            <font>
                               <Font name="Century Gothic" size="17.0" />
                            </font>
                         </Hyperlink>
-                        <Hyperlink onMouseClicked="#setShopNowPage" prefHeight="34.0" prefWidth="126.0" styleClass="header-words" stylesheets="@All.css" text="Shop Now">
+                        <Hyperlink prefHeight="34.0" prefWidth="133.0" styleClass="header-words" stylesheets="@All.css" text="Contact Us">
                            <font>
                               <Font name="Century Gothic" size="17.0" />
                            </font>
