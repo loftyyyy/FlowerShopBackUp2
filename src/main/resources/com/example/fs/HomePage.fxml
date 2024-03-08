@@ -2,9 +2,11 @@
 
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -436,96 +438,204 @@
             </Pane>
          </children>
       </HBox>
-      <Label layoutX="534.0" layoutY="1113.0" text="New Arrival">
-         <font>
-            <Font name="Times New Roman Bold" size="52.0" />
-         </font>
-      </Label>
-      <HBox alignment="CENTER" layoutX="58.0" layoutY="1233.0" prefHeight="278.0" prefWidth="1212.0">
+      <HBox alignment="CENTER" layoutX="3.0" layoutY="1817.0" prefHeight="59.0" prefWidth="1335.0">
          <children>
-            <Pane prefHeight="281.0" prefWidth="260.0" style="-fx-background-color: #E8D7E7;" styleClass="search-button">
+            <Separator prefHeight="0.0" prefWidth="423.0" />
+            <Label text="New Arrival" textFill="#5b715a">
+               <font>
+                  <Font name="Times New Roman Bold" size="52.0" />
+               </font>
+            </Label>
+            <Separator prefHeight="0.0" prefWidth="423.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="17.0" layoutY="2084.0" prefHeight="283.0" prefWidth="1308.0">
+         <children>
+            <Pane fx:id="flowerCard1" onMouseEntered="#flowerCardEnter1" onMouseExited="#flowerCardExit1" prefHeight="282.0" prefWidth="220.0" style="-fx-background-color: #E8D7E7;" styleClass="shadow">
                <children>
-                  <ImageView fitHeight="236.0" fitWidth="209.0" layoutX="18.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" styleClass="search-button">
+                  <ImageView fx:id="flower1" fitHeight="144.0" fitWidth="128.0" layoutX="46.0" layoutY="76.0" onMouseEntered="#flowerEnter1" onMouseExited="#flowerExit1" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
                      <image>
                         <Image url="@../../../images/lavenderflower.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="heartIcon1" fitHeight="40.0" fitWidth="46.0" layoutX="15.0" layoutY="223.0" onMouseClicked="#clickHeart1" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="heartIcon1" fitHeight="40.0" fitWidth="46.0" layoutX="16.0" layoutY="235.0" onMouseClicked="#clickHeart1" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/grayheart.png" />
                      </image></ImageView>
+                  <HBox layoutX="16.0" layoutY="17.0" prefHeight="34.0" prefWidth="246.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="118.0" text="Lavender " textFill="#635e5e">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text=" ₱299.00" textFill="#620a91">
+                           <font>
+                              <Font name="Century Gothic Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ImageView fx:id="cartIcon1" fitHeight="40.0" fitWidth="46.0" layoutX="159.0" layoutY="235.0" onMouseClicked="#clickCart1" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/cartgrey.png" />
+                     </image>
+                  </ImageView>
                </children>
                <HBox.margin>
-                  <Insets right="30.0" />
+                  <Insets right="50.0" />
                </HBox.margin>
             </Pane>
-            <Pane prefHeight="278.0" prefWidth="260.0" style="-fx-background-color: #C9DBC2;" styleClass="search-button">
+            <Pane fx:id="flowerCard2" onMouseEntered="#flowerCardEnter2" onMouseExited="#flowerCardExit2" prefHeight="283.0" prefWidth="220.0" style="-fx-background-color: #C9DBC2;" styleClass="shadow">
                <children>
-                  <ImageView fitHeight="283.0" fitWidth="261.0" layoutX="2.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="flower2" fitHeight="192.0" fitWidth="148.0" layoutX="30.0" layoutY="70.0" onMouseEntered="#flowerEnter2" onMouseExited="#flowerExit2" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
                      <image>
                         <Image url="@../../../images/greenflowers2.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="heartIcon2" fitHeight="40.0" fitWidth="46.0" layoutX="15.0" layoutY="223.0" onMouseClicked="#clickHeart2" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="heartIcon2" fitHeight="40.0" fitWidth="46.0" layoutX="18.0" layoutY="236.0" onMouseClicked="#clickHeart2" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/grayheart.png" />
                      </image></ImageView>
+                  <HBox layoutX="18.0" layoutY="20.0" prefHeight="34.0" prefWidth="242.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="109.0" text="Lily" textFill="#635e5e">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text=" ₱439.00" textFill="#2b7946">
+                           <font>
+                              <Font name="Century Gothic Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ImageView fx:id="cartIcon2" fitHeight="40.0" fitWidth="46.0" layoutX="158.0" layoutY="236.0" onMouseClicked="#clickCart2" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/cartgrey.png" />
+                     </image>
+                  </ImageView>
                </children>
                <HBox.margin>
-                  <Insets right="30.0" />
+                  <Insets right="50.0" />
                </HBox.margin>
             </Pane>
-            <Pane prefHeight="278.0" prefWidth="260.0" style="-fx-background-color: #FFD55A;" styleClass="search-button">
+            <Pane fx:id="flowerCard3" onMouseEntered="#flowerCardEnter3" onMouseExited="#flowerCardExit3" prefHeight="278.0" prefWidth="220.0" style="-fx-background-color: #FFD55A;" styleClass="shadow">
                <children>
-                  <ImageView fitHeight="265.0" fitWidth="278.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="flower3" fitHeight="148.0" fitWidth="171.0" layoutX="55.0" layoutY="83.0" onMouseEntered="#flowerEnter3" onMouseExited="#flowerExit3" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
                      <image>
                         <Image url="@../../../images/sunflowers.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="heartIcon3" fitHeight="40.0" fitWidth="46.0" layoutX="17.0" layoutY="224.0" onMouseClicked="#clickHeart3" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="heartIcon3" fitHeight="40.0" fitWidth="46.0" layoutX="14.0" layoutY="241.0" onMouseClicked="#clickHeart3" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/grayheart.png" />
                      </image></ImageView>
+                  <HBox layoutX="20.0" layoutY="18.0" prefHeight="34.0" prefWidth="218.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="114.0" text="Sunflower" textFill="#635e5e">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text=" ₱359.00" textFill="#734e03">
+                           <font>
+                              <Font name="Century Gothic Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ImageView fx:id="cartIcon3" fitHeight="40.0" fitWidth="46.0" layoutX="166.0" layoutY="241.0" onMouseClicked="#clickCart3" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/cartgrey.png" />
+                     </image>
+                  </ImageView>
                </children>
                <HBox.margin>
-                  <Insets right="30.0" />
+                  <Insets right="50.0" />
                </HBox.margin>
             </Pane>
-            <Pane prefHeight="278.0" prefWidth="260.0" style="-fx-background-color: #FFE0D8;" styleClass="search-button">
+            <Pane fx:id="flowerCard4" onMouseEntered="#flowerCardEnter4" onMouseExited="#flowerCardExit4" prefHeight="278.0" prefWidth="220.0" style="-fx-background-color: #FFE0D8;" styleClass="shadow">
                <children>
-                  <ImageView fitHeight="240.0" fitWidth="252.0" layoutX="2.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="flower4" fitHeight="148.0" fitWidth="148.0" layoutX="39.0" layoutY="84.0" onMouseEntered="#flowerEnter4" onMouseExited="#flowerExit4" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
                      <image>
                         <Image url="@../../../images/pinkboquet2.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="heartIcon4" fitHeight="40.0" fitWidth="46.0" layoutX="15.0" layoutY="223.0" onMouseClicked="#clickHeart4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="heartIcon4" fitHeight="40.0" fitWidth="46.0" layoutX="9.0" layoutY="238.0" onMouseClicked="#clickHeart4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/grayheart.png" />
+                     </image>
+                  </ImageView>
+                  <HBox layoutX="29.0" layoutY="19.0" prefHeight="34.0" prefWidth="207.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="102.0" text="Daisy" textFill="#635e5e">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text=" ₱299.00" textFill="#ae5999">
+                           <font>
+                              <Font name="Century Gothic Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ImageView fx:id="cartIcon4" fitHeight="40.0" fitWidth="46.0" layoutX="167.0" layoutY="238.0" onMouseClicked="#clickCart4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/cartgrey.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
          </children>
       </HBox>
-      <Label layoutX="165.0" layoutY="1192.0" text="Lavender " textFill="#635e5e">
+      <Text fontSmoothingType="LCD" layoutX="152.0" layoutY="1915.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dive into our online boutique's latest treasure trove of crochet wonders! Experience the thrill of discovery as you explore our freshly unveiled collection, where each piece tells a story of craftsmanship and creativity. Discover the allure of handmade elegance with our new arrivals, waiting to be cherished and adorned in your stylish creations. Embark on a journey of inspiration and delight as you browse our virtual shelves, where every click unveils a world of endless possibilities. Welcome to a realm where innovation meets tradition, and every stitch is a testament to the artistry of crochet. Explore, indulge, and elevate your crafting experience with our captivating new arrivals—exclusively online, just for you. " textAlignment="JUSTIFY" wrappingWidth="1012.53662109375">
          <font>
-            <Font name="Century Gothic" size="26.0" />
+            <Font name="Century Gothic" size="15.0" />
          </font>
-      </Label>
-      <Label layoutX="485.0" layoutY="1191.0" text="Green" textFill="#635e5e">
-         <font>
-            <Font name="Century Gothic" size="26.0" />
-         </font>
-      </Label>
-      <Label layoutX="756.0" layoutY="1194.0" text="Sunflower" textFill="#635e5e">
-         <font>
-            <Font name="Century Gothic" size="26.0" />
-         </font>
-      </Label>
-      <Label layoutX="1036.0" layoutY="1193.0" text="PinkShit" textFill="#635e5e">
-         <font>
-            <Font name="Century Gothic" size="26.0" />
-         </font>
-      </Label>
+      </Text>
+      <AnchorPane layoutX="63.0" layoutY="1197.0" prefHeight="416.0" prefWidth="674.0">
+         <children>
+            <AnchorPane fx:id="pane1Set1" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../../../images/sae2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane2Set1" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/co1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane3Set1" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/sae1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane4Set1" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="419.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/co2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Accordion layoutX="154.0" layoutY="2385.0" prefHeight="51.0" prefWidth="218.0" styleClass="transparent" stylesheets="@All.css" />
    </children>
 </AnchorPane>
