@@ -98,6 +98,10 @@ public class HomePageController {
         handlePaneMouseExited(mouseEvent, pane4);
     }
 
+    MarketController marketController;
+    public void setMarketController(MarketController marketController){
+        this.marketController = marketController;
+    }
 
     private void handlePaneMouseEntered(MouseEvent event, Pane pane) {
         ImageView image = getImageForPane(pane);

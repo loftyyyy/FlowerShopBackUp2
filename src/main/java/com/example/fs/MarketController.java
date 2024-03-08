@@ -129,7 +129,7 @@ public class MarketController implements Initializable {
         replaceMarketContent(getClass().getResource("HomePage.fxml"), HomePageController.class);
     }
     public void setAboutUsPage(){
-        //replaceMarketContent();
+        replaceMarketContent(getClass().getResource("AboutUsPage.fxml"), AboutUsController.class);
 
     }
     public void setContactUsPage(){
