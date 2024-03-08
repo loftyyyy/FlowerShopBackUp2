@@ -80,7 +80,7 @@ public class HomePageController {
     }
 
     public void goToShopNowPage() throws IOException {
-        marketController.shopNowPage();
+        marketController.setShopNowPage();
     }
 
 
