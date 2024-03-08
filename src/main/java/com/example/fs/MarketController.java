@@ -1,6 +1,9 @@
 package com.example.fs;
 
 
+import javafx.animation.FadeTransition;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,15 +16,22 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import model.Checkout;
 import model.Flower;
+import model.Products;
 import javafx.application.Platform;
-
+import javafx.util.Duration;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.sql.*;
 import java.util.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class MarketController implements Initializable {
     @FXML
@@ -43,13 +53,19 @@ public class MarketController implements Initializable {
     private ScrollPane scroll;
 
     @FXML
+    private AnchorPane rootPane;
+
+    @FXML
     private Button addToCart;
 
     @FXML
-    private Label itemCount;
+    private Button searchBTN;
 
     @FXML
-    private Button searchBTN;
+    private Pane headerPane;
+
+    @FXML
+    private AnchorPane marketAnchorPane;
 
     @FXML
     private TextField searchField;
@@ -59,7 +75,15 @@ public class MarketController implements Initializable {
 
     @FXML
     private ScrollPane mainScrollPane;
-    @FXML private HBox hBoxFlowers;
+    @FXML
+    private HBox hBoxFlowers;
+
+    @FXML
+    private HBox hboxCount;
+
+    @FXML
+    private AnchorPane centerAnchorPane;
+
     private MarketListener marketListener;
     private Image image;
 
@@ -67,7 +91,6 @@ public class MarketController implements Initializable {
     private Scene scene;
     private List<Flower> flowers = new ArrayList<>();
 
-    private int itemCounter = 0;
 
 
     String url = "jdbc:postgresql://localhost:5435/postgres";
@@ -85,35 +108,51 @@ public class MarketController implements Initializable {
     Timer timer = new Timer();
     Runnable embedFlowersTask = () -> {
         String searchName = searchField.getText().toLowerCase();
-        embedFlowers(searchName);
+        embedMatchingFlowers(searchName);
     };
-    public void setMarketController(MarketController marketController) {
-        this.marketController = marketController;
-//        this.mainPageController.hidePopups();
-//        aboutUsPage__gojoImage.setOpacity(0);
-//        aboutUsPage__founderBigTitle1.setOpacity(0);
-//        aboutUsPage__founderBigTitle2.setOpacity(0);
-//        aboutUsPage__iconicContainer.setOpacity(0);
+
+    public MarketController getMarketController(){
+        return marketController;
     }
+
+//    public void setMarketController(MarketController marketController) {
+//        this.marketController = marketController;
+////        this.mainPageController.hidePopups();
+////        aboutUsPage__gojoImage.setOpacity(0);
+////        aboutUsPage__founderBigTitle1.setOpacity(0);
+////        aboutUsPage__founderBigTitle2.setOpacity(0);
+////        aboutUsPage__iconicContainer.setOpacity(0);
+//    }
 
     public void setHomePage(){
 
-        replaceMarketContent(getClass().getResource("AboutUsPage.fxml"), AboutUsController.class);
+        replaceMarketContent(getClass().getResource("HomePage.fxml"), HomePageController.class);
     }
     public void setAboutUsPage(){
         //replaceMarketContent();
 
     }
-    public void contactUsPage(){
+    public void setContactUsPage(){
         //replaceMarketContent();
 
     }
-    public void shopNowPage(){
-        replaceMarketContent(getClass().getResource("ShopNowPage.fxml"), MarketController.class);
+    public void setShopNowPage() throws IOException {
+        returnMarketContent(getClass().getResource("ShopNowPage.fxml"));
+
+//        replaceMarketContent(getClass().getResource("ShopNowPage.fxml"), MarketController.class);
+
 
     }
     public void checkoutPage(){
         replaceMarketContent(getClass().getResource("PlaceOrder.fxml"),PlaceOrderController.class);
+    }
+
+    //TODO: Make the HomePage be the one to show first.
+    public void returnMarketContent(URL fxmlResource) throws IOException {
+        FXMLLoader loader = new FXMLLoader(fxmlResource);
+        AnchorPane returnOriginalContent = loader.load();
+        mainScrollPane.setContent(returnOriginalContent);
+
     }
 
     public void replaceMarketContent(URL fxmlResource, Class<?> controllerClass) {
@@ -214,10 +253,6 @@ public class MarketController implements Initializable {
     }
     public void checkOutBtn() throws IOException, SQLException {
 
-        itemCounter += 1;
-
-        itemCount.setText(String.valueOf(itemCounter))  ;
-
         String name = flowerNameLabel.getText();
         String imagePath = getImageURL(name);
         int quantity = comboBox.getValue();
@@ -248,143 +283,143 @@ public class MarketController implements Initializable {
              PreparedStatement pst = db.prepareStatement(insertQuery);) {
 
             pst.setString(1,"Anthurium");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,500.0);
             pst.setString(2,"/images/anthurium.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"B35759");
             pst.setInt(5,1);
             pst.executeUpdate();
 
             pst.setString(1,"Carnation");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,600.0);
             pst.setString(2,"/images/carnation.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"A18DAB");
             pst.setInt(5,2);
             pst.executeUpdate();
 
             pst.setString(1,"Chamomile");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,300.0);
             pst.setString(2,"/images/chamomile.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"BEB4BC");
             pst.setInt(5,3);
             pst.executeUpdate();
 
             pst.setString(1,"Crocus");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,1200.0);
             pst.setString(2,"/images/crocus.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"724A6C");
             pst.setInt(5,4);
             pst.executeUpdate();
 
             pst.setString(1,"Dahlia");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,1200.0);
             pst.setString(2,"/images/dahlia.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"B2AB6B");
             pst.setInt(5,5);
             pst.executeUpdate();
 
             pst.setString(1,"Eternal");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,600.0);
             pst.setString(2,"/images/eternal.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"F19FB9");
             pst.setInt(5,6);
             pst.executeUpdate();
 
             pst.setString(1,"Gerbera");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,700.0);
             pst.setString(2,"/images/gerbera.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"BC664F");
             pst.setInt(5,7);
             pst.executeUpdate();
 
             pst.setString(1,"Hydrangea");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,400.0);
             pst.setString(2,"/images/hydrangea.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"9D6D8A");
             pst.setInt(5,8);
             pst.executeUpdate();
 
             pst.setString(1,"Lavender");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,650.0);
             pst.setString(2,"/images/lavender.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"9B4777");
             pst.setInt(5,9);
             pst.executeUpdate();
 
             pst.setString(1,"Lily");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,400.0);
             pst.setString(2,"/images/lily.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"BD747D");
             pst.setInt(5,10);
             pst.executeUpdate();
 
             pst.setString(1,"Memory Bloom");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,600.0);
             pst.setString(2,"/images/memorybloom.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"3E4B7C");
             pst.setInt(5,11);
             pst.executeUpdate();
 
             pst.setString(1,"Orchid");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,400.0);
             pst.setString(2,"/images/orchid.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"AF7233");
             pst.setInt(5,12);
             pst.executeUpdate();
 
             pst.setString(1,"Peony");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,400.0);
             pst.setString(2,"/images/peony.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"8A7A60");
             pst.setInt(5,13);
             pst.executeUpdate();
 
             pst.setString(1,"Tulips");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,900.0);
             pst.setString(2,"/images/pinktulips.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"A76255");
             pst.setInt(5,14);
             pst.executeUpdate();
 
             pst.setString(1,"Rose");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,1000.0);
             pst.setString(2,"/images/rosecrochet.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"C8A2A7");
             pst.setInt(5,15);
             pst.executeUpdate();
 
             pst.setString(1,"Sundrop");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,1000.0);
             pst.setString(2,"/images/sundrop.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"FFC2D1");
             pst.setInt(5,16);
             pst.executeUpdate();
 
             pst.setString(1,"Sunflower");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,1200.0);
             pst.setString(2,"/images/sunflower.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"CCC0A8");
             pst.setInt(5,17);
             pst.executeUpdate();
 
             pst.setString(1,"Furand");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,1000.0);
             pst.setString(2,"/images/furand.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"845539");
             pst.setInt(5,18);
             pst.executeUpdate();
 
             pst.setString(1,"Strawberry");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,500.0);
             pst.setString(2,"/images/strawberry.png");
-            pst.setString(4,"FFCAD4");
+            pst.setString(4,"92353D");
             pst.setInt(5,19);
             pst.executeUpdate();
 
             pst.setString(1,"Dandelion");
-            pst.setDouble(3,20.99);
+            pst.setDouble(3,300.0);
             pst.setString(2,"/images/dandelion.png");
-            pst.setString(4,"FFCAD4");
-            pst.setInt(5,19);
+            pst.setString(4,"978E89");
+            pst.setInt(5,20);
             pst.executeUpdate();
 
             System.out.println("SuccessjA");
@@ -520,7 +555,7 @@ public class MarketController implements Initializable {
         comboBox.setValue(1);
     }
 
-    public void embedFlowers(String searchName){
+    public void embedMatchingFlowers(String searchName){
         ArrayList<Flower> matchingFlowers = new ArrayList<>();
 
         int column = 0;
@@ -529,6 +564,7 @@ public class MarketController implements Initializable {
         grid.getChildren().clear();
 
         try {
+
             for (Flower flower : flowers) {
                 if (flower.getName().toLowerCase().contains(searchName.toLowerCase())) {
                     //System.out.println(flower);
@@ -566,9 +602,45 @@ public class MarketController implements Initializable {
         }
 
     }
+    public void embedFlowers() throws IOException {
+
+        int column = 0;
+        int row = 1;
+
+        int count = 0;
+        for (Flower flower : flowers) {
+            count+=1;
+
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("itemv2.fxml"));
+            AnchorPane pane = fxmlLoader.load();
+
+            ItemController itemController = fxmlLoader.getController();
+            itemController.setData(flower, marketListener);
+
+            if (column == 3) {
+                column = 0;
+                row++;
+            }
+            grid.add(pane, column++, row);
+            //set grid width
+            grid.setMinWidth(Region.USE_COMPUTED_SIZE);
+            grid.setPrefWidth(Region.USE_COMPUTED_SIZE);
+            grid.setMaxWidth(Region.USE_PREF_SIZE);
+
+            //set grid height
+            grid.setMinHeight(Region.USE_COMPUTED_SIZE);
+            grid.setPrefHeight(Region.USE_COMPUTED_SIZE);
+            grid.setMaxHeight(Region.USE_PREF_SIZE);
+            GridPane.setMargin(pane, new Insets(10));
+
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //itemCount = new Label();
+        //headerPane.getChildren().add(itemCount);kk
         System.out.println("Hi");
         //addFlowers();
         flowers.addAll(getFlowers());
@@ -582,7 +654,11 @@ public class MarketController implements Initializable {
             };
         }
         if(grid.getChildren().isEmpty()){
-            embedFlowers(" ");
+            try {
+                embedFlowers();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
         Integer[] quantity = {1,2,3,4,5,6,7,8,9,10};
         comboBox.getItems().addAll(quantity);
