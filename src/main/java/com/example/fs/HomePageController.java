@@ -79,6 +79,10 @@ public class HomePageController {
 //        aboutUsPage__iconicContainer.setOpacity(0);
     }
 
+    public void goToShopNowPage() throws IOException {
+        marketController.shopNowPage();
+    }
+
 
     @FXML
     void backSet1(ActionEvent event) {

@@ -18,7 +18,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="4257.0" prefWidth="1336.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.HomePageController">
+<AnchorPane fx:id="centerAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="4257.0" prefWidth="1336.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.HomePageController">
    <children>
       <Pane layoutX="3.0" layoutY="5.0" prefHeight="315.0" prefWidth="1327.0" style="-fx-background-color: #90ADC5;">
          <children>
@@ -45,7 +45,7 @@
                         <Image url="@../../../images/23.png" />
                      </image>
                   </ImageView>
-                  <Button mnemonicParsing="false" prefHeight="19.0" prefWidth="250.0" style="-fx-background-color: #FAD02C; -fx-text-fill: #FFFFFF;" stylesheets="@All.css" text="Shop Now">
+                  <Button mnemonicParsing="false" onAction="#goToShopNowPage" prefHeight="19.0" prefWidth="250.0" style="-fx-background-color: #FAD02C; -fx-text-fill: #FFFFFF;" stylesheets="@All.css" text="Shop Now">
                      <font>
                         <Font name="Century Gothic Bold" size="18.0" />
                      </font>

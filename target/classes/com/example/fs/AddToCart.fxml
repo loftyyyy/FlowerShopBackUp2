@@ -21,11 +21,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="739.0" prefWidth="1316.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.MarketController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1316.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.MarketController">
    <children>
-      <ScrollPane fx:id="mainScrollPane" layoutX="-3.0" layoutY="103.0" prefHeight="638.0" prefWidth="1336.0" styleClass="transparent" stylesheets="@All.css">
+      <ScrollPane fx:id="mainScrollPane" layoutX="-3.0" layoutY="103.0" prefHeight="900.0" prefWidth="1336.0" styleClass="transparent" stylesheets="@All.css">
          <content>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1448.0" prefWidth="1317.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css">
+            <AnchorPane fx:id="centerAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1448.0" prefWidth="1317.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css">
                <children>
                   <Pane layoutX="3.0" layoutY="5.0" prefHeight="308.0" prefWidth="1298.0" style="-fx-background-color: #90ADC5;">
                      <children>
@@ -39,6 +39,7 @@
                               <Image url="@../../../images/purchase.png" />
                            </image>
                         </ImageView>
+                        <AnchorPane layoutX="1098.0" layoutY="-23.0" prefHeight="200.0" prefWidth="200.0" />
                      </children>
                   </Pane>
                   <AnchorPane layoutX="-6.0" layoutY="1143.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="1350.0" style="-fx-background-color: #45595B;" stylesheets="@All.css">
@@ -299,7 +300,7 @@
                                     <Insets left="30.0" right="30.0" />
                                  </VBox.margin>
                                  <children>
-                                    <TextField fx:id="searchField" onKeyPressed="#getSearch" prefHeight="40.0" prefWidth="235.0" promptText="Type here to search" styleClass="transparent" stylesheets="@market.css">
+                                    <TextField fx:id="searchField" onKeyReleased="#getSearch" prefHeight="40.0" prefWidth="235.0" promptText="Type here to search" styleClass="transparent" stylesheets="@market.css">
                                        <HBox.margin>
                                           <Insets left="20.0" />
                                        </HBox.margin>
@@ -445,7 +446,6 @@
                            </font>
                         </Hyperlink>
                         <Pane prefHeight="86.0" prefWidth="268.0" />
-                        <Label fx:id="itemCount" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="35.0" text="0" />
                         <ImageView fitHeight="44.0" fitWidth="28.0" onMouseClicked="#checkoutPage" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/cartblu.png" />

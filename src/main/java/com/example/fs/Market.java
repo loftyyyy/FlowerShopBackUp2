@@ -11,12 +11,15 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Market extends Application {
+
     @Override
     public void start(Stage stage) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("AddToCart.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("AddToCart.fxml"));
+        Parent root = loader.load();
         stage.setTitle("Flower Market");
         stage.setScene(new Scene(root));
+        stage.setResizable(false);
         stage.show();
     }
 
