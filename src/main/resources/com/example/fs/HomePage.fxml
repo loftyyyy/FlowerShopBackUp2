@@ -466,7 +466,7 @@
             </ImageView>
             <HBox layoutX="20.0" layoutY="18.0" prefHeight="34.0" prefWidth="218.0">
                <children>
-                  <Label prefHeight="28.0" prefWidth="114.0" text="Sunflower" textFill="#635e5e">
+                  <Label prefHeight="28.0" prefWidth="108.0" text="Sunflower" textFill="#635e5e">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
                      </font>
@@ -502,7 +502,7 @@
             </ImageView>
             <HBox layoutX="29.0" layoutY="19.0" prefHeight="34.0" prefWidth="207.0">
                <children>
-                  <Label prefHeight="28.0" prefWidth="102.0" text="Daisy" textFill="#635e5e">
+                  <Label prefHeight="28.0" prefWidth="96.0" text="Daisy" textFill="#635e5e">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
                      </font>

@@ -12,6 +12,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -20,7 +21,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1673.0" prefWidth="1317.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.PlaceOrderController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3886.0" prefWidth="1317.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.PlaceOrderController">
+   <ImageView fitHeight="1059.0" fitWidth="826.0" layoutX="316.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../images/postofficeborder.png" />
+      </image>
+   </ImageView>
    <Pane prefHeight="311.0" prefWidth="1317.0" style="-fx-background-color: #90ADC5;">
       <ImageView fitHeight="310.0" fitWidth="1317.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@../../../images/head1.png" />
@@ -29,7 +35,7 @@
          <Image url="@../../../images/purchase.png" />
       </ImageView>
    </Pane>
-   <AnchorPane layoutX="-6.0" layoutY="1369.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="1326.0" style="-fx-background-color: #45595B;" stylesheets="@All.css">
+   <AnchorPane layoutX="-15.0" layoutY="3392.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="1326.0" style="-fx-background-color: #45595B;" stylesheets="@All.css">
       <TextField layoutX="410.0" layoutY="39.0" prefHeight="37.0" prefWidth="336.0" styleClass="search-box" />
       <Button layoutX="703.0" layoutY="37.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="128.0" styleClass="add-btn" stylesheets="@market.css" text="Subscribe Now!" />
       <HBox alignment="TOP_CENTER" layoutX="-2.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="192.0" prefWidth="1367.0">
@@ -215,9 +221,9 @@
             </Text>
             <ImageView fitHeight="21.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
                <VBox.margin>
-                  <Insets top="10.0"/>
+                  <Insets top="10.0" />
                </VBox.margin>
-               <Image url="@../../../images/iconpayment.png"/>
+               <Image url="@../../../images/iconpayment.png" />
             </ImageView>
          </VBox>
          <Pane prefHeight="190.0" prefWidth="74.0" />
@@ -239,8 +245,8 @@
       </ImageView>
       <Text fill="#ffbf3f" layoutX="197.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="___________________________________________________________________________________________________________________________________________________________________________________________" wrappingWidth="959.5469665527344" />
    </AnchorPane>
-   <VBox layoutX="55.0" layoutY="398.0" prefHeight="847.0" prefWidth="476.0">
-      <Label text="Customer's Information:">
+   <VBox layoutX="429.0" layoutY="442.0" prefHeight="910.0" prefWidth="471.0">
+      <Label alignment="CENTER" prefHeight="32.0" prefWidth="475.0" text="Customer's Information:">
          <font>
             <Font name="Century Gothic Bold" size="25.0" />
          </font>
@@ -248,7 +254,7 @@
             <Insets bottom="10.0" />
          </VBox.margin>
       </Label>
-      <VBox prefHeight="482.0" prefWidth="478.0">
+      <VBox prefHeight="618.0" prefWidth="561.0">
          <HBox prefHeight="25.0" prefWidth="478.0">
             <padding>
                <Insets bottom="5.0" />
@@ -270,8 +276,8 @@
                </padding>
             </Label>
          </HBox>
-         <HBox prefHeight="43.0" prefWidth="478.0">
-            <TextField prefHeight="36.0" prefWidth="226.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+         <HBox prefHeight="78.0" prefWidth="471.0">
+            <TextField prefHeight="70.0" prefWidth="226.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
                <styleClass>
                   <String fx:value="search-button" />
                   <String fx:value="search-box" />
@@ -282,7 +288,7 @@
                   <Insets bottom="5.0" />
                </HBox.margin>
             </TextField>
-            <TextField prefHeight="46.0" prefWidth="230.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+            <TextField prefHeight="54.0" prefWidth="230.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
                <HBox.margin>
                   <Insets bottom="5.0" left="19.0" />
                </HBox.margin>
@@ -294,6 +300,52 @@
                </styleClass>
             </TextField>
          </HBox>
+         <Label text="Contact Number:">
+            <font>
+               <Font name="Century Gothic" size="16.0" />
+            </font>
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+            <padding>
+               <Insets left="5.0" />
+            </padding>
+         </Label>
+         <TextField prefHeight="70.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+            <VBox.margin>
+               <Insets bottom="20.0" />
+            </VBox.margin>
+            <styleClass>
+               <String fx:value="search-button" />
+               <String fx:value="search-box" />
+               <String fx:value="transparent" />
+               <String fx:value="shadow" />
+            </styleClass>
+         </TextField>
+         <Label text="Email:">
+            <font>
+               <Font name="Century Gothic" size="16.0" />
+            </font>
+            <padding>
+               <Insets left="5.0" />
+            </padding>
+         </Label>
+         <TextField prefHeight="70.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+            <styleClass>
+               <String fx:value="search-button" />
+               <String fx:value="search-box" />
+               <String fx:value="transparent" />
+               <String fx:value="shadow" />
+            </styleClass>
+         </TextField>
+         <Label alignment="CENTER" prefHeight="32.0" prefWidth="475.0" text="Delivery Information:">
+            <font>
+               <Font name="Century Gothic Bold" size="25.0" />
+            </font>
+            <VBox.margin>
+               <Insets top="30.0" />
+            </VBox.margin>
+         </Label>
          <Label text="Town/City:">
             <font>
                <Font name="Century Gothic" size="16.0" />
@@ -305,7 +357,7 @@
                <Insets left="5.0" />
             </padding>
          </Label>
-         <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+         <TextField prefHeight="70.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
             <VBox.margin>
                <Insets bottom="20.0" />
             </VBox.margin>
@@ -327,7 +379,7 @@
                <Insets left="5.0" />
             </padding>
          </Label>
-         <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+         <TextField prefHeight="70.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
             <VBox.margin>
                <Insets bottom="20.0" />
             </VBox.margin>
@@ -349,29 +401,7 @@
                <Insets left="5.0" />
             </padding>
          </Label>
-         <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
-            <VBox.margin>
-               <Insets bottom="20.0" />
-            </VBox.margin>
-            <styleClass>
-               <String fx:value="search-button" />
-               <String fx:value="search-box" />
-               <String fx:value="transparent" />
-               <String fx:value="shadow" />
-            </styleClass>
-         </TextField>
-         <Label text="Contact Number:">
-            <font>
-               <Font name="Century Gothic" size="16.0" />
-            </font>
-            <VBox.margin>
-               <Insets top="10.0" />
-            </VBox.margin>
-            <padding>
-               <Insets left="5.0" />
-            </padding>
-         </Label>
-         <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+         <TextField prefHeight="70.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
             <VBox.margin>
                <Insets bottom="20.0" />
             </VBox.margin>
@@ -393,7 +423,7 @@
                <Insets left="5.0" />
             </padding>
          </Label>
-         <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+         <TextField prefHeight="70.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
             <VBox.margin>
                <Insets bottom="20.0" />
             </VBox.margin>
@@ -413,21 +443,54 @@
             <Insets left="5.0" />
          </padding>
       </Label>
-      <TextArea prefHeight="295.0" prefWidth="479.0" styleClass="message-box" stylesheets="@All.css" />
+      <TextArea prefHeight="178.0" prefWidth="471.0" styleClass="message-box" stylesheets="@All.css" />
    </VBox>
-   <VBox layoutX="608.0" layoutY="422.0" prefHeight="439.0" prefWidth="692.0">
+   <VBox layoutX="301.0" layoutY="1587.0" prefHeight="439.0" prefWidth="692.0">
       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="655.0">
-         <ScrollPane prefHeight="439.0" prefWidth="684.0">
-            <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-            </GridPane>
+         <ScrollPane layoutX="21.0" layoutY="-50.0" prefHeight="439.0" prefWidth="684.0">
+            <content>
+               <GridPane alignment="CENTER" prefHeight="202.0" prefWidth="682.0">
+                 <columnConstraints>
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.8666534423828" minWidth="10.0" prefWidth="111.19999084472659" />
+                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="431.2000518798828" minWidth="10.0" prefWidth="287.1332641601563" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.33337402343756" minWidth="10.0" prefWidth="158.86673583984373" />
+                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.86663818359375" minWidth="10.0" prefWidth="132.33331298828125" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                  <children>
+                     <ImageView fitHeight="198.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                        <image>
+                           <Image url="@../../../images/sunflowers.png" />
+                        </image>
+                        <GridPane.margin>
+                           <Insets left="50.0" />
+                        </GridPane.margin>
+                     </ImageView>
+                     <Label alignment="CENTER" prefHeight="18.0" prefWidth="109.0" text="2x">
+                        <font>
+                           <Font name="Century Gothic" size="20.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="CENTER" prefHeight="26.0" prefWidth="161.0" text=" ₱359.00" GridPane.columnIndex="2">
+                        <font>
+                           <Font name="Century Gothic" size="20.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="CENTER" prefHeight="26.0" prefWidth="161.0" text=" ₱718.00" GridPane.columnIndex="3">
+                        <font>
+                           <Font name="Century Gothic" size="20.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </GridPane>
+            </content>
          </ScrollPane>
       </AnchorPane>
    </VBox>
-   <AnchorPane layoutX="717.0" layoutY="887.0" prefHeight="455.0" prefWidth="542.0">
-      <VBox layoutY="158.0" prefHeight="202.0" prefWidth="517.0">
+   <AnchorPane layoutX="321.0" layoutY="1999.0" prefHeight="538.0" prefWidth="682.0">
+      <VBox layoutY="192.0" prefHeight="202.0" prefWidth="517.0">
          <Label prefHeight="34.0" prefWidth="158.0" text="Order Summary:">
             <font>
                <Font name="Century Gothic Bold" size="20.0" />
@@ -485,7 +548,7 @@
             </Label>
             <Pane prefHeight="32.0" prefWidth="25.0" />
             <ImageView fitHeight="22.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-               <Image url="@../../../images/iconfree-shipping.png"/>
+               <Image url="@../../../images/iconfree-shipping.png" />
             </ImageView>
             <Pane prefHeight="28.0" prefWidth="281.0" />
             <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="- ₱125.00" wrappingWidth="114.95276015996933">
@@ -518,51 +581,64 @@
             </Label>
          </HBox>
       </VBox>
-      <Label layoutX="2.0" layoutY="-9.0" text="Payment Method:">
+      <Label layoutX="2.0" layoutY="25.0" text="Payment Method:">
          <font>
-            <Font name="Century Gothic Bold" size="20.0" />
+            <Font name="Century Gothic Bold" size="30.0" />
          </font>
       </Label>
-      <CheckBox layoutX="469.0" layoutY="103.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="30.0" stylesheets="@All.css" />
-      <Text fill="#ffbf3f" layoutY="135.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #acacac;" text="____________________________________________________________________________________________________" wrappingWidth="548.8802795410156" />
-      <Label layoutX="407.0" layoutY="371.0" prefHeight="18.0" prefWidth="125.0" style="-fx-text-fill: #d13939;" text="you saved (₱45.00)" textFill="#d13939">
+      <CheckBox layoutX="469.0" layoutY="137.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="30.0" stylesheets="@All.css" />
+      <Text fill="#ffbf3f" layoutY="169.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #acacac;" text="____________________________________________________________________________________________________" wrappingWidth="548.8802795410156" />
+      <Label layoutX="407.0" layoutY="405.0" prefHeight="18.0" prefWidth="125.0" style="-fx-text-fill: #d13939;" text="you saved (₱45.00)" textFill="#d13939">
          <font>
             <Font size="11.0" />
          </font>
       </Label>
-      <CheckBox layoutX="468.0" layoutY="31.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="54.0" stylesheets="@All.css" />
-      <CheckBox layoutX="469.0" layoutY="64.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="34.0" stylesheets="@All.css" />
-      <Label layoutX="37.0" layoutY="36.0" text="Cash on Delivery">
+      <CheckBox layoutX="468.0" layoutY="65.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="54.0" stylesheets="@All.css" />
+      <CheckBox layoutX="469.0" layoutY="98.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="34.0" stylesheets="@All.css" />
+      <Label layoutX="37.0" layoutY="70.0" text="Cash on Delivery">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="37.0" layoutY="69.0" text="Gcash">
+      <Label layoutX="37.0" layoutY="103.0" text="Gcash">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="36.0" layoutY="108.0" text="Paypal">
+      <Label layoutX="36.0" layoutY="142.0" text="Paypal">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Label>
-      <Text fill="#ffbf3f" layoutY="16.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #acacac;" text="____________________________________________________________________________________________________" wrappingWidth="548.8802795410156" />
-      <ImageView fitHeight="14.0" fitWidth="83.0" layoutX="6.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../../images/iconcod.png"/>
+      <Text fill="#ffbf3f" layoutX="3.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #acacac;" text="____________________________________________________________________________________________________" wrappingWidth="619.5">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <ImageView fitHeight="14.0" fitWidth="83.0" layoutX="6.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/iconcod.png" />
       </ImageView>
-      <ImageView fitHeight="14.0" fitWidth="83.0" layoutX="12.0" layoutY="71.0" pickOnBounds="true"
-                 preserveRatio="true">
-         <Image url="@../../../images/icongcash.png"/>
+      <ImageView fitHeight="14.0" fitWidth="83.0" layoutX="12.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/icongcash.png" />
       </ImageView>
-      <ImageView fitHeight="14.0" fitWidth="83.0" layoutX="12.0" layoutY="111.0" pickOnBounds="true"
-                 preserveRatio="true">
-         <Image url="@../../../images/iconpaypal.png"/>
+      <ImageView fitHeight="14.0" fitWidth="83.0" layoutX="12.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/iconpaypal.png" />
       </ImageView>
-      <Button fx:id="PlaceOrderButton" layoutX="146.0" layoutY="407.0" mnemonicParsing="false" onMouseClicked="#placeOrderClick" prefHeight="36.0" prefWidth="228.0" styleClass="add-btn" stylesheets="@market.css" text="Place Order" />
+      <Button fx:id="PlaceOrderButton" layoutX="146.0" layoutY="441.0" mnemonicParsing="false" onMouseClicked="#placeOrderClick" prefHeight="36.0" prefWidth="228.0" styleClass="add-btn" stylesheets="@market.css" text="Place Order" />
    </AnchorPane>
-   <Label layoutX="728.0" layoutY="402.0" prefHeight="20.0" prefWidth="76.0" text="Flower" />
-   <Label layoutX="883.0" layoutY="402.0" prefHeight="20.0" prefWidth="76.0" text="Quantity" />
-   <Label layoutX="1052.0" layoutY="402.0" prefHeight="20.0" prefWidth="76.0" text="Price" />
-   <Label layoutX="1212.0" layoutY="402.0" prefHeight="20.0" prefWidth="76.0" text="Total" />
+   <Label layoutX="552.0" layoutY="1486.0" prefHeight="20.0" prefWidth="76.0" text="Flower">
+      <font>
+         <Font name="Century Gothic Bold" size="21.0" />
+      </font></Label>
+   <Label layoutX="344.0" layoutY="1490.0" prefHeight="27.0" prefWidth="94.0" text="Quantity">
+      <font>
+         <Font name="Century Gothic Bold" size="21.0" />
+      </font></Label>
+   <Label layoutX="768.0" layoutY="1488.0" prefHeight="20.0" prefWidth="76.0" text="Price">
+      <font>
+         <Font name="Century Gothic Bold" size="21.0" />
+      </font></Label>
+   <Label layoutX="928.0" layoutY="1488.0" prefHeight="20.0" prefWidth="76.0" text="Total">
+      <font>
+         <Font name="Century Gothic Bold" size="21.0" />
+      </font></Label>
 </AnchorPane>

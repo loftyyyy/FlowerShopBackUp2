@@ -143,33 +143,81 @@ public class HomePageController {
     }
 
     // Mouse Entered Events
-    @FXML public void pane1MouseEntered(MouseEvent event) { handlePaneMouseEntered(event, pane1); }
-    @FXML public void pane2MouseEntered(MouseEvent event) { handlePaneMouseEntered(event, pane2); }
-    @FXML public void pane3MouseEntered(MouseEvent event) { handlePaneMouseEntered(event, pane3); }
-    @FXML public void pane4MouseEntered(MouseEvent event) { handlePaneMouseEntered(event, pane4); }
-    @FXML public void flowerEnter1(MouseEvent event) { handleImageViewZoomIn(flower1); }
-    @FXML public void flowerEnter2(MouseEvent event) { handleImageViewZoomIn(flower2); }
-    @FXML public void flowerEnter3(MouseEvent event) { handleImageViewZoomIn(flower3); }
-    @FXML public void flowerEnter4(MouseEvent event) { handleImageViewZoomIn(flower4); }
+    @FXML public void pane1MouseEntered(MouseEvent event) {
+        handlePaneMouseEntered(event, pane1);
+    }
+    @FXML public void pane2MouseEntered(MouseEvent event) {
+        handlePaneMouseEntered(event, pane2);
+    }
+    @FXML public void pane3MouseEntered(MouseEvent event) {
+        handlePaneMouseEntered(event, pane3);
+    }
+    @FXML public void pane4MouseEntered(MouseEvent event) {
+        handlePaneMouseEntered(event, pane4);
+    }
+    @FXML public void flowerEnter1(MouseEvent event) {
+        handleImageViewZoomIn(flower1);
+    }
+    @FXML public void flowerEnter2(MouseEvent event) {
+        handleImageViewZoomIn(flower2);
+    }
+    @FXML public void flowerEnter3(MouseEvent event) {
+        handleImageViewZoomIn(flower3);
+    }
+    @FXML public void flowerEnter4(MouseEvent event) {
+        handleImageViewZoomIn(flower4);
+    }
 
-    @FXML public void flowerEnter11(MouseEvent event) { handleImageViewZoomIn(flower11); }
-    @FXML public void flowerEnter21(MouseEvent event) { handleImageViewZoomIn(flower21); }
-    @FXML public void flowerEnter31(MouseEvent event) { handleImageViewZoomIn(flower31); }
-    @FXML public void flowerEnter41(MouseEvent event) { handleImageViewZoomIn(flower41); }
+    @FXML public void flowerEnter11(MouseEvent event) {
+        handleImageViewZoomIn(flower11);
+    }
+    @FXML public void flowerEnter21(MouseEvent event) {
+        handleImageViewZoomIn(flower21);
+    }
+    @FXML public void flowerEnter31(MouseEvent event) {
+        handleImageViewZoomIn(flower31);
+    }
+    @FXML public void flowerEnter41(MouseEvent event) {
+        handleImageViewZoomIn(flower41);
+    }
 
     // Mouse Exited Events
-    @FXML public void pane1MouseExited(MouseEvent event) { handlePaneMouseExited(event, pane1); }
-    @FXML public void pane2MouseExited(MouseEvent event) { handlePaneMouseExited(event, pane2); }
-    @FXML public void pane3MouseExited(MouseEvent event) { handlePaneMouseExited(event, pane3); }
-    @FXML public void pane4MouseExited(MouseEvent event) { handlePaneMouseExited(event, pane4); }
-    @FXML public void flowerExit1(MouseEvent event) { handleImageViewZoomOut(flower1); }
-    @FXML public void flowerExit2(MouseEvent event) { handleImageViewZoomOut(flower2); }
-    @FXML public void flowerExit3(MouseEvent event) { handleImageViewZoomOut(flower3); }
-    @FXML public void flowerExit4(MouseEvent event) { handleImageViewZoomOut(flower4); }
-    @FXML public void flowerExit11(MouseEvent event) { handleImageViewZoomOut(flower11); }
-    @FXML public void flowerExit21(MouseEvent event) { handleImageViewZoomOut(flower21); }
-    @FXML public void flowerExit31(MouseEvent event) { handleImageViewZoomOut(flower31); }
-    @FXML public void flowerExit41(MouseEvent event) { handleImageViewZoomOut(flower41); }
+    @FXML public void pane1MouseExited(MouseEvent event) {
+        handlePaneMouseExited(event, pane1);
+    }
+    @FXML public void pane2MouseExited(MouseEvent event) {
+        handlePaneMouseExited(event, pane2);
+    }
+    @FXML public void pane3MouseExited(MouseEvent event) {
+        handlePaneMouseExited(event, pane3);
+    }
+    @FXML public void pane4MouseExited(MouseEvent event) {
+        handlePaneMouseExited(event, pane4);
+    }
+    @FXML public void flowerExit1(MouseEvent event) {
+        handleImageViewZoomOut(flower1);
+    }
+    @FXML public void flowerExit2(MouseEvent event) {
+        handleImageViewZoomOut(flower2);
+    }
+    @FXML public void flowerExit3(MouseEvent event) {
+        handleImageViewZoomOut(flower3);
+    }
+    @FXML public void flowerExit4(MouseEvent event) {
+        handleImageViewZoomOut(flower4);
+    }
+    @FXML public void flowerExit11(MouseEvent event) {
+        handleImageViewZoomOut(flower11);
+    }
+    @FXML public void flowerExit21(MouseEvent event) {
+        handleImageViewZoomOut(flower21);
+    }
+    @FXML public void flowerExit31(MouseEvent event) {
+        handleImageViewZoomOut(flower31);
+    }
+    @FXML public void flowerExit41(MouseEvent event) {
+        handleImageViewZoomOut(flower41);
+    }
 
     // Flower Card Mouse Entered and Exited Events
     @FXML public void flowerCardEnter1(MouseEvent event) { handlePaneZoomIn(flowerCard1); }
@@ -190,25 +238,56 @@ public class HomePageController {
     @FXML public void flowerCardEnter41(MouseEvent event) { handlePaneZoomIn(flowerCard41); }
     @FXML public void flowerCardExit41(MouseEvent event) { handlePaneZoomOut(flowerCard41); }
 
-    // Heart Icon Click Events
-    @FXML void clickHeart1(MouseEvent event) { toggleHeartIcon(heartIcon1); playPumpAnimation(heartIcon1); }
-    @FXML void clickHeart2(MouseEvent event) { toggleHeartIcon(heartIcon2); playPumpAnimation(heartIcon2); }
-    @FXML void clickHeart3(MouseEvent event) { toggleHeartIcon(heartIcon3); playPumpAnimation(heartIcon3); }
-    @FXML void clickHeart4(MouseEvent event) { toggleHeartIcon(heartIcon4); playPumpAnimation(heartIcon4); }
-    @FXML void clickHeart11(MouseEvent event) { toggleHeartIcon(heartIcon11); playPumpAnimation(heartIcon11); }
-    @FXML void clickHeart21(MouseEvent event) { toggleHeartIcon(heartIcon21); playPumpAnimation(heartIcon21); }
-    @FXML void clickHeart31(MouseEvent event) { toggleHeartIcon(heartIcon31); playPumpAnimation(heartIcon31); }
-    @FXML void clickHeart41(MouseEvent event) { toggleHeartIcon(heartIcon41); playPumpAnimation(heartIcon41); }
+    @FXML void clickHeart1(MouseEvent event) {
+        toggleHeartIcon(heartIcon1); playPumpAnimation(heartIcon1);
+    }
+    @FXML void clickHeart2(MouseEvent event) {
+        toggleHeartIcon(heartIcon2); playPumpAnimation(heartIcon2);
+    }
+    @FXML void clickHeart3(MouseEvent event) {
+        toggleHeartIcon(heartIcon3); playPumpAnimation(heartIcon3);
+    }
+    @FXML void clickHeart4(MouseEvent event) {
+        toggleHeartIcon(heartIcon4); playPumpAnimation(heartIcon4);
+    }
+    @FXML void clickHeart11(MouseEvent event) {
+        toggleHeartIcon(heartIcon11); playPumpAnimation(heartIcon11);
+    }
+    @FXML void clickHeart21(MouseEvent event) {
+        toggleHeartIcon(heartIcon21); playPumpAnimation(heartIcon21);
+    }
+    @FXML void clickHeart31(MouseEvent event) {
+        toggleHeartIcon(heartIcon31); playPumpAnimation(heartIcon31);
+    }
+    @FXML void clickHeart41(MouseEvent event) {
+        toggleHeartIcon(heartIcon41); playPumpAnimation(heartIcon41);
+    }
 
     // Cart Icon Click Events
-    @FXML void clickCart1(MouseEvent event) { toggleCartIcon(cartIcon1); playPumpAnimation(cartIcon1); }
-    @FXML void clickCart2(MouseEvent event) { toggleCartIcon(cartIcon2); playPumpAnimation(cartIcon2); }
-    @FXML void clickCart3(MouseEvent event) { toggleCartIcon(cartIcon3); playPumpAnimation(cartIcon3); }
-    @FXML void clickCart4(MouseEvent event) { toggleCartIcon(cartIcon4); playPumpAnimation(cartIcon4); }
-    @FXML void clickCart11(MouseEvent event) { toggleCartIcon(cartIcon11); playPumpAnimation(cartIcon11); }
-    @FXML void clickCart21(MouseEvent event) { toggleCartIcon(cartIcon21); playPumpAnimation(cartIcon21); }
-    @FXML void clickCart31(MouseEvent event) { toggleCartIcon(cartIcon31); playPumpAnimation(cartIcon31); }
-    @FXML void clickCart41(MouseEvent event) { toggleCartIcon(cartIcon41); playPumpAnimation(cartIcon41); }
+    @FXML void clickCart1(MouseEvent event) {
+        toggleCartIcon(cartIcon1); playPumpAnimation(cartIcon1);
+    }
+    @FXML void clickCart2(MouseEvent event) {
+        toggleCartIcon(cartIcon2); playPumpAnimation(cartIcon2);
+    }
+    @FXML void clickCart3(MouseEvent event) {
+        toggleCartIcon(cartIcon3); playPumpAnimation(cartIcon3);
+    }
+    @FXML void clickCart4(MouseEvent event) {
+        toggleCartIcon(cartIcon4); playPumpAnimation(cartIcon4);
+    }
+    @FXML void clickCart11(MouseEvent event) {
+        toggleCartIcon(cartIcon11); playPumpAnimation(cartIcon11);
+    }
+    @FXML void clickCart21(MouseEvent event) {
+        toggleCartIcon(cartIcon21); playPumpAnimation(cartIcon21);
+    }
+    @FXML void clickCart31(MouseEvent event) {
+        toggleCartIcon(cartIcon31); playPumpAnimation(cartIcon31);
+    }
+    @FXML void clickCart41(MouseEvent event) {
+        toggleCartIcon(cartIcon41); playPumpAnimation(cartIcon41);
+    }
 
     // Mouse Hover Effects on ImageViews and FlowerCards
     private void handleImageViewZoomIn(ImageView imageView) {

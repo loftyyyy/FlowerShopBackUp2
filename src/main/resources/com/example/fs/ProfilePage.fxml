@@ -12,71 +12,60 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1190.0"
-            prefWidth="1336.0" style="-fx-background-color: #FAF4DB;" xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.ProfilePageController">
-   <Pane layoutX="67.0" layoutY="548.0" prefHeight="296.0" prefWidth="1234.0"
-         style="-fx-background-color: #B0D4F1; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@All.css">
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="18.0" layoutY="31.0" pickOnBounds="true"
-                 preserveRatio="true"/>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1190.0" prefWidth="1336.0" style="-fx-background-color: #FAF4DB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.ProfilePageController">
+   <Pane layoutX="67.0" layoutY="548.0" prefHeight="296.0" prefWidth="1234.0" style="-fx-background-color: #B0D4F1; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@All.css">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="18.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="212.0" layoutY="91.0" text="₱845.50">
          <font>
-            <Font name="Century Gothic" size="66.0"/>
+            <Font name="Century Gothic" size="66.0" />
          </font>
       </Label>
       <Label layoutX="277.0" layoutY="74.0" text="current balance: " textFill="#635c5c">
          <font>
-            <Font size="20.0"/>
+            <Font size="20.0" />
          </font>
       </Label>
-      <Pane layoutX="16.0" layoutY="202.0" prefHeight="322.0" prefWidth="579.0"
-            style="-fx-background-color: #F6E8B2; -fx-background-radius: 30;" styleClass="shadow">
-         <ImageView fitHeight="146.0" fitWidth="180.0" layoutX="47.0" layoutY="103.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@../../../images/wallet.png"/>
+      <Pane layoutX="34.0" layoutY="202.0" prefHeight="324.0" prefWidth="561.0" style="-fx-background-color: #F6E8B2; -fx-background-radius: 30;" styleClass="shadow">
+         <ImageView fitHeight="146.0" fitWidth="180.0" layoutX="47.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../images/wallet.png" />
          </ImageView>
-         <TextField layoutX="240.0" layoutY="151.0" prefHeight="57.0" prefWidth="297.0"
-                    promptText="Enter Amount: " styleClass="comboBox" stylesheets="@market.css">
+         <TextField layoutX="240.0" layoutY="151.0" prefHeight="57.0" prefWidth="297.0" promptText="Enter Amount: " styleClass="comboBox" stylesheets="@market.css">
             <font>
-               <Font name="Century Gothic" size="22.0"/>
+               <Font name="Century Gothic" size="22.0" />
             </font>
          </TextField>
-         <Button layoutX="286.0" layoutY="231.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="178.0"
-                 styleClass="add-btn" stylesheets="@market.css" text="Cash In">
+         <Button layoutX="286.0" layoutY="231.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="178.0" styleClass="add-btn" stylesheets="@market.css" text="Cash In">
             <font>
-               <Font name="Century Gothic" size="20.0"/>
+               <Font name="Century Gothic" size="20.0" />
             </font>
          </Button>
-         <ComboBox layoutX="244.0" layoutY="83.0" prefHeight="55.0" prefWidth="289.0" promptText="Online Banks"
-                   styleClass="comboBox" stylesheets="@market.css"/>
+         <ComboBox layoutX="244.0" layoutY="83.0" prefHeight="55.0" prefWidth="289.0" promptText="Online Banks" styleClass="comboBox" stylesheets="@market.css" />
       </Pane>
       <Label layoutX="885.0" layoutY="32.0" text="Cash In History:" textFill="#635c5c">
          <font>
-            <Font size="20.0"/>
+            <Font size="20.0" />
          </font>
       </Label>
    </Pane>
    <Pane layoutX="3.0" layoutY="5.0" prefHeight="315.0" prefWidth="1327.0" style="-fx-background-color: #90ADC5;">
-      <ImageView fitHeight="600.0" fitWidth="1340.0" layoutX="-2.0" layoutY="-5.0" pickOnBounds="true"
-                 preserveRatio="true">
-         <Image url="@../../../images/bigimage3.png"/>
+      <ImageView fitHeight="600.0" fitWidth="1340.0" layoutX="-2.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/bigimage3.png" />
       </ImageView>
       <!-- StackPane to contain the circular profile picture -->
       <StackPane fx:id="profilePictureContainer" layoutX="519.0" layoutY="122.0">
          <!-- Circle shape for the profile picture -->
-         <Circle fill="#e1e3e4" radius="156.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0"/>
+         <Circle fill="#e1e3e4" radius="156.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" />
 
          <ImageView fx:id="profilePicture" fitHeight="312.0" fitWidth="312.0" onMouseClicked="#addProfilePicture">
-            <Image url="@../../../images/icongoogle-contacts.png"/>
+            <Image url="@../../../images/icongoogle-contacts.png" />
          </ImageView>
       </StackPane>
    </Pane>
    <!-- Other nodes in your AnchorPane -->
    <Label layoutX="460.0" layoutY="455.0" prefHeight="62.0" prefWidth="511.0" text="username@gmail.com">
       <font>
-         <Font name="Century Gothic" size="38.0"/>
+         <Font name="Century Gothic" size="38.0" />
       </font>
    </Label>
-   <Pane layoutX="690.0" layoutY="616.0" prefHeight="459.0" prefWidth="600.0"
-         style="-fx-background-color: #F6E8B2; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@All.css"/>
+   <Pane layoutX="690.0" layoutY="616.0" prefHeight="453.0" prefWidth="587.0" style="-fx-background-color: #F6E8B2; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@All.css" />
 </AnchorPane>
