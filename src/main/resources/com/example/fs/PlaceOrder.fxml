@@ -21,7 +21,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3886.0" prefWidth="1317.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.PlaceOrderController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3137.0" prefWidth="1317.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.PlaceOrderController">
+   <AnchorPane layoutY="1438.0" prefHeight="1398.0" prefWidth="1318.0" style="-fx-background-color: #FAF6EE;" />
    <ImageView fitHeight="1059.0" fitWidth="826.0" layoutX="316.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../images/postofficeborder.png" />
@@ -35,7 +36,7 @@
          <Image url="@../../../images/purchase.png" />
       </ImageView>
    </Pane>
-   <AnchorPane layoutX="-15.0" layoutY="3392.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="1326.0" style="-fx-background-color: #45595B;" stylesheets="@All.css">
+   <AnchorPane layoutX="-6.0" layoutY="2833.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="1326.0" style="-fx-background-color: #45595B;" stylesheets="@All.css">
       <TextField layoutX="410.0" layoutY="39.0" prefHeight="37.0" prefWidth="336.0" styleClass="search-box" />
       <Button layoutX="703.0" layoutY="37.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="128.0" styleClass="add-btn" stylesheets="@market.css" text="Subscribe Now!" />
       <HBox alignment="TOP_CENTER" layoutX="-2.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="192.0" prefWidth="1367.0">
@@ -489,142 +490,26 @@
          </ScrollPane>
       </AnchorPane>
    </VBox>
-   <AnchorPane layoutX="321.0" layoutY="1999.0" prefHeight="538.0" prefWidth="682.0">
-      <VBox layoutY="192.0" prefHeight="202.0" prefWidth="517.0">
-         <Label prefHeight="34.0" prefWidth="158.0" text="Order Summary:">
-            <font>
-               <Font name="Century Gothic Bold" size="20.0" />
-            </font>
-            <VBox.margin>
-               <Insets bottom="-10.0" />
-            </VBox.margin>
-         </Label>
-         <Text fill="#acacac" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #acacac;" text="____________________________________________________________________________________________________" wrappingWidth="516.8804626464844" />
-         <HBox>
-            <VBox.margin>
-               <Insets top="10.0" />
-            </VBox.margin>
-            <Label prefHeight="18.0" prefWidth="443.0" text="Subtotal: ">
-               <font>
-                  <Font name="Century Gothic" size="14.0" />
-               </font>
-            </Label>
-            <Text fx:id="subTotal" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="₱600.00" wrappingWidth="56.717041015625">
-               <font>
-                  <Font name="Century Gothic" size="14.0" />
-               </font>
-            </Text>
-         </HBox>
-         <HBox prefHeight="44.0" prefWidth="550.0">
-            <VBox.margin>
-               <Insets bottom="-20.0" top="10.0" />
-            </VBox.margin>
-            <padding>
-               <Insets top="10.0" />
-            </padding>
-            <Label prefHeight="20.0" prefWidth="421.0" text="Shipping Fee: ">
-               <font>
-                  <Font name="Century Gothic" size="14.0" />
-               </font>
-            </Label>
-            <Pane prefHeight="32.0" prefWidth="22.0" />
-            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="₱125.00" wrappingWidth="55.116943359375">
-               <font>
-                  <Font name="Century Gothic" size="14.0" />
-               </font>
-            </Text>
-         </HBox>
-         <HBox prefHeight="42.0" prefWidth="517.0">
-            <VBox.margin>
-               <Insets top="20.0" />
-            </VBox.margin>
-            <padding>
-               <Insets top="10.0" />
-            </padding>
-            <Label prefHeight="20.0" prefWidth="173.0" text="Shipping Discount:">
-               <font>
-                  <Font name="Century Gothic" size="14.0" />
-               </font>
-            </Label>
-            <Pane prefHeight="32.0" prefWidth="25.0" />
-            <ImageView fitHeight="22.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-               <Image url="@../../../images/iconfree-shipping.png" />
-            </ImageView>
-            <Pane prefHeight="28.0" prefWidth="281.0" />
-            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="- ₱125.00" wrappingWidth="114.95276015996933">
-               <font>
-                  <Font name="Century Gothic" size="14.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="45.0" />
-               </HBox.margin>
-            </Text>
-         </HBox>
-         <HBox />
-         <Text fill="#ffbf3f" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #acacac;" text="____________________________________________________________________________________________________" wrappingWidth="548.8802795410156" />
-         <HBox>
-            <Label alignment="TOP_LEFT" prefHeight="34.0" prefWidth="427.0" text="Grand Total:">
-               <font>
-                  <Font name="Century Gothic Bold" size="18.0" />
-               </font>
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
-            <Label fx:id="grandTotal" alignment="TOP_LEFT" prefHeight="34.0" prefWidth="72.0" text="₱707.00">
-               <font>
-                  <Font name="Century Gothic Bold" size="18.0" />
-               </font>
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
-         </HBox>
-      </VBox>
-      <Label layoutX="2.0" layoutY="25.0" text="Payment Method:">
-         <font>
-            <Font name="Century Gothic Bold" size="30.0" />
-         </font>
-      </Label>
-      <CheckBox layoutX="469.0" layoutY="137.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="30.0" stylesheets="@All.css" />
-      <Text fill="#ffbf3f" layoutY="169.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #acacac;" text="____________________________________________________________________________________________________" wrappingWidth="548.8802795410156" />
-      <Label layoutX="407.0" layoutY="405.0" prefHeight="18.0" prefWidth="125.0" style="-fx-text-fill: #d13939;" text="you saved (₱45.00)" textFill="#d13939">
-         <font>
-            <Font size="11.0" />
-         </font>
-      </Label>
-      <CheckBox layoutX="468.0" layoutY="65.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="54.0" stylesheets="@All.css" />
-      <CheckBox layoutX="469.0" layoutY="98.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="34.0" stylesheets="@All.css" />
-      <Label layoutX="37.0" layoutY="70.0" text="Cash on Delivery">
-         <font>
-            <Font name="Century Gothic" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="37.0" layoutY="103.0" text="Gcash">
-         <font>
-            <Font name="Century Gothic" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="36.0" layoutY="142.0" text="Paypal">
-         <font>
-            <Font name="Century Gothic" size="14.0" />
-         </font>
-      </Label>
-      <Text fill="#ffbf3f" layoutX="3.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #acacac;" text="____________________________________________________________________________________________________" wrappingWidth="619.5">
-         <font>
-            <Font size="13.0" />
-         </font></Text>
-      <ImageView fitHeight="14.0" fitWidth="83.0" layoutX="6.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../../images/iconcod.png" />
-      </ImageView>
-      <ImageView fitHeight="14.0" fitWidth="83.0" layoutX="12.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../../images/icongcash.png" />
-      </ImageView>
-      <ImageView fitHeight="14.0" fitWidth="83.0" layoutX="12.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../../images/iconpaypal.png" />
-      </ImageView>
-      <Button fx:id="PlaceOrderButton" layoutX="146.0" layoutY="441.0" mnemonicParsing="false" onMouseClicked="#placeOrderClick" prefHeight="36.0" prefWidth="228.0" styleClass="add-btn" stylesheets="@market.css" text="Place Order" />
-   </AnchorPane>
+   <HBox layoutX="373.0" layoutY="2766.199951171875" prefHeight="44.0" prefWidth="550.0">
+      <padding>
+         <Insets top="10.0" />
+      </padding>
+      <Pane prefHeight="32.0" prefWidth="22.0" />
+   </HBox>
+   <HBox layoutX="373.0" layoutY="2805.39990234375" prefHeight="42.0" prefWidth="517.0">
+      <padding>
+         <Insets top="10.0" />
+      </padding>
+      <Pane prefHeight="32.0" prefWidth="25.0" />
+      <Pane prefHeight="28.0" prefWidth="281.0" />
+   </HBox>
+   <HBox layoutX="373.0" layoutY="2843.800048828125" />
+   <HBox layoutX="373.0" layoutY="2859.800048828125" />
+   <Label layoutX="344.0" layoutY="2046.0" text="Payment Method:" textFill="#696969">
+      <font>
+         <Font name="Times New Roman Bold" size="30.0" />
+      </font>
+   </Label>
    <Label layoutX="552.0" layoutY="1486.0" prefHeight="20.0" prefWidth="76.0" text="Flower">
       <font>
          <Font name="Century Gothic Bold" size="21.0" />
@@ -641,4 +526,103 @@
       <font>
          <Font name="Century Gothic Bold" size="21.0" />
       </font></Label>
+   <Pane layoutX="320.0" layoutY="2098.0" prefHeight="200.0" prefWidth="690.0" style="-fx-background-color: #C9DBC2;" stylesheets="@All.css">
+      <styleClass>
+         <String fx:value="shadow" />
+         <String fx:value="search-button" />
+      </styleClass>
+      <children>
+         <ImageView fitHeight="51.0" fitWidth="34.0" layoutX="118.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../images/icongcash.png" />
+         </ImageView>
+         <Label layoutX="310.0" layoutY="42.0" text="Gcash">
+            <font>
+               <Font name="Century Gothic" size="18.0" />
+            </font>
+         </Label>
+         <CheckBox layoutX="549.0" layoutY="38.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" stylesheets="@All.css" />
+         <ImageView fitHeight="28.0" fitWidth="40.0" layoutX="115.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../images/iconcod.png" />
+         </ImageView>
+         <Label layoutX="265.0" layoutY="95.0" text="Cash on Delivery">
+            <font>
+               <Font name="Century Gothic" size="18.0" />
+            </font>
+         </Label>
+         <CheckBox layoutX="549.0" layoutY="98.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="0.0" stylesheets="@All.css" />
+         <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="124.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../images/iconpaypal.png" />
+         </ImageView>
+         <Label layoutX="308.0" layoutY="151.0" text="Paypal">
+            <font>
+               <Font name="Century Gothic" size="18.0" />
+            </font>
+         </Label>
+         <CheckBox layoutX="549.0" layoutY="149.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="30.0" stylesheets="@All.css" />
+      </children>
+   </Pane>
+   <Pane layoutX="319.0" layoutY="2375.0" prefHeight="200.0" prefWidth="690.0" style="-fx-background-color: #B2DCFF;" stylesheets="@All.css">
+      <styleClass>
+         <String fx:value="shadow" />
+         <String fx:value="search-button" />
+      </styleClass>
+      <children>
+         <Label layoutX="113.0" layoutY="42.0" prefHeight="23.0" prefWidth="107.0" text="Subtotal: " textFill="#6e6e6e">
+            <font>
+               <Font name="Century Gothic" size="21.0" />
+            </font>
+         </Label>
+         <Label layoutX="110.0" layoutY="91.0" prefHeight="23.0" prefWidth="155.0" text="Shipping Fee: " textFill="#6e6e6e">
+            <font>
+               <Font name="Century Gothic" size="21.0" />
+            </font>
+         </Label>
+         <Label layoutX="109.0" layoutY="139.0" prefHeight="23.0" prefWidth="211.0" text="Shipping Discount:" textFill="#6e6e6e">
+            <font>
+               <Font name="Century Gothic" size="21.0" />
+            </font>
+         </Label>
+         <Text fx:id="subTotal" fontSmoothingType="LCD" layoutX="500.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="₱718.00" wrappingWidth="94.20000000000005">
+            <font>
+               <Font name="Century Gothic" size="22.0" />
+            </font>
+         </Text>
+         <Text fontSmoothingType="LCD" layoutX="499.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="₱125.00" wrappingWidth="87.31681251525873">
+            <font>
+               <Font name="Century Gothic" size="22.0" />
+            </font>
+         </Text>
+         <Text fontSmoothingType="LCD" layoutX="485.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- ₱125.00" wrappingWidth="116.25000000000011">
+            <font>
+               <Font name="Century Gothic" size="22.0" />
+            </font>
+         </Text>
+      </children>
+   </Pane>
+   <Label layoutX="343.0" layoutY="2326.0" text="Order Summary:" textFill="#696969">
+      <font>
+         <Font name="Times New Roman Bold" size="30.0" />
+      </font>
+   </Label>
+   <Label alignment="TOP_LEFT" layoutX="427.0" layoutY="2615.0" prefHeight="34.0" prefWidth="427.0" text="Grand Total:">
+      <font>
+         <Font name="Times New Roman Bold" size="34.0" />
+      </font>
+      <padding>
+         <Insets top="10.0" />
+      </padding>
+   </Label>
+   <Label fx:id="grandTotal" alignment="TOP_LEFT" layoutX="793.0" layoutY="2614.0" prefHeight="50.0" prefWidth="124.0" text="₱718.00">
+      <font>
+         <Font name="Century Gothic Bold" size="31.0" />
+      </font>
+      <padding>
+         <Insets top="10.0" />
+      </padding>
+   </Label>
+   <Button fx:id="PlaceOrderButton" layoutX="553.0" layoutY="2725.0" mnemonicParsing="false" onMouseClicked="#placeOrderClick" prefHeight="55.0" prefWidth="242.0" styleClass="add-btn" stylesheets="@market.css" text="Place Order">
+      <font>
+         <Font name="Century Gothic" size="21.0" />
+      </font>
+   </Button>
 </AnchorPane>
