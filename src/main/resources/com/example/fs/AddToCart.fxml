@@ -480,12 +480,12 @@
                <content>
                   <AnchorPane prefHeight="381.0" prefWidth="340.0">
                      <children>
-                        <Button fx:id="cashInButton" layoutX="32.0" layoutY="281.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="112.0" styleClass="add-btn" stylesheets="@market.css" text="Cash In">
+                        <Button fx:id="cashInButton" layoutX="32.0" layoutY="281.0" mnemonicParsing="false" onAction="#setCashInPage" prefHeight="20.0" prefWidth="112.0" styleClass="add-btn" stylesheets="@market.css" text="Cash In">
                            <font>
                               <Font name="Century Gothic" size="20.0" />
                            </font>
                         </Button>
-                        <Button fx:id="logOutButton" layoutX="196.0" layoutY="281.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="112.0" styleClass="add-btn" stylesheets="@market.css" text="Log Out">
+                        <Button fx:id="logOutButton" layoutX="196.0" layoutY="281.0" mnemonicParsing="false" onAction="#setLogOutButton" prefHeight="33.0" prefWidth="112.0" styleClass="add-btn" stylesheets="@market.css" text="Log Out">
                            <font>
                               <Font name="Century Gothic" size="20.0" />
                            </font>

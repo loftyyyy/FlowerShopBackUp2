@@ -29,9 +29,9 @@ public class CheckoutController {
 
         this.checkout = checkout;
         flowerName.setText(checkout.getFlowerName());
-        pricePerQuantityLabel.setText(String.valueOf(checkout.getPricePerQuantity()));
+        pricePerQuantityLabel.setText("₱" + String.valueOf(checkout.getPricePerQuantity()));
         quantityLabel.setText(String.valueOf(checkout.getQuantity()));
-        totalPriceLabel.setText(String.valueOf(checkout.getTotalPrice()));
+        totalPriceLabel.setText("₱" + String.valueOf(checkout.getTotalPrice()));
         Image image = new Image(getClass().getResourceAsStream(checkout.getFlowerImage()));
         flowerImg.setImage(image);
     }

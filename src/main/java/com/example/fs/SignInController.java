@@ -57,9 +57,17 @@ public class SignInController {
                 //TODO Find a way to somehow make the email be accessible to every class.
                 String email = db.getCurrentUser(username_signin.getText(), password_signin.getText());
                 makeUserEmailText(email);
-                Parent root = FXMLLoader.load(getClass().getResource("AddToCart.fxml"));
+
                 Stage window = (Stage) signupBTN.getScene().getWindow();
-                window.setScene(new Scene(root));
+                window.close();
+
+                Stage stage1 = new Stage();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddToCart.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+                stage1.setTitle("Flower Market");
+                stage1.setResizable(false);
+                stage1.setScene(scene);
+                stage1.show();
             }else{
                 emptyCases("Incorrect username or password");
             }

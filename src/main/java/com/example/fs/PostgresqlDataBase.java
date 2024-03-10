@@ -14,8 +14,8 @@ public class PostgresqlDataBase {
     String dbUsername = "postgres";
     String dbPassword = "admin";
 
-    String insertQuery = "INSERT INTO users(email, username, password, balance) VALUES(?, ?, ?, ?)";
-    String retrieveQuery = "SELECT email, username, password, balance FROM users";
+    String insertQuery = "INSERT INTO users(email, username, password, balance, cashinhistory) VALUES(?, ?, ?, ?,?)";
+    String retrieveQuery = "SELECT * FROM users";
 
     // TODO: Dependency Injection
     @FXML
@@ -51,6 +51,7 @@ public class PostgresqlDataBase {
                 pst.setString(2, username);
                 pst.setString(3, password);
                 pst.setDouble(4,0.00);
+                pst.setString(5,"<--------------------Cash In History-------------------->\n");
                 pst.executeUpdate();
 
                 System.out.println("Successfully Created User!");

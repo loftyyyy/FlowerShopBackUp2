@@ -13,11 +13,14 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Region;
+import javafx.scene.shape.QuadCurve;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import model.Checkout;
 import model.Flower;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -25,6 +28,7 @@ import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 import java.util.ResourceBundle;
 
 public class PlaceOrderController implements Initializable {
@@ -58,14 +62,29 @@ public class PlaceOrderController implements Initializable {
 //        aboutUsPage__founderBigTitle2.setOpacity(0);
 //        aboutUsPage__iconicContainer.setOpacity(0);
     }
-    private ArrayList<Checkout> getCheckout(){
 
+    public String getCurrentUser() throws SQLException {
+
+        String email = "";
+        try (BufferedReader reader = new BufferedReader(new FileReader("userEmail.txt"))) {
+            email = reader.readLine();
+        } catch (IOException e) {
+            System.err.println("Error reading file: " + e.getMessage());
+        }
+
+        return email;
+
+
+    }
+    private ArrayList<Checkout> setCheckout() throws SQLException {
+
+        String email = getCurrentUser();
         List<Checkout> checkouts = new ArrayList<>();
         Checkout checkout;
         try(Connection db = DriverManager.getConnection(this.url, this.dbUsername, this.dbPassword);
-            PreparedStatement pst = db.prepareStatement(retrieveCheckoutQuerty);
-            ResultSet rst = pst.executeQuery()) {
-
+            PreparedStatement pst = db.prepareStatement("SELECT * FROM checkout WHERE email=?");){
+            pst.setString(1,email);
+            ResultSet rst = pst.executeQuery();
             while(rst.next()){
 
                 String name = rst.getString("name");
@@ -103,8 +122,8 @@ public class PlaceOrderController implements Initializable {
         String formattedTotalPrice = bdtp.toPlainString();
         String formattedGrandprice = bdgp.toPlainString();
 
-        subTotal.setText(formattedTotalPrice);
-        grandTotal.setText(formattedGrandprice);
+        subTotal.setText("₱" + formattedTotalPrice);
+        grandTotal.setText("₱" + formattedGrandprice);
 
     }
     private void embedCheckout(){
@@ -163,7 +182,11 @@ public class PlaceOrderController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        checkouts.addAll(getCheckout());
+        try {
+            checkouts.addAll(setCheckout());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         embedCheckout();
         calculateCheckOut();
 

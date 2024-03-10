@@ -117,7 +117,7 @@ public class MarketController implements Initializable {
 
     String insertQuery = "INSERT INTO products(name,image,price,color,id) VALUES(?, ?, ?, ?, ?)";
 
-    String insertCheckOutQuery = "INSERT INTO checkout(name, quantity, pricePerQuantity,totalPrice,flowerImage) VALUES(?,?,?,?,?)";
+    String insertCheckOutQuery = "INSERT INTO checkout(name, quantity, pricePerQuantity,totalPrice,flowerImage, email) VALUES(?,?,?,?,?,?)";
 
     String retrieveUsers = "SELECT * FROM users";
     String retrieveQuery = "SELECT * FROM products";
@@ -142,6 +142,21 @@ public class MarketController implements Initializable {
 ////        aboutUsPage__iconicContainer.setOpacity(0);
 //    }
 
+    public void setLogOutButton() throws Exception{
+        Stage stage = (Stage) logOutButton.getScene().getWindow();
+        stage.close();
+
+        Stage stage1 = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SigninPage.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage1.setTitle("Fauget Crochet Studio");
+        stage1.setResizable(false);
+        stage1.setScene(scene);
+        stage1.show();
+
+        //Parent root = FXMLLoader.load(getClass().getResource("SigninPage.fxml"));
+
+    }
     public void setHomePage(){
 
         //replaceMarketContent(getClass().getResource("HomePage.fxml"), HomePageController.class);
@@ -169,7 +184,7 @@ public class MarketController implements Initializable {
 
     }
     public void setCheckoutPage(){
-        replaceMarketContent(getClass().getResource("PlaceOrder.fxml"),PlaceOrderController.class);
+        replaceMarketContent(getClass().getResource("OrderPlace.fxml"),PlaceOrderController.class);
     }
 
     public void setCashInPage(){
@@ -190,7 +205,7 @@ public class MarketController implements Initializable {
         System.out.println(email);
 
         userEmail.setText(email);
-        currentBalance.setText(String.valueOf(getCurrentBalance(email)));
+        currentBalance.setText("₱" + String.valueOf(getCurrentBalance(email)));
 
         if(userAccountScrollPane.isVisible()){
             userAccountScrollPane.setVisible(false);
@@ -202,7 +217,7 @@ public class MarketController implements Initializable {
 
     }
 
-    public Double getCurrentBalance(String userEmail) throws SQLException {
+    public double getCurrentBalance(String userEmail) throws SQLException {
         double userBalance = 0.0;
 
         try(Connection db = DriverManager.getConnection(this.url, this.dbUsername, this.dbPassword);
@@ -323,19 +338,32 @@ public class MarketController implements Initializable {
 
     }
 
+
+    public String getCurrentUser() throws SQLException {
+
+        String email = "";
+        try (BufferedReader reader = new BufferedReader(new FileReader("userEmail.txt"))) {
+            email = reader.readLine();
+        } catch (IOException e) {
+            System.err.println("Error reading file: " + e.getMessage());
+        }
+
+        return email;
+
+
+    }
+
     public void getCheckOutItemsAmount() throws SQLException {
+        String email = getCurrentUser();
         int itemCounter = 0;
         try (Connection db = DriverManager.getConnection(this.url, this.dbUsername, this.dbPassword);
-             PreparedStatement pst = db.prepareStatement(retrieveCheckoutQuery);
-             ResultSet rst = pst.executeQuery()) {
-
-                while(rst.next()){
-                    itemCounter += 1;
-                }
-
-             itemCount.setText(String.valueOf(itemCounter));
-
-
+             PreparedStatement pst = db.prepareStatement("SELECT * FROM checkout WHERE email=?");) {
+            pst.setString(1, email);
+            ResultSet rst = pst.executeQuery();
+            while (rst.next()) {
+                itemCounter += 1;
+            }
+            itemCount.setText(String.valueOf(itemCounter));
         }
     }
     public void checkOutBtn() throws IOException, SQLException {
@@ -355,6 +383,7 @@ public class MarketController implements Initializable {
             pst.setDouble(3,pricePerQuantity);
             pst.setDouble(4,totalPrice);
             pst.setString(5,imagePath);
+            pst.setString(6,getCurrentUser());
             pst.executeUpdate();
 
             getCheckOutItemsAmount();

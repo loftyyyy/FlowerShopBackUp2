@@ -321,7 +321,7 @@
                      <Insets bottom="20.0" top="30.0" />
                   </VBox.margin>
                   <font>
-                     <Font name="System Bold" size="18.0" />
+                     <Font name="Century Gothic" size="18.0" />
                   </font>
                </Button>
             </VBox>
