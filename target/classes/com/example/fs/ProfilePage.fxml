@@ -17,7 +17,7 @@
       <Pane layoutX="67.0" layoutY="548.0" prefHeight="296.0" prefWidth="1234.0" style="-fx-background-color: #B0D4F1; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@All.css">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="18.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
-            <Label layoutX="212.0" layoutY="91.0" text="₱845.50">
+            <Label fx:id="currentBalance" layoutX="212.0" layoutY="91.0" text="₱845.50">
                <font>
                   <Font name="Century Gothic" size="66.0" />
                </font>
@@ -34,17 +34,17 @@
                         <Image url="@../../../images/wallet.png" />
                      </image>
                   </ImageView>
-                  <TextField layoutX="240.0" layoutY="151.0" prefHeight="57.0" prefWidth="297.0" promptText="Enter Amount: " styleClass="comboBox" stylesheets="@market.css">
+                  <TextField fx:id="cashInAmount" layoutX="240.0" layoutY="151.0" prefHeight="57.0" prefWidth="297.0" promptText="Enter Amount: " styleClass="comboBox" stylesheets="@market.css">
                      <font>
                         <Font name="Century Gothic" size="22.0" />
                      </font>
                   </TextField>
-                  <Button layoutX="286.0" layoutY="231.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="178.0" styleClass="add-btn" stylesheets="@market.css" text="Cash In">
+                  <Button fx:id="cashInButton" layoutX="286.0" layoutY="231.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="178.0" styleClass="add-btn" stylesheets="@market.css" text="Cash In">
                      <font>
                         <Font name="Century Gothic" size="20.0" />
                      </font>
                   </Button>
-                  <ComboBox layoutX="244.0" layoutY="83.0" prefHeight="55.0" prefWidth="289.0" promptText="Online Banks" styleClass="comboBox" stylesheets="@market.css" />
+                  <ComboBox fx:id="paymentMethods" layoutX="244.0" layoutY="83.0" prefHeight="55.0" prefWidth="289.0" promptText="Online Banks" styleClass="comboBox" stylesheets="@market.css" />
                </children>
             </Pane>
             <Label layoutX="885.0" layoutY="32.0" text="Cash In History:" textFill="#635c5c">
@@ -75,11 +75,10 @@
          </children>
       </Pane>
       <!-- Other nodes in your AnchorPane -->
-      <Label layoutX="460.0" layoutY="455.0" prefHeight="62.0" prefWidth="511.0" text="username@gmail.com">
+      <Label fx:id="userEmail" layoutX="460.0" layoutY="455.0" prefHeight="62.0" prefWidth="511.0" text="username@gmail.com">
          <font>
             <Font name="Century Gothic" size="38.0" />
          </font>
       </Label>
       <Pane layoutX="690.0" layoutY="616.0" prefHeight="459.0" prefWidth="600.0" style="-fx-background-color: #F6E8B2; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@All.css" />
-   </children>
-</AnchorPane>
+   </c

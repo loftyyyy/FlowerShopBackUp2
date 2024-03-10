@@ -21,11 +21,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="739.0" prefWidth="1316.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.MarketController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1316.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.MarketController">
    <children>
-      <ScrollPane fx:id="mainScrollPane" layoutX="-3.0" layoutY="103.0" prefHeight="836.0" prefWidth="1336.0" styleClass="transparent" stylesheets="@All.css">
+      <ScrollPane fx:id="mainScrollPane" layoutX="-3.0" layoutY="103.0" prefHeight="900.0" prefWidth="1336.0" styleClass="transparent" stylesheets="@All.css">
          <content>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1481.0" prefWidth="1318.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css">
+            <AnchorPane fx:id="centerAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1448.0" prefWidth="1317.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css">
                <children>
                   <Pane layoutX="3.0" layoutY="5.0" prefHeight="308.0" prefWidth="1298.0" style="-fx-background-color: #90ADC5;">
                      <children>
@@ -34,14 +34,14 @@
                               <Image url="@../../../images/bigimage3.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="144.0" fitWidth="1187.0" layoutX="127.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="144.0" fitWidth="1187.0" layoutX="87.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/purchase.png" />
                            </image>
                         </ImageView>
                      </children>
                   </Pane>
-                  <AnchorPane layoutX="-22.0" layoutY="1168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="1350.0" style="-fx-background-color: #45595B;" stylesheets="@All.css">
+                  <AnchorPane layoutX="-6.0" layoutY="1143.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="1350.0" style="-fx-background-color: #45595B;" stylesheets="@All.css">
                      <children>
                         <TextField layoutX="394.0" layoutY="39.0" prefHeight="37.0" prefWidth="336.0" styleClass="search-box" />
                         <Button layoutX="687.0" layoutY="37.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="128.0" styleClass="search-button" stylesheets="@All.css" text="Subscribe Now!" />
@@ -299,7 +299,7 @@
                                     <Insets left="30.0" right="30.0" />
                                  </VBox.margin>
                                  <children>
-                                    <TextField fx:id="searchField" onKeyPressed="#getSearch" prefHeight="40.0" prefWidth="235.0" promptText="Type here to search" styleClass="transparent" stylesheets="@market.css">
+                                    <TextField fx:id="searchField" onKeyReleased="#getSearch" prefHeight="40.0" prefWidth="235.0" promptText="Type here to search" styleClass="transparent" stylesheets="@market.css">
                                        <HBox.margin>
                                           <Insets left="20.0" />
                                        </HBox.margin>
@@ -362,12 +362,12 @@
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" prefHeight="53.0" prefWidth="335.0" />
-                                    <Button fx:id="addToCart" mnemonicParsing="false" onAction="#checkOutBtn" prefHeight="50.0" prefWidth="270.0" styleClass="enter-shop-button" stylesheets="@All.css" text="ADD TO CART" textFill="#332c2c">
+                                    <Button fx:id="addToCart" mnemonicParsing="false" onAction="#checkOutBtn" prefHeight="50.0" prefWidth="270.0" styleClass="add-btn" stylesheets="@market.css" text="ADD TO CART" textFill="#828282">
                                        <VBox.margin>
                                           <Insets bottom="20.0" top="30.0" />
                                        </VBox.margin>
                                        <font>
-                                          <Font name="Century Gothic" size="18.0" />
+                                          <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Button>
                                  </children>
@@ -429,7 +429,7 @@
                               <Font name="Century Gothic" size="17.0" />
                            </font>
                         </Hyperlink>
-                        <Hyperlink prefHeight="34.0" prefWidth="124.0" styleClass="header-words" stylesheets="@All.css" text="About Us">
+                        <Hyperlink onMouseClicked="#setAboutUsPage" prefHeight="34.0" prefWidth="124.0" styleClass="header-words" stylesheets="@All.css" text="About Us">
                            <font>
                               <Font name="Century Gothic" size="17.0" />
                            </font>
@@ -439,32 +439,28 @@
                               <Font name="Century Gothic" size="17.0" />
                            </font>
                         </Hyperlink>
-                        <Hyperlink onMouseClicked="#shopNowPage" prefHeight="34.0" prefWidth="126.0" styleClass="header-words" stylesheets="@All.css" text="Shop Now">
+                        <Hyperlink onMouseClicked="#setShopNowPage" prefHeight="34.0" prefWidth="126.0" styleClass="header-words" stylesheets="@All.css" text="Shop Now">
                            <font>
                               <Font name="Century Gothic" size="17.0" />
                            </font>
                         </Hyperlink>
-                        <Pane prefHeight="86.0" prefWidth="268.0" />
-                        <Label fx:id="itemCount" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="35.0" text="0">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="5.0" />
-                           </HBox.margin></Label>
-                        <ImageView fitHeight="44.0" fitWidth="28.0" onMouseClicked="#checkoutPage" pickOnBounds="true" preserveRatio="true">
+                        <Pane prefHeight="86.0" prefWidth="268.0">
+                           <children>
+                              <Label fx:id="itemCount" alignment="CENTER_RIGHT" layoutX="225.0" layoutY="42.0" prefHeight="17.0" prefWidth="28.0" text="0" />
+                           </children></Pane>
+                        <ImageView fitHeight="44.0" fitWidth="28.0" onMouseClicked="#setCheckoutPage" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/cartblu.png" />
                            </image>
                         </ImageView>
                         <Pane prefHeight="86.0" prefWidth="34.0" />
-                        <ImageView fitHeight="40.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="40.0" fitWidth="24.0" onMouseClicked="#setCashInPage" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/circle.png" />
                            </image>
                         </ImageView>
                         <Pane prefHeight="100.0" prefWidth="56.0" />
-                        <ImageView fitHeight="54.0" fitWidth="38.0" onMouseClicked="#shoppingCart" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="54.0" fitWidth="38.0" onMouseClicked="#userAccountPane" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/hamburger.png" />
                            </image>
@@ -476,6 +472,38 @@
                   </HBox>
                </children>
             </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="userAccountPane" layoutX="976.0" layoutY="110.0" prefHeight="374.0" prefWidth="340.0">
+         <children>
+            <ScrollPane fx:id="userAccountScrollPane" hbarPolicy="NEVER" layoutY="-7.0" prefHeight="381.0" prefWidth="340.0" vbarPolicy="NEVER" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-7.0">
+               <content>
+                  <AnchorPane prefHeight="381.0" prefWidth="340.0">
+                     <children>
+                        <Button fx:id="cashInButton" layoutX="32.0" layoutY="281.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="112.0" styleClass="add-btn" stylesheets="@market.css" text="Cash In">
+                           <font>
+                              <Font name="Century Gothic" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="logOutButton" layoutX="196.0" layoutY="281.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="112.0" styleClass="add-btn" stylesheets="@market.css" text="Log Out">
+                           <font>
+                              <Font name="Century Gothic" size="20.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="userEmail" alignment="CENTER" layoutX="9.0" layoutY="60.0" prefHeight="62.0" prefWidth="324.0" text="username@gmail.com">
+                           <font>
+                              <Font name="Century Gothic" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="88.0" layoutY="137.0" prefHeight="27.0" prefWidth="151.0" text="Current Balance:" />
+                        <Label fx:id="currentBalance" alignment="CENTER" layoutX="40.0" layoutY="160.0" prefHeight="62.0" prefWidth="247.0" text="₱0.0">
+                           <font>
+                              <Font name="Century Gothic" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content></ScrollPane>
          </children>
       </AnchorPane>
    </children>

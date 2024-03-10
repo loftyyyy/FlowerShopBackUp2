@@ -1,9 +1,6 @@
 package com.example.fs;
 
 
-import javafx.animation.FadeTransition;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,22 +13,17 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
-import model.Checkout;
 import model.Flower;
-import model.Products;
 import javafx.application.Platform;
-import javafx.util.Duration;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.sql.*;
 import java.util.*;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 public class MarketController implements Initializable {
     @FXML
@@ -84,6 +76,28 @@ public class MarketController implements Initializable {
     @FXML
     private AnchorPane centerAnchorPane;
 
+    @FXML
+    private Pane userAccountPane;
+
+    @FXML
+    private Label itemCount;
+
+    @FXML
+    private ScrollPane userAccountScrollPane;
+
+    @FXML
+    private Button cashInButton;
+
+    @FXML
+    private Label currentBalance;
+
+    @FXML
+    private Button logOutButton;
+
+    @FXML
+    private Label userEmail;
+
+
     private MarketListener marketListener;
     private Image image;
 
@@ -99,9 +113,13 @@ public class MarketController implements Initializable {
 
     String retrieveProductsQuery = "SELECT * FROM products";
 
+    String retrieveCheckoutQuery = "SELECT * FROM checkout";
+
     String insertQuery = "INSERT INTO products(name,image,price,color,id) VALUES(?, ?, ?, ?, ?)";
 
     String insertCheckOutQuery = "INSERT INTO checkout(name, quantity, pricePerQuantity,totalPrice,flowerImage) VALUES(?,?,?,?,?)";
+
+    String retrieveUsers = "SELECT * FROM users";
     String retrieveQuery = "SELECT * FROM products";
     private MarketController marketController;
 
@@ -126,7 +144,10 @@ public class MarketController implements Initializable {
 
     public void setHomePage(){
 
-        replaceMarketContent(getClass().getResource("HomePage.fxml"), HomePageController.class);
+        //replaceMarketContent(getClass().getResource("HomePage.fxml"), HomePageController.class);
+        FXLoader object = new FXLoader();
+        AnchorPane newPane = object.getAnchorPane("HomePage.fxml");
+        mainScrollPane.setContent(newPane);
     }
     public void setAboutUsPage(){
         replaceMarketContent(getClass().getResource("AboutUsPage.fxml"), AboutUsController.class);
@@ -137,14 +158,68 @@ public class MarketController implements Initializable {
 
     }
     public void setShopNowPage() throws IOException {
-        returnMarketContent(getClass().getResource("ShopNowPage.fxml"));
+        FXLoader object = new FXLoader();
+        AnchorPane newPane = object.getAnchorPane("AddToCart.fxml");
+        rootPane.getChildren().clear();
+        rootPane.getChildren().setAll(newPane);
+        //returnMarketContent(getClass().getResource("ShopNowPage.fxml"));
 
 //        replaceMarketContent(getClass().getResource("ShopNowPage.fxml"), MarketController.class);
 
 
     }
-    public void checkoutPage(){
+    public void setCheckoutPage(){
         replaceMarketContent(getClass().getResource("PlaceOrder.fxml"),PlaceOrderController.class);
+    }
+
+    public void setCashInPage(){
+
+        FXLoader object = new FXLoader();
+        AnchorPane newPane = object.getAnchorPane("ProfilePage.fxml");
+        mainScrollPane.setContent(newPane);
+    }
+
+
+    public void userAccountPane() throws SQLException {
+        String email = "";
+        try (BufferedReader reader = new BufferedReader(new FileReader("userEmail.txt"))) {
+            email = reader.readLine();
+        } catch (IOException e) {
+            System.err.println("Error reading file: " + e.getMessage());
+        }
+        System.out.println(email);
+
+        userEmail.setText(email);
+        currentBalance.setText(String.valueOf(getCurrentBalance(email)));
+
+        if(userAccountScrollPane.isVisible()){
+            userAccountScrollPane.setVisible(false);
+
+        }else{
+            userAccountScrollPane.setVisible(true);
+        }
+
+
+    }
+
+    public Double getCurrentBalance(String userEmail) throws SQLException {
+        double userBalance = 0.0;
+
+        try(Connection db = DriverManager.getConnection(this.url, this.dbUsername, this.dbPassword);
+            PreparedStatement pst = db.prepareStatement(retrieveUsers);
+            ResultSet rst = pst.executeQuery()) {
+
+            while(rst.next()){
+                String email = rst.getString("email");
+                double balance = rst.getDouble("balance");
+
+                if(email.equals(userEmail)){
+                    userBalance += balance;
+                }
+            }
+
+        }
+        return userBalance;
     }
 
     //TODO: Make the HomePage be the one to show first.
@@ -194,10 +269,6 @@ public class MarketController implements Initializable {
                 }
             }, 500);
         });
-    }
-    public void clearPane(){
-        grid.getChildren().clear();
-
     }
     public void searchFlowers(String searchName) throws IOException {
 
@@ -251,7 +322,24 @@ public class MarketController implements Initializable {
 
 
     }
+
+    public void getCheckOutItemsAmount() throws SQLException {
+        int itemCounter = 0;
+        try (Connection db = DriverManager.getConnection(this.url, this.dbUsername, this.dbPassword);
+             PreparedStatement pst = db.prepareStatement(retrieveCheckoutQuery);
+             ResultSet rst = pst.executeQuery()) {
+
+                while(rst.next()){
+                    itemCounter += 1;
+                }
+
+             itemCount.setText(String.valueOf(itemCounter));
+
+
+        }
+    }
     public void checkOutBtn() throws IOException, SQLException {
+
 
         String name = flowerNameLabel.getText();
         String imagePath = getImageURL(name);
@@ -268,6 +356,8 @@ public class MarketController implements Initializable {
             pst.setDouble(4,totalPrice);
             pst.setString(5,imagePath);
             pst.executeUpdate();
+
+            getCheckOutItemsAmount();
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -639,6 +729,11 @@ public class MarketController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            getCheckOutItemsAmount();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         //itemCount = new Label();
         //headerPane.getChildren().add(itemCount);kk
         System.out.println("Hi");
@@ -661,6 +756,7 @@ public class MarketController implements Initializable {
             }
         }
         Integer[] quantity = {1,2,3,4,5,6,7,8,9,10};
+
         comboBox.getItems().addAll(quantity);
         comboBox.getSelectionModel().select(0);
 

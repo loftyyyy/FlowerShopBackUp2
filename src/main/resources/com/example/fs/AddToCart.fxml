@@ -39,7 +39,6 @@
                               <Image url="@../../../images/purchase.png" />
                            </image>
                         </ImageView>
-                        <AnchorPane layoutX="1022.0" layoutY="-29.0" prefHeight="405.0" prefWidth="292.0" />
                      </children>
                   </Pane>
                   <AnchorPane layoutX="-6.0" layoutY="1143.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="1350.0" style="-fx-background-color: #45595B;" stylesheets="@All.css">
@@ -445,20 +444,23 @@
                               <Font name="Century Gothic" size="17.0" />
                            </font>
                         </Hyperlink>
-                        <Pane prefHeight="86.0" prefWidth="268.0" />
-                        <ImageView fitHeight="44.0" fitWidth="28.0" onMouseClicked="#checkoutPage" pickOnBounds="true" preserveRatio="true">
+                        <Pane prefHeight="86.0" prefWidth="268.0">
+                           <children>
+                              <Label fx:id="itemCount" alignment="CENTER_RIGHT" layoutX="225.0" layoutY="42.0" prefHeight="17.0" prefWidth="28.0" text="0" />
+                           </children></Pane>
+                        <ImageView fitHeight="44.0" fitWidth="28.0" onMouseClicked="#setCheckoutPage" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/cartblu.png" />
                            </image>
                         </ImageView>
                         <Pane prefHeight="86.0" prefWidth="34.0" />
-                        <ImageView fitHeight="40.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="40.0" fitWidth="24.0" onMouseClicked="#setCashInPage" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/circle.png" />
                            </image>
                         </ImageView>
                         <Pane prefHeight="100.0" prefWidth="56.0" />
-                        <ImageView fitHeight="54.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="54.0" fitWidth="38.0" onMouseClicked="#userAccountPane" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/hamburger.png" />
                            </image>
@@ -470,6 +472,38 @@
                   </HBox>
                </children>
             </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="userAccountPane" layoutX="976.0" layoutY="110.0" prefHeight="374.0" prefWidth="340.0">
+         <children>
+            <ScrollPane fx:id="userAccountScrollPane" hbarPolicy="NEVER" layoutY="-7.0" prefHeight="381.0" prefWidth="340.0" vbarPolicy="NEVER" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-7.0">
+               <content>
+                  <AnchorPane prefHeight="381.0" prefWidth="340.0">
+                     <children>
+                        <Button fx:id="cashInButton" layoutX="32.0" layoutY="281.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="112.0" styleClass="add-btn" stylesheets="@market.css" text="Cash In">
+                           <font>
+                              <Font name="Century Gothic" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="logOutButton" layoutX="196.0" layoutY="281.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="112.0" styleClass="add-btn" stylesheets="@market.css" text="Log Out">
+                           <font>
+                              <Font name="Century Gothic" size="20.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="userEmail" alignment="CENTER" layoutX="9.0" layoutY="60.0" prefHeight="62.0" prefWidth="324.0" text="username@gmail.com">
+                           <font>
+                              <Font name="Century Gothic" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="88.0" layoutY="137.0" prefHeight="27.0" prefWidth="151.0" text="Current Balance:" />
+                        <Label fx:id="currentBalance" alignment="CENTER" layoutX="40.0" layoutY="160.0" prefHeight="62.0" prefWidth="247.0" text="₱0.0">
+                           <font>
+                              <Font name="Century Gothic" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content></ScrollPane>
          </children>
       </AnchorPane>
    </children>

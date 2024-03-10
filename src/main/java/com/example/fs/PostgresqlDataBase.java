@@ -14,8 +14,8 @@ public class PostgresqlDataBase {
     String dbUsername = "postgres";
     String dbPassword = "admin";
 
-    String insertQuery = "INSERT INTO users(email, username, password) VALUES(?, ?, ?)";
-    String retrieveQuery = "SELECT email, username, password FROM users";
+    String insertQuery = "INSERT INTO users(email, username, password, balance) VALUES(?, ?, ?, ?)";
+    String retrieveQuery = "SELECT email, username, password, balance FROM users";
 
     // TODO: Dependency Injection
     @FXML
@@ -50,10 +50,37 @@ public class PostgresqlDataBase {
                 pst.setString(1, lowerCaseEmail);
                 pst.setString(2, username);
                 pst.setString(3, password);
+                pst.setDouble(4,0.00);
                 pst.executeUpdate();
+
                 System.out.println("Successfully Created User!");
             }
             return false;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+    public String getCurrentUser(String username, String password){
+        String email = "";
+
+        try(Connection db = DriverManager.getConnection(this.url, this.dbUsername, this.dbPassword);
+            PreparedStatement pst = db.prepareStatement(retrieveQuery);
+            ResultSet rst = pst.executeQuery()) {
+
+            while(rst.next()){
+                String retrieveUsername = rst.getString("username");
+                String retievePassword = rst.getString("password");
+                String retrieveEmail = rst.getString("email");
+
+                if(retrieveUsername.equals(username) && retievePassword.equals(password)){
+                    email = retrieveEmail;
+                }
+            }
+
+            return email;
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

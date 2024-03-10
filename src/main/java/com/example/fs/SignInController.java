@@ -17,6 +17,9 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class SignInController {
@@ -35,10 +38,9 @@ public class SignInController {
     private Button signupBTN;
 
 
-    public PostgresqlDataBase db = new PostgresqlDataBase();
+    private PostgresqlDataBase db = new PostgresqlDataBase();
 
-    public void SignIn(Event e) throws IOException
-    {
+    public void SignIn(Event e) throws IOException {
 
         if (username_signin.getText().isBlank() && password_signin.getText().isEmpty()){
             emptyCases("Missing Entire Credentials!");
@@ -52,13 +54,26 @@ public class SignInController {
             //TODO Compare username and password and if yes, open the Shopping Page the code below is a test case.
             
             if(db.readDatabase(username_signin.getText(), password_signin.getText())){
-
+                //TODO Find a way to somehow make the email be accessible to every class.
+                String email = db.getCurrentUser(username_signin.getText(), password_signin.getText());
+                makeUserEmailText(email);
                 Parent root = FXMLLoader.load(getClass().getResource("AddToCart.fxml"));
                 Stage window = (Stage) signupBTN.getScene().getWindow();
                 window.setScene(new Scene(root));
             }else{
                 emptyCases("Incorrect username or password");
             }
+
+        }
+
+    }
+    public void makeUserEmailText(String email){
+
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter("userEmail.txt"))){
+            writer.write(email);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
     }

@@ -1,6 +1,8 @@
 package com.example.fs;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
@@ -9,13 +11,18 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 
 import java.io.File;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ProfilePageController {
+public class ProfilePageController implements Initializable {
+
 
     public StackPane profilePictureContainer;
     @FXML
     private ImageView profilePicture;
 
+    @FXML
+    private ComboBox<String> paymentMethods;
     @FXML
     void addProfilePicture(MouseEvent event) {
         // Create a file chooser dialog
@@ -38,4 +45,16 @@ public class ProfilePageController {
             profilePicture.setClip(clip);
         }
     }
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
+        String[] quantity = {"Credit Card", "Debit Card", "GCash", "PlayMoney"};
+        paymentMethods.getItems().addAll(quantity);
+        paymentMethods.getSelectionModel().select(0);
+
+    }
+
 }
