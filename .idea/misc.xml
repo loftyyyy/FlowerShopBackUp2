@@ -4,6 +4,9 @@
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="javafx.fxml.FXML" />
     </list>
+    <writeAnnotations>
+      <writeAnnotation name="javafx.fxml.FXML" />
+    </writeAnnotations>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
@@ -13,6 +16,10 @@
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
+  </component>
+  <component name="PWA">
+    <option name="enabled" value="true" />
+    <option name="wasEnabledAtLeastOnce" value="true" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK" />
 </project>
