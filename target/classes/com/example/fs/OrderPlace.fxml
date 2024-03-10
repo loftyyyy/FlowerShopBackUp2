@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1673.0" prefWidth="1317.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.PlaceOrderController">
+    <children>
+        <Pane prefHeight="311.0" prefWidth="1317.0" style="-fx-background-color: #90ADC5;">
+            <children>
+                <ImageView fitHeight="310.0" fitWidth="1317.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/head1.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="163.0" fitWidth="1039.0" layoutX="144.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/purchase.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <AnchorPane layoutX="-6.0" layoutY="1369.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="1326.0" style="-fx-background-color: #45595B;" stylesheets="@All.css">
+            <children>
+                <TextField layoutX="410.0" layoutY="39.0" prefHeight="37.0" prefWidth="336.0" styleClass="search-box" />
+                <Button layoutX="703.0" layoutY="37.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="128.0" styleClass="add-btn" stylesheets="@market.css" text="Subscribe Now!" />
+                <HBox alignment="TOP_CENTER" layoutX="-2.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="192.0" prefWidth="1367.0">
+                    <children>
+                        <Pane prefHeight="192.0" prefWidth="0.0" />
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="174.0" prefWidth="242.0">
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                            <children>
+                                <Text fill="#383838" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-title" text="Why People Like us!">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="People choose us for the exquisite  craftsmanship and personalized  attention they receive at Fauget Crochet Studio." textAlignment="CENTER" wrappingWidth="162.54803466796875">
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                    <styleClass>
+                                        <String fx:value="colored-text" />
+                                        <String fx:value="colored-text" />
+                                    </styleClass>
+                                </Text>
+                                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" styleClass="add-btn" stylesheets="@market.css" text="READ MORE!">
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                </Button>
+                            </children>
+                        </VBox>
+                        <Pane prefHeight="288.0" prefWidth="28.0" />
+                        <VBox alignment="TOP_CENTER" prefHeight="278.0" prefWidth="206.0">
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                            <children>
+                                <Text fill="#383838" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-title" text="Shop Info">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="About Us">
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </Hyperlink>
+                                <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Contact Us">
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </Hyperlink>
+                                <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Privacy Policy">
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </Hyperlink>
+                                <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Terms &amp; Condition">
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </Hyperlink>
+                                <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Return Policy">
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </Hyperlink>
+                                <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="FAQs &amp; Help">
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </Hyperlink>
+                            </children>
+                        </VBox>
+                        <Pane prefHeight="288.0" prefWidth="33.0" />
+                        <VBox alignment="TOP_CENTER" prefHeight="278.0" prefWidth="192.0">
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                            <children>
+                                <Text fill="#e1e0dc" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-title" text="Account">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="My Account">
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Hyperlink>
+                                <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Shop Details">
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Hyperlink>
+                                <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Shopping Cart">
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Hyperlink>
+                                <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Wishlist">
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Hyperlink>
+                                <Hyperlink styleClass="colored-text" stylesheets="@All.css" text="Order History">
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Hyperlink>
+                            </children>
+                        </VBox>
+                        <Pane prefHeight="218.0" prefWidth="50.0" />
+                        <VBox alignment="TOP_CENTER" prefHeight="278.0" prefWidth="183.0">
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                            <children>
+                                <Text fill="#383838" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-title" text="Contact">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-text" text="8000, G. Silang St, Davao City">
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Text>
+                                <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-text" text="faugetcrochetstudio@gmail.xom">
+                                    <VBox.margin>
+                                        <Insets top="5.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Text>
+                                <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-text" text="09758787893">
+                                    <VBox.margin>
+                                        <Insets top="5.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Text>
+                                <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="colored-text" text="Payment Accepted">
+                                    <VBox.margin>
+                                        <Insets top="5.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Text>
+                                <ImageView fitHeight="21.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                    <image>
+                                        <Image url="@../../../images/iconpayment.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </VBox>
+                        <Pane prefHeight="190.0" prefWidth="74.0" />
+                    </children>
+                </HBox>
+                <ImageView fitHeight="73.0" fitWidth="142.0" layoutX="229.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/2.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="884.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/iconfacebook.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="937.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/icnoninstagram.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="989.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/icontwitter.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="1040.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/iconyoutube.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#ffbf3f" layoutX="197.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="___________________________________________________________________________________________________________________________________________________________________________________________" wrappingWidth="959.5469665527344" />
+            </children>
+        </AnchorPane>
+        <VBox layoutX="120.0" layoutY="375.0" prefHeight="847.0" prefWidth="476.0">
+            <children>
+                <Label text="Customer's Information:">
+                    <font>
+                        <Font name="Century Gothic Bold" size="25.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Label>
+                <VBox prefHeight="482.0" prefWidth="478.0">
+                    <children>
+                        <HBox prefHeight="25.0" prefWidth="478.0">
+                            <padding>
+                                <Insets bottom="5.0" />
+                            </padding>
+                            <children>
+                                <Label prefHeight="15.0" prefWidth="253.0" text="First Name: ">
+                                    <font>
+                                        <Font name="Century Gothic" size="16.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                </Label>
+                                <Label text="Last Name:">
+                                    <font>
+                                        <Font name="Century Gothic" size="16.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="43.0" prefWidth="478.0">
+                            <children>
+                                <TextField prefHeight="36.0" prefWidth="226.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                                    <styleClass>
+                                        <String fx:value="search-button" />
+                                        <String fx:value="search-box" />
+                                        <String fx:value="transparent" />
+                                        <String fx:value="shadow" />
+                                    </styleClass>
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" />
+                                    </HBox.margin>
+                                </TextField>
+                                <TextField prefHeight="46.0" prefWidth="230.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="19.0" />
+                                    </HBox.margin>
+                                    <styleClass>
+                                        <String fx:value="search-button" />
+                                        <String fx:value="search-box" />
+                                        <String fx:value="transparent" />
+                                        <String fx:value="shadow" />
+                                    </styleClass>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <Label text="Town/City:">
+                            <font>
+                                <Font name="Century Gothic" size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                            <VBox.margin>
+                                <Insets bottom="20.0" />
+                            </VBox.margin>
+                            <styleClass>
+                                <String fx:value="search-button" />
+                                <String fx:value="search-box" />
+                                <String fx:value="transparent" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                        </TextField>
+                        <Label text="Country;">
+                            <font>
+                                <Font name="Century Gothic" size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                            <VBox.margin>
+                                <Insets bottom="20.0" />
+                            </VBox.margin>
+                            <styleClass>
+                                <String fx:value="search-button" />
+                                <String fx:value="search-box" />
+                                <String fx:value="transparent" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                        </TextField>
+                        <Label text="Postcode/ZIP:">
+                            <font>
+                                <Font name="Century Gothic" size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                            <VBox.margin>
+                                <Insets bottom="20.0" />
+                            </VBox.margin>
+                            <styleClass>
+                                <String fx:value="search-button" />
+                                <String fx:value="search-box" />
+                                <String fx:value="transparent" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                        </TextField>
+                        <Label text="Contact Number:">
+                            <font>
+                                <Font name="Century Gothic" size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                            <VBox.margin>
+                                <Insets bottom="20.0" />
+                            </VBox.margin>
+                            <styleClass>
+                                <String fx:value="search-button" />
+                                <String fx:value="search-box" />
+                                <String fx:value="transparent" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                        </TextField>
+                        <Label text="Address:">
+                            <font>
+                                <Font name="Century Gothic" size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                            <VBox.margin>
+                                <Insets bottom="20.0" />
+                            </VBox.margin>
+                            <styleClass>
+                                <String fx:value="search-button" />
+                                <String fx:value="search-box" />
+                                <String fx:value="transparent" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                        </TextField>
+                    </children>
+                </VBox>
+                <Label text="Order Note (Optional):">
+                    <font>
+                        <Font name="Century Gothic" size="16.0" />
+                    </font>
+                    <padding>
+                        <Insets left="5.0" />
+                    </padding>
+                </Label>
+                <TextArea prefHeight="295.0" prefWidth="479.0" styleClass="message-box" stylesheets="@All.css" />
+            </children>
+        </VBox>
+        <VBox layoutX="608.0" layoutY="422.0" prefHeight="439.0" prefWidth="692.0">
+            <children>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="600.0">
+                    <children>
+                        <ScrollPane prefHeight="439.0" prefWidth="692.0">
+                            <content>
+                                <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                </GridPane>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+        <AnchorPane layoutX="717.0" layoutY="887.0" prefHeight="455.0" prefWidth="542.0">
+            <children>
+                <VBox layoutY="158.0" prefHeight="202.0" prefWidth="517.0">
+                    <children>
+                        <Label prefHeight="34.0" prefWidth="158.0" text="Order Summary:">
+                            <font>
+                                <Font name="Century Gothic Bold" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="-10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Text fill="#acacac" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #acacac;" text="____________________________________________________________________________________________________" wrappingWidth="516.8804626464844" />
+                        <HBox>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label prefHeight="18.0" prefWidth="443.0" text="Subtotal: ">
+                                    <font>
+                                        <Font name="Century Gothic" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Text fx:id="subTotal" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="₱600.00" wrappingWidth="56.717041015625">
+                                    <font>
+                                        <Font name="Century Gothic" size="14.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="44.0" prefWidth="550.0">
+                            <VBox.margin>
+                                <Insets bottom="-20.0" top="10.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets top="10.0" />
+                            </padding>
+                            <children>
+                                <Label prefHeight="20.0" prefWidth="421.0" text="Shipping Fee: ">
+                                    <font>
+                                        <Font name="Century Gothic" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Pane prefHeight="32.0" prefWidth="22.0" />
+                                <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="₱125.00" wrappingWidth="55.116943359375">
+                                    <font>
+                                        <Font name="Century Gothic" size="14.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="42.0" prefWidth="517.0">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets top="10.0" />
+                            </padding>
+                            <children>
+                                <Label prefHeight="20.0" prefWidth="173.0" text="Shipping Discount:">
+                                    <font>
+                                        <Font name="Century Gothic" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Pane prefHeight="32.0" prefWidth="25.0" />
+                                <ImageView fitHeight="22.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../images/iconfree-shipping.png" />
+                                    </image>
+                                </ImageView>
+                                <Pane prefHeight="28.0" prefWidth="281.0" />
+                                <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="- ₱125.00" wrappingWidth="114.95276015996933">
+                                    <font>
+                                        <Font name="Century Gothic" size="14.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="45.0" />
+                                    </HBox.margin>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <HBox />
+                        <Text fill="#ffbf3f" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #acacac;" text="____________________________________________________________________________________________________" wrappingWidth="548.8802795410156" />
+                        <HBox>
+                            <children>
+                                <Label alignment="TOP_LEFT" prefHeight="34.0" prefWidth="427.0" text="Grand Total:">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="18.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets top="10.0" />
+                                    </padding>
+                                </Label>
+                                <Label fx:id="grandTotal" alignment="TOP_LEFT" prefHeight="33.0" prefWidth="119.0" text="₱707.00">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="18.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets top="10.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <Label layoutX="2.0" layoutY="-9.0" text="Payment Method:">
+                    <font>
+                        <Font name="Century Gothic Bold" size="20.0" />
+                    </font>
+                </Label>
+                <CheckBox layoutX="469.0" layoutY="103.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="30.0" stylesheets="@All.css" />
+                <Text fill="#ffbf3f" layoutY="135.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #acacac;" text="____________________________________________________________________________________________________" wrappingWidth="548.8802795410156" />
+                <Label layoutX="407.0" layoutY="371.0" prefHeight="18.0" prefWidth="125.0" style="-fx-text-fill: #d13939;" text="you saved (₱45.00)" textFill="#d13939">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Label>
+                <CheckBox layoutX="468.0" layoutY="31.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="54.0" stylesheets="@All.css" />
+                <CheckBox layoutX="469.0" layoutY="64.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="34.0" stylesheets="@All.css" />
+                <Label layoutX="37.0" layoutY="36.0" text="Cash on Delivery">
+                    <font>
+                        <Font name="Century Gothic" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="37.0" layoutY="69.0" text="Gcash">
+                    <font>
+                        <Font name="Century Gothic" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="36.0" layoutY="108.0" text="Paypal">
+                    <font>
+                        <Font name="Century Gothic" size="14.0" />
+                    </font>
+                </Label>
+                <Text fill="#ffbf3f" layoutY="16.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #acacac;" text="____________________________________________________________________________________________________" wrappingWidth="548.8802795410156" />
+                <ImageView fitHeight="14.0" fitWidth="83.0" layoutX="6.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/iconcod.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="14.0" fitWidth="83.0" layoutX="12.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/icongcash.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="14.0" fitWidth="83.0" layoutX="12.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/iconpaypal.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="PlaceOrderButton" layoutX="146.0" layoutY="407.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="228.0" styleClass="add-btn" stylesheets="@market.css" text="Place Order" />
+            </children>
+        </AnchorPane>
+        <Label alignment="CENTER" layoutX="796.0" layoutY="402.0" prefHeight="20.0" prefWidth="76.0" text="Flower" />
+        <Label alignment="CENTER" layoutX="954.0" layoutY="402.0" prefHeight="20.0" prefWidth="76.0" text="Quantity" />
+        <Label alignment="CENTER" layoutX="1073.0" layoutY="402.0" prefHeight="20.0" prefWidth="76.0" text="Price" />
+        <Label layoutX="1212.0" layoutY="402.0" prefHeight="20.0" prefWidth="76.0" text="Total" />
+    </children>
+</AnchorPane>
