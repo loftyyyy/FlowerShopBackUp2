@@ -7,8 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -35,24 +34,51 @@ public class PlaceOrderController implements Initializable {
 
 
     @FXML
-    private GridPane grid;
+    private Button PlaceOrderButton;
+
+    @FXML
+    private TextField address;
+
+    @FXML
+    private TextField contact;
+
+    @FXML
+    private TextField country;
+
+    @FXML
+    private TextField firstName;
 
     @FXML
     private Label grandTotal;
 
     @FXML
+    private GridPane grid;
+
+    @FXML
+    private TextField lastName;
+
+    @FXML
+    private TextField postal;
+
+    @FXML
     private Text subTotal;
 
+    @FXML
+    private TextField town;
     String url = "jdbc:postgresql://localhost:5435/postgres";
 
     String dbUsername = "postgres";
     String dbPassword = "admin";
     MarketController marketController;
 
+
     private List<Checkout> checkouts = new ArrayList<>();
 
     private String retrieveCheckoutQuerty = "SELECT * FROM checkout";
+    private String retrieveUsers = "SELECT * FROM users";
 
+    private double totalPrice = 0;
+    private double grandPrice = -125.00;
 
     public void setMarketController(MarketController marketController) {
         this.marketController = marketController;
@@ -63,6 +89,118 @@ public class PlaceOrderController implements Initializable {
 //        aboutUsPage__iconicContainer.setOpacity(0);
     }
 
+    public void placeOrder() throws SQLException{
+        missingField();
+
+    }
+
+    public void missingField() throws SQLException{
+
+        if(address.getText().isEmpty() || contact.getText().isEmpty() || town.getText().isEmpty() || country.getText().isEmpty() || firstName.getText().isEmpty() || lastName.getText().isEmpty() || postal.getText().isEmpty() ){
+            missingFieldDialog();
+        }else{
+
+            orderPlaced();
+        }
+    }
+
+    public void outOfBalance() throws SQLException {
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Insufficient Balance!");
+        alert.setHeaderText(null);
+        alert.setContentText("Insufficient Balance! Unfortunately, your current balance of ₱"+ getUserBalance() +" is not enough to cover the total order amount of ₱" + grandPrice );
+        alert.getDialogPane().getButtonTypes().add(ButtonType.CLOSE);
+        alert.showAndWait();
+    }
+
+    public void successfulPurchase(){
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Insufficient Balance!");
+        alert.setHeaderText(null);
+        alert.setContentText("Order confirmation: Your order #"+ getOrderId() + " for a total of ₱" + grandPrice+" has been placed successfully.");
+        alert.getDialogPane().getButtonTypes().add(ButtonType.CLOSE);
+        alert.showAndWait();
+    }
+
+    public void missingFieldDialog(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Missing Fields");
+        alert.setHeaderText(null);
+        alert.setContentText("There are some missing fields in the customer's information. Please fill everything out.");
+        alert.getDialogPane().getButtonTypes().add(ButtonType.CLOSE);
+        alert.showAndWait();
+    }
+    public void orderPlaced() throws SQLException {
+
+        if(getUserBalance() >= grandPrice){
+            successfulPurchase();
+            deductUserBalance();
+            clearCart();
+        }else{
+            outOfBalance();
+        }
+
+    }
+
+    public void clearCart() throws SQLException{
+
+        String user = getCurrentUser();
+
+        try(Connection db = DriverManager.getConnection(this.url, this.dbUsername, this.dbPassword);
+            PreparedStatement pst = db.prepareStatement("DELETE FROM checkout WHERE email = ? ");) {
+            pst.setString(1,user);
+            pst.execute();
+        }
+//        try {
+//            checkouts.addAll(setCheckout());
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        }
+//        embedCheckout();
+//        calculateCheckOut();
+    }
+
+    public void deductUserBalance() throws SQLException{
+        String user = getCurrentUser();
+        double userBalance = getUserBalance();
+        double userDeductedBalance = userBalance - grandPrice;
+
+        try(Connection db = DriverManager.getConnection(this.url, this.dbUsername, this.dbPassword);
+            PreparedStatement pst = db.prepareStatement("UPDATE users SET balance = ? WHERE email = ? ");) {
+
+            pst.setDouble(1,userDeductedBalance);
+            pst.setString(2,user);
+            pst.execute();
+        }
+
+    }
+
+    public String getOrderId(){
+        int length = 12;
+        if (length <= 0) {
+            throw new IllegalArgumentException("Order number length must be positive.");
+        }
+
+        StringBuilder orderNumber = new StringBuilder();
+
+        // Generate random characters (alphanumeric + hyphen)
+        for (int i = 0; i < length; i++) {
+            int randomInt = (int) (Math.random() * 62);
+            char randomChar;
+            if (randomInt < 10) {
+                randomChar = (char) ('0' + randomInt); // Generate digit (0-9)
+            } else if (randomInt < 36) {
+                randomChar = (char) ('A' + randomInt - 10); // Generate uppercase letter (A-Z)
+            } else {
+                randomChar = (char) ('a' + randomInt - 36); // Generate lowercase letter (a-z)
+            }
+            orderNumber.append(randomChar);
+        }
+
+        return orderNumber.toString();
+    }
     public String getCurrentUser() throws SQLException {
 
         String email = "";
@@ -75,6 +213,29 @@ public class PlaceOrderController implements Initializable {
         return email;
 
 
+    }
+    public double getUserBalance() throws SQLException{
+
+        double userBalance = 0.0;
+
+        String userEmail = getCurrentUser();
+
+
+        try(Connection db = DriverManager.getConnection(this.url, this.dbUsername, this.dbPassword);
+            PreparedStatement pst = db.prepareStatement(retrieveUsers);
+            ResultSet rst = pst.executeQuery()) {
+
+            while(rst.next()){
+                String email = rst.getString("email");
+                double balance = rst.getDouble("balance");
+
+                if(email.equals(userEmail)){
+                    userBalance += balance;
+                }
+            }
+
+        }
+        return userBalance;
     }
     private ArrayList<Checkout> setCheckout() throws SQLException {
 
@@ -109,13 +270,12 @@ public class PlaceOrderController implements Initializable {
         }
     }
     private void calculateCheckOut(){
-        double totalPrice = 0;
-        double grandPrice = -125.00;
         for(Checkout checkout: checkouts){
             totalPrice += checkout.getTotalPrice();
         }
+        grandPrice = grandPrice + totalPrice;
         BigDecimal bdtp = new BigDecimal(totalPrice);
-        BigDecimal bdgp = new BigDecimal(grandPrice + totalPrice);
+        BigDecimal bdgp = new BigDecimal(grandPrice);
         bdtp = bdtp.setScale(2, RoundingMode.HALF_UP);
         bdgp = bdgp.setScale(2, RoundingMode.HALF_UP);
 
@@ -162,8 +322,6 @@ public class PlaceOrderController implements Initializable {
             throw new RuntimeException(e);
         }
     }
-    @FXML
-    private Button PlaceOrderButton;
 
     private void playPumpAnimation(Button button) {
         Timeline timeline = new Timeline(

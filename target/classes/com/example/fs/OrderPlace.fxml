@@ -307,7 +307,7 @@
                         </HBox>
                         <HBox prefHeight="43.0" prefWidth="478.0">
                             <children>
-                                <TextField prefHeight="36.0" prefWidth="226.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                                <TextField fx:id="firstName" prefHeight="36.0" prefWidth="226.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
                                     <styleClass>
                                         <String fx:value="search-button" />
                                         <String fx:value="search-box" />
@@ -318,7 +318,7 @@
                                         <Insets bottom="5.0" />
                                     </HBox.margin>
                                 </TextField>
-                                <TextField prefHeight="46.0" prefWidth="230.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                                <TextField fx:id="lastName" prefHeight="46.0" prefWidth="230.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
                                     <HBox.margin>
                                         <Insets bottom="5.0" left="19.0" />
                                     </HBox.margin>
@@ -342,7 +342,7 @@
                                 <Insets left="5.0" />
                             </padding>
                         </Label>
-                        <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                        <TextField fx:id="town" prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
                             <VBox.margin>
                                 <Insets bottom="20.0" />
                             </VBox.margin>
@@ -364,7 +364,7 @@
                                 <Insets left="5.0" />
                             </padding>
                         </Label>
-                        <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                        <TextField fx:id="country" prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
                             <VBox.margin>
                                 <Insets bottom="20.0" />
                             </VBox.margin>
@@ -386,7 +386,7 @@
                                 <Insets left="5.0" />
                             </padding>
                         </Label>
-                        <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                        <TextField fx:id="postal" prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
                             <VBox.margin>
                                 <Insets bottom="20.0" />
                             </VBox.margin>
@@ -408,7 +408,7 @@
                                 <Insets left="5.0" />
                             </padding>
                         </Label>
-                        <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                        <TextField fx:id="contact" prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
                             <VBox.margin>
                                 <Insets bottom="20.0" />
                             </VBox.margin>
@@ -430,7 +430,7 @@
                                 <Insets left="5.0" />
                             </padding>
                         </Label>
-                        <TextField prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
+                        <TextField fx:id="address" prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: #FAF6EE;" stylesheets="@All.css">
                             <VBox.margin>
                                 <Insets bottom="20.0" />
                             </VBox.margin>
@@ -458,7 +458,7 @@
             <children>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="600.0">
                     <children>
-                        <ScrollPane prefHeight="439.0" prefWidth="692.0">
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="439.0" prefWidth="692.0" vbarPolicy="NEVER">
                             <content>
                                 <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
                                     <rowConstraints>
@@ -494,7 +494,7 @@
                                         <Font name="Century Gothic" size="14.0" />
                                     </font>
                                 </Label>
-                                <Text fx:id="subTotal" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="₱600.00" wrappingWidth="56.717041015625">
+                                <Text fx:id="subTotal" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="₱600.00" wrappingWidth="99.717041015625">
                                     <font>
                                         <Font name="Century Gothic" size="14.0" />
                                     </font>
@@ -583,11 +583,6 @@
                 </Label>
                 <CheckBox layoutX="469.0" layoutY="103.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="30.0" stylesheets="@All.css" />
                 <Text fill="#ffbf3f" layoutY="135.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #acacac;" text="____________________________________________________________________________________________________" wrappingWidth="548.8802795410156" />
-                <Label layoutX="407.0" layoutY="371.0" prefHeight="18.0" prefWidth="125.0" style="-fx-text-fill: #d13939;" text="you saved (₱45.00)" textFill="#d13939">
-                    <font>
-                        <Font size="11.0" />
-                    </font>
-                </Label>
                 <CheckBox layoutX="468.0" layoutY="31.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="54.0" stylesheets="@All.css" />
                 <CheckBox layoutX="469.0" layoutY="64.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="34.0" stylesheets="@All.css" />
                 <Label layoutX="37.0" layoutY="36.0" text="Cash on Delivery">
@@ -621,7 +616,7 @@
                         <Image url="@../../../images/iconpaypal.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="PlaceOrderButton" layoutX="146.0" layoutY="407.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="228.0" styleClass="add-btn" stylesheets="@market.css" text="Place Order" />
+                <Button fx:id="PlaceOrderButton" layoutX="146.0" layoutY="407.0" mnemonicParsing="false" onAction="#placeOrder" prefHeight="36.0" prefWidth="228.0" styleClass="add-btn" stylesheets="@market.css" text="Place Order" />
             </children>
         </AnchorPane>
         <Label alignment="CENTER" layoutX="796.0" layoutY="402.0" prefHeight="20.0" prefWidth="76.0" text="Flower" />

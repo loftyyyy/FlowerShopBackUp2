@@ -434,11 +434,6 @@
                               <Font name="Century Gothic" size="17.0" />
                            </font>
                         </Hyperlink>
-                        <Hyperlink prefHeight="34.0" prefWidth="133.0" styleClass="header-words" stylesheets="@All.css" text="Contact Us">
-                           <font>
-                              <Font name="Century Gothic" size="17.0" />
-                           </font>
-                        </Hyperlink>
                         <Hyperlink onMouseClicked="#setShopNowPage" prefHeight="34.0" prefWidth="126.0" styleClass="header-words" stylesheets="@All.css" text="Shop Now">
                            <font>
                               <Font name="Century Gothic" size="17.0" />
@@ -446,7 +441,7 @@
                         </Hyperlink>
                         <Pane prefHeight="86.0" prefWidth="268.0">
                            <children>
-                              <Label fx:id="itemCount" alignment="CENTER_RIGHT" layoutX="225.0" layoutY="42.0" prefHeight="17.0" prefWidth="28.0" text="0" />
+                              <Label fx:id="itemCount" alignment="CENTER_RIGHT" layoutX="225.0" layoutY="42.0" prefHeight="17.0" prefWidth="45.0" text="0" />
                            </children></Pane>
                         <ImageView fitHeight="44.0" fitWidth="28.0" onMouseClicked="#setCheckoutPage" pickOnBounds="true" preserveRatio="true">
                            <image>

@@ -44,7 +44,7 @@
                         <Image url="@../../../images/23.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="enterShopButton" layoutX="545.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" styleClass="enter-shop-button" stylesheets="@All.css" text="Shop Now" textFill="#474747">
+                  <Button fx:id="enterShopButton" layoutX="545.0" mnemonicParsing="false" onAction="#goToShopNow" prefHeight="38.0" prefWidth="242.0" styleClass="enter-shop-button" stylesheets="@All.css" text="Shop Now" textFill="#474747">
                      <font>
                         <Font name="Century Gothic" size="18.0" />
                      </font>

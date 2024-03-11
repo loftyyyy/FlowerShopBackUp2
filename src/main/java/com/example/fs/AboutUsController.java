@@ -5,6 +5,8 @@ import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -13,8 +15,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.util.Objects;
 
 public class AboutUsController {
@@ -62,6 +66,7 @@ public class AboutUsController {
 
     @FXML
     private Label itemCount;
+
 
     private int itemCounter = 0;
     private int currentIndexSet1 = 1;
@@ -120,6 +125,23 @@ public class AboutUsController {
             switchPanes(currentIndexSet3, currentIndexSet3 + 1, "set3");
             currentIndexSet3++;
         }
+    }
+
+    public void goToShopNow(ActionEvent event) throws IOException {
+
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+
+        // Load the FXML file for the new scene
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("AddToCart.fxml"));  // Replace "newScene.fxml" with your actual FXML file name
+        Parent newSceneRoot = loader.load();
+
+        // Create a new scene with the loaded FXML content
+        Scene newScene = new Scene(newSceneRoot);
+
+        // Set the new scene on the stage
+        stage.setScene(newScene);
+        stage.show();
+
     }
 
     private void switchPanes(int currentIndex, int nextIndex, String set) {
