@@ -117,7 +117,7 @@ public class PlaceOrderController implements Initializable {
     public void successfulPurchase(){
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Insufficient Balance!");
+        alert.setTitle("Order Placed Successfully!");
         alert.setHeaderText(null);
         alert.setContentText("Order confirmation: Your order #"+ getOrderId() + " for a total of ₱" + grandPrice+" has been placed successfully.");
         alert.getDialogPane().getButtonTypes().add(ButtonType.CLOSE);

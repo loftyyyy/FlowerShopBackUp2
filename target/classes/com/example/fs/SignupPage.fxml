@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.SignUpController">
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.SignUpController">
     <AnchorPane fx:id="signin_page" prefHeight="200.0" prefWidth="200.0">
         <AnchorPane layoutX="317.0" layoutY="2.0" prefHeight="510.0" prefWidth="482.0" style="-fx-background-color: #FAF6EE;">
          <ImageView fitHeight="334.0" fitWidth="200.0" layoutX="-21.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
@@ -39,7 +39,7 @@
                         <Insets left="10.0" right="10.0" top="10.0" />
                     </VBox.margin>
                 </PasswordField>
-                <Button fx:id="signinBTN" mnemonicParsing="false" onAction="#signUp" prefHeight="35.0" prefWidth="270.0" style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" styleClass="shadow" stylesheets="@All.css" text="Sign Up">
+                <Button fx:id="signinBTN" mnemonicParsing="false" onAction="#signUp" onMouseClicked="#clickSignUp" prefHeight="35.0" prefWidth="270.0" style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" styleClass="shadow" stylesheets="@All.css" text="Sign Up">
                     <font>
                         <Font name="Century Gothic" size="13.0" />
                     </font>
@@ -72,7 +72,7 @@
                      <Insets top="10.0" />
                   </VBox.margin>
                    </ImageView>
-                  <Button fx:id="signupBTN" mnemonicParsing="false" onAction="#signIn" prefHeight="35.0" prefWidth="138.0" style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" styleClass="shadow" stylesheets="@All.css" text="Sign In">
+                  <Button fx:id="signupBTN" mnemonicParsing="false" onAction="#signIn" onMouseClicked="#clickSignIn" prefHeight="35.0" prefWidth="138.0" style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" styleClass="shadow" stylesheets="@All.css" text="Sign In">
                       <font>
                           <Font name="Century Gothic" size="13.0" />
                       </font>

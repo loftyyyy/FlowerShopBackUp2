@@ -14,52 +14,51 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.SignInController">
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.SignInController">
    <AnchorPane fx:id="Login_page" prefHeight="200.0" prefWidth="200.0">
       <AnchorPane layoutX="456.0" prefHeight="510.0" prefWidth="291.0" style="-fx-background-color: #FAF6EE;">
          <VBox alignment="CENTER" layoutX="49.0" prefHeight="510.0" prefWidth="298.0">
-            <VBox/>
+            <VBox />
             <ImageView fitHeight="100.0" fitWidth="206.0" pickOnBounds="true" preserveRatio="true">
-               <Image url="@../../../images/7.png"/>
+               <Image url="@../../../images/7.png" />
                <VBox.margin>
-                  <Insets top="20.0"/>
+                  <Insets top="20.0" />
                </VBox.margin>
             </ImageView>
             <ImageView fitHeight="108.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true">
-               <Image url="@../../../images/9.png"/>
+               <Image url="@../../../images/9.png" />
                <VBox.margin>
-                  <Insets top="10.0"/>
+                  <Insets top="10.0" />
                </VBox.margin>
             </ImageView>
             <ImageView fitHeight="97.0" fitWidth="207.0" pickOnBounds="true" preserveRatio="true">
-               <Image url="@../../../images/8.png"/>
+               <Image url="@../../../images/8.png" />
                <VBox.margin>
-                  <Insets top="10.0"/>
+                  <Insets top="10.0" />
                </VBox.margin>
             </ImageView>
-            <Button fx:id="signupBTN" mnemonicParsing="false" onAction="#SignUp" prefHeight="35.0" prefWidth="138.0"
-                    style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" text="Sign Up">
+            <Button fx:id="signupBTN" mnemonicParsing="false" onAction="#SignUp" onMouseClicked="#clickSignUp" prefHeight="35.0" prefWidth="138.0" style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" text="Sign Up">
                <font>
-                  <Font name="Century Gothic" size="13.0"/>
+                  <Font name="Century Gothic" size="13.0" />
                </font>
                <VBox.margin>
-                  <Insets top="30.0"/>
+                  <Insets top="30.0" />
                </VBox.margin>
             </Button>
             <Text fill="#3b3b3b" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account?">
                <font>
-                  <Font name="Century Gothic" size="11.0"/>
+                  <Font name="Century Gothic" size="11.0" />
                </font>
                <VBox.margin>
-                  <Insets top="10.0"/>
+                  <Insets top="10.0" />
                </VBox.margin>
             </Text>
             <Label text="2024 Fauget. All Rights Served.">
                <font>
-                  <Font size="9.0"/>
+                  <Font size="9.0" />
                </font>
                <VBox.margin>
-                  <Insets top="30.0"/>
+                  <Insets top="30.0" />
                </VBox.margin>
             </Label>
          </VBox>
@@ -68,9 +67,8 @@
          <ImageView fx:id="faugetlogo_signin" fitHeight="127.0" fitWidth="226.0" layoutX="135.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../../../images/2.png" />
          </ImageView>
-         <ImageView fitHeight="317.0" fitWidth="190.0" layoutX="315.0" layoutY="192.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@../../../images/girl2.gif"/>
+         <ImageView fitHeight="317.0" fitWidth="190.0" layoutX="315.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../images/girl2.gif" />
          </ImageView>
          <VBox layoutX="82.0" layoutY="255.0">
             <TextField fx:id="username_signin" prefHeight="35.0" prefWidth="270.0" promptText="Username" style="-fx-background-color: #FAF6EE; -fx-background-radius: 50;">
@@ -83,7 +81,7 @@
                   <Insets left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </PasswordField>
-            <Button fx:id="signinBTN" mnemonicParsing="false" onAction="#SignIn" prefHeight="35.0" prefWidth="270.0" style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" text="Sign In">
+            <Button fx:id="signinBTN" mnemonicParsing="false" onAction="#SignIn" onMouseClicked="#clickSignIn" prefHeight="35.0" prefWidth="270.0" style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" text="Sign In">
                <font>
                   <Font name="Century Gothic" size="13.0" />
                </font>

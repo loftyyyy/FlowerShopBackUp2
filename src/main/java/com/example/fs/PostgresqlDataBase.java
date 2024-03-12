@@ -51,7 +51,7 @@ public class PostgresqlDataBase {
                 pst.setString(2, username);
                 pst.setString(3, password);
                 pst.setDouble(4,0.00);
-                pst.setString(5,"<--------------------Cash In History-------------------->\n");
+                pst.setString(5,"");
                 pst.executeUpdate();
 
                 System.out.println("Successfully Created User!");

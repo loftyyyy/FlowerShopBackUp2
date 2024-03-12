@@ -1,5 +1,8 @@
 package com.example.fs;
 import javafx.animation.FadeTransition;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -9,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -17,7 +21,6 @@ import org.apache.commons.validator.routines.*;
 
 
 import java.io.IOException;
-import java.util.regex.Pattern;
 
 public class SignUpController {
 
@@ -40,6 +43,8 @@ public class SignUpController {
     private PostgresqlDataBase db = new PostgresqlDataBase();
 
     private String regexPattern = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
+    @FXML
+    private Button signupBTN;
 
     public void signUp(ActionEvent e) throws IOException {
         String email = email_signup.getText();
@@ -139,6 +144,28 @@ public class SignUpController {
         email_signup.setText("");
         username_signup.setText("");
         password_signup.setText("");
+    }
+
+    @FXML
+    private void clickSignIn (MouseEvent event) {
+        playPumpAnimation(signupBTN);
+    }
+    @FXML
+    private void clickSignUp (MouseEvent event) {
+        playPumpAnimation(signinBTN);
+    }
+
+
+    private void playPumpAnimation(Button icon) {
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.ZERO, new KeyValue(icon.scaleXProperty(), 1)),
+                new KeyFrame(Duration.ZERO, new KeyValue(icon.scaleYProperty(), 1)),
+                new KeyFrame(Duration.seconds(0.15), new KeyValue(icon.scaleXProperty(), 1.2)),
+                new KeyFrame(Duration.seconds(0.15), new KeyValue(icon.scaleYProperty(), 1.2)),
+                new KeyFrame(Duration.seconds(0.3), new KeyValue(icon.scaleXProperty(), 1)),
+                new KeyFrame(Duration.seconds(0.3), new KeyValue(icon.scaleYProperty(), 1))
+        );
+        timeline.play();
     }
 
 

@@ -1,6 +1,9 @@
 package com.example.fs;
 
 
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,6 +16,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import model.Flower;
 import javafx.application.Platform;
 
@@ -184,7 +188,7 @@ public class MarketController implements Initializable {
 
     }
     public void setCheckoutPage(){
-        replaceMarketContent(getClass().getResource("OrderPlace.fxml"),PlaceOrderController.class);
+        replaceMarketContent(getClass().getResource("PlaceOrder.fxml"),PlaceOrderController.class);
     }
 
     public void setCashInPage(){
@@ -196,6 +200,7 @@ public class MarketController implements Initializable {
 
 
     public void userAccountPane() throws SQLException {
+        System.out.println("Called");
         String email = "";
         try (BufferedReader reader = new BufferedReader(new FileReader("userEmail.txt"))) {
             email = reader.readLine();
@@ -790,6 +795,29 @@ public class MarketController implements Initializable {
         comboBox.getSelectionModel().select(0);
 
     }
+    @FXML
+   private void clickCashIn (MouseEvent event) {
+        playPumpAnimation(cashInButton);
+    }
+
+    @FXML
+    private void clickLogOut (MouseEvent event) {
+        playPumpAnimation(logOutButton);
+    }
+
+    private void playPumpAnimation(Button icon) {
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.ZERO, new KeyValue(icon.scaleXProperty(), 1)),
+                new KeyFrame(Duration.ZERO, new KeyValue(icon.scaleYProperty(), 1)),
+                new KeyFrame(Duration.seconds(0.15), new KeyValue(icon.scaleXProperty(), 1.2)),
+                new KeyFrame(Duration.seconds(0.15), new KeyValue(icon.scaleYProperty(), 1.2)),
+                new KeyFrame(Duration.seconds(0.3), new KeyValue(icon.scaleXProperty(), 1)),
+                new KeyFrame(Duration.seconds(0.3), new KeyValue(icon.scaleYProperty(), 1))
+        );
+        timeline.play();
+    }
+
+
 //    public void cartPage(Stage stage) throws IOException {
 //
 //        Parent root = FXMLLoader.load(getClass().getResource("AddToCart.fxml"));

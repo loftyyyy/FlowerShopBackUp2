@@ -622,7 +622,7 @@
                <Font name="Century Gothic" size="12.0" />
             </font>
          </Label>
-         <Label alignment="CENTER" layoutX="129.0" layoutY="6.0" prefHeight="26.0" prefWidth="83.0" text="-----------------" textFill="#0036c9">
+         <Label alignment="CENTER" layoutX="129.0" layoutY="6.0" prefHeight="26.0" prefWidth="83.0" text="-----------------" textFill="#8fa7e4">
             <font>
                <Font name="Century Gothic" size="12.0" />
             </font>

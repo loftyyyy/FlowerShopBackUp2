@@ -21,9 +21,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1316.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.MarketController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="852.0" prefWidth="1316.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.MarketController">
    <children>
-      <ScrollPane fx:id="mainScrollPane" layoutX="-3.0" layoutY="103.0" prefHeight="900.0" prefWidth="1336.0" styleClass="transparent" stylesheets="@All.css">
+      <ScrollPane fx:id="mainScrollPane" layoutX="-3.0" layoutY="103.0" prefHeight="750.0" prefWidth="1336.0" styleClass="transparent" stylesheets="@All.css">
          <content>
             <AnchorPane fx:id="centerAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1448.0" prefWidth="1317.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css">
                <children>
@@ -341,7 +341,7 @@
                                           <Insets top="20.0" />
                                        </VBox.margin>
                                        <children>
-                                          <ImageView fx:id="flowerImg" fitHeight="201.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fx:id="flowerImg" fitHeight="256.0" fitWidth="244.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../../../images/bluebouquet.png" />
                                              </image>
@@ -471,16 +471,17 @@
       </AnchorPane>
       <AnchorPane fx:id="userAccountPane" layoutX="976.0" layoutY="110.0" prefHeight="374.0" prefWidth="340.0">
          <children>
-            <ScrollPane fx:id="userAccountScrollPane" hbarPolicy="NEVER" layoutY="-7.0" prefHeight="381.0" prefWidth="340.0" vbarPolicy="NEVER" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-7.0">
+            <ScrollPane fx:id="userAccountScrollPane" hbarPolicy="NEVER" layoutY="-7.0" onMouseClicked="#userAccountPane" prefHeight="381.0" prefWidth="340.0" vbarPolicy="NEVER" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-7.0">
                <content>
-                  <AnchorPane prefHeight="381.0" prefWidth="340.0">
+                  <AnchorPane prefHeight="381.0" prefWidth="340.0" style="-fx-background-color: #C9DBC2;" stylesheets="@All.css">
                      <children>
-                        <Button fx:id="cashInButton" layoutX="32.0" layoutY="281.0" mnemonicParsing="false" onAction="#setCashInPage" prefHeight="20.0" prefWidth="112.0" styleClass="add-btn" stylesheets="@market.css" text="Cash In">
+                        <Pane layoutX="73.0" layoutY="134.0" prefHeight="93.0" prefWidth="200.0" />
+                        <Button fx:id="cashInButton" layoutX="32.0" layoutY="281.0" mnemonicParsing="false" onAction="#setCashInPage" onMouseClicked="#clickCashIn" prefHeight="20.0" prefWidth="112.0" style="-fx-background-color: #F4E689;" styleClass="add-btn" stylesheets="@market.css" text="Cash In">
                            <font>
                               <Font name="Century Gothic" size="20.0" />
                            </font>
                         </Button>
-                        <Button fx:id="logOutButton" layoutX="196.0" layoutY="281.0" mnemonicParsing="false" onAction="#setLogOutButton" prefHeight="33.0" prefWidth="112.0" styleClass="add-btn" stylesheets="@market.css" text="Log Out">
+                        <Button fx:id="logOutButton" layoutX="196.0" layoutY="281.0" mnemonicParsing="false" onAction="#setLogOutButton" onMouseClicked="#clickLogOut" prefHeight="33.0" prefWidth="112.0" style="-fx-background-color: #F4E689;" styleClass="add-btn" stylesheets="@market.css" text="Log Out">
                            <font>
                               <Font name="Century Gothic" size="20.0" />
                            </font>

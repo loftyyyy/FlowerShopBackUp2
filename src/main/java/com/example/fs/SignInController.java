@@ -2,6 +2,7 @@ package com.example.fs;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -13,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -39,6 +41,7 @@ public class SignInController {
 
 
     private PostgresqlDataBase db = new PostgresqlDataBase();
+    private Button signinBTN;
 
     public void SignIn(Event e) throws IOException {
 
@@ -134,6 +137,28 @@ public class SignInController {
             revertTimeline.play();
         }));
 
+        timeline.play();
+    }
+
+    @FXML
+    private void clickSignIn (MouseEvent event) {
+        playPumpAnimation(signinBTN);
+    }
+    @FXML
+    private void clickSignUp (MouseEvent event) {
+        playPumpAnimation(signupBTN);
+    }
+
+
+    private void playPumpAnimation(Button icon) {
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.ZERO, new KeyValue(icon.scaleXProperty(), 1)),
+                new KeyFrame(Duration.ZERO, new KeyValue(icon.scaleYProperty(), 1)),
+                new KeyFrame(Duration.seconds(0.15), new KeyValue(icon.scaleXProperty(), 1.2)),
+                new KeyFrame(Duration.seconds(0.15), new KeyValue(icon.scaleYProperty(), 1.2)),
+                new KeyFrame(Duration.seconds(0.3), new KeyValue(icon.scaleXProperty(), 1)),
+                new KeyFrame(Duration.seconds(0.3), new KeyValue(icon.scaleYProperty(), 1))
+        );
         timeline.play();
     }
 }
