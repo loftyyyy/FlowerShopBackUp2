@@ -49,22 +49,19 @@ public class ProfilePageController implements Initializable {
     private Label nullCashIn;
     @FXML
     void addProfilePicture(MouseEvent event) {
-        // Create a file chooser dialog
+
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Choose Profile Picture");
 
-        // Set filter for image files
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif"));
 
-        // Show open file dialog
         File selectedFile = fileChooser.showOpenDialog(null);
         if (selectedFile != null) {
-            // Load the selected image file into the ImageView
+
             Image image = new Image(selectedFile.toURI().toString());
             profilePicture.setImage(image);
 
-            // Set circular clip to ImageView
             Circle clip = new Circle(profilePicture.getFitWidth() / 2, profilePicture.getFitHeight() / 2, profilePicture.getFitWidth() / 2);
             profilePicture.setClip(clip);
         }
