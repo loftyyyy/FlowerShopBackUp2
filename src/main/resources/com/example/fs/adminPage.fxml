@@ -61,7 +61,7 @@
                         <Font name="Century Gothic" size="12.0" />
                      </font>
                   </TextField>
-                  <TextField prefHeight="39.0" prefWidth="276.0" promptText="Background Color:">
+                  <TextField fx:id="hexCodeTF" prefHeight="39.0" prefWidth="276.0" promptText="Background Color:">
                      <stylesheets>
                         <URL value="@market.css" />
                         <URL value="@All.css" />
@@ -103,7 +103,7 @@
                   <Image url="@../../../images/brokenborderline.png" />
                </image>
             </ImageView>
-            <Pane layoutX="237.0" layoutY="263.0" prefHeight="207.0" prefWidth="163.0" styleClass="enter-shop-button" stylesheets="@All.css" />
+            <Pane fx:id="colorpane" layoutX="237.0" layoutY="263.0" prefHeight="207.0" prefWidth="163.0" styleClass="enter-shop-button" stylesheets="@All.css" />
             <Label layoutX="262.0" layoutY="232.0" prefHeight="23.0" prefWidth="117.0" text="Background Color:" textFill="#a6a5a5">
                <font>
                   <Font name="Century Gothic" size="12.0" />
