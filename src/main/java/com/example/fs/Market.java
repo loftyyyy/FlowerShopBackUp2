@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class Market extends Application {
     public void start(Stage stage) throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("AddToCart.fxml"));
-        stage.setTitle("Flower Market");
+        stage.setTitle("Fauget Crochet Studio");
         stage.setScene(new Scene(root));
         stage.show();
     }

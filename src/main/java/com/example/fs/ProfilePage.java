@@ -15,7 +15,7 @@ public class ProfilePage extends Application {
     public void start(Stage stage) throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("ProfilePage.fxml"));
-        stage.setTitle("Flower Market");
+        stage.setTitle("Fauget Crochet Studio");
         stage.setScene(new Scene(root));
         stage.show();
     }

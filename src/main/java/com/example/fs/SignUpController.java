@@ -14,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.apache.commons.lang3.*;
@@ -52,14 +53,17 @@ public class SignUpController {
         String password = password_signup.getText();
 
         if(email.isBlank() || username.isBlank() || password.isBlank()){
-           emailValidation.setText("Missing Field!");
+           emptyCases("Please fill out all the required fields");
 
         }else if(EmailValidation(email)){
             if(db.writeDatabase(email,username,password)){
-                emailValidation.setText("Email Already Used!");
+                //emptyCases().setText("Email Already Used!");
+                emptyCases("Email Already Used!");
+
                 //clearText();
             }else{
-                emailValidation.setText("Sign Up Success! Press Sign In to continue.");
+                emailValidation.setTextFill(Color.GREEN);
+                emptyCases("Sign Up Success! Press Sign In to continue.");
                 //clearText();
             }
             //emailValidation.setText("Email Recognized!");
@@ -67,6 +71,20 @@ public class SignUpController {
             emailValidation.setText("Invalid Email!");
         }
 
+    }
+
+    public void emptyCases(String missing){
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(0.05), e -> {
+            emailValidation.setText(missing);
+
+            Timeline revertTimeline = new Timeline(new KeyFrame(Duration.seconds(3), el ->{
+                emailValidation.setText("");
+            }));
+
+            revertTimeline.play();
+        }));
+
+        timeline.play();
     }
     public void signIn() throws IOException {
 //        Parent root = FXMLLoader.load(getClass().getResource("SigninPage.fxml"));

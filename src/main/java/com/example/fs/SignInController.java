@@ -46,7 +46,7 @@ public class SignInController {
     public void SignIn(Event e) throws IOException {
 
         if (username_signin.getText().isBlank() && password_signin.getText().isEmpty()){
-            emptyCases("Missing Entire Credentials!");
+            emptyCases("Please fill out all the required fields");
         } else if(username_signin.getText().isBlank()){
             emptyCases("Missing username!");
 
@@ -130,7 +130,7 @@ public class SignInController {
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(0.05), e -> {
             missingCredentials.setText(missing);
 
-            Timeline revertTimeline = new Timeline(new KeyFrame(Duration.seconds(0.5), el ->{
+            Timeline revertTimeline = new Timeline(new KeyFrame(Duration.seconds(3), el ->{
                 missingCredentials.setText("");
             }));
 

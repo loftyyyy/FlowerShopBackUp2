@@ -386,7 +386,7 @@
                               <Pane prefHeight="26.0" prefWidth="823.0" />
                               <ScrollPane fx:id="scroll" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="800.0" styleClass="transparent" stylesheets="@market.css">
                                  <content>
-                                    <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
+                                    <GridPane fx:id="grid" prefHeight="199.0" prefWidth="789.0">
                                        <rowConstraints>
                                           <RowConstraints minHeight="10.0" prefHeight="30.0" />
                                        </rowConstraints>
