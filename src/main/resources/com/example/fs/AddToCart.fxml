@@ -21,9 +21,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="852.0" prefWidth="1316.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.MarketController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="801.0" prefWidth="1316.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.MarketController">
    <children>
-      <ScrollPane fx:id="mainScrollPane" layoutX="-3.0" layoutY="103.0" prefHeight="750.0" prefWidth="1336.0" styleClass="transparent" stylesheets="@All.css">
+      <ScrollPane fx:id="mainScrollPane" layoutX="-3.0" layoutY="103.0" prefHeight="700.0" prefWidth="1336.0" styleClass="transparent" stylesheets="@All.css">
          <content>
             <AnchorPane fx:id="centerAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1448.0" prefWidth="1317.0" style="-fx-background-color: #FAF4DB;" stylesheets="@All.css">
                <children>
