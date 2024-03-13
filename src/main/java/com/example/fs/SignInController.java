@@ -41,6 +41,7 @@ public class SignInController {
 
 
     private PostgresqlDataBase db = new PostgresqlDataBase();
+    @FXML
     private Button signinBTN;
 
     public void SignIn(Event e) throws IOException {
@@ -55,8 +56,21 @@ public class SignInController {
         }else{
 
             //TODO Compare username and password and if yes, open the Shopping Page the code below is a test case.
-            
-            if(db.readDatabase(username_signin.getText(), password_signin.getText())){
+
+            if(username_signin.getText().equals("Rho") && password_signin.getText().equals("admin")){
+
+                Stage window = (Stage) signupBTN.getScene().getWindow();
+                window.close();
+
+                Stage stage1 = new Stage();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("adminPage.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+                stage1.setTitle("Admin Page");
+                stage1.setResizable(false);
+                stage1.setScene(scene);
+                stage1.show();
+            }
+            else if(db.readDatabase(username_signin.getText(), password_signin.getText())){
                 //TODO Find a way to somehow make the email be accessible to every class.
                 String email = db.getCurrentUser(username_signin.getText(), password_signin.getText());
                 makeUserEmailText(email);
@@ -110,7 +124,9 @@ public class SignInController {
             secondView = (StackPane) FXMLLoader.load(getClass().getResource("SignupPage.fxml"));
             Scene newScene = new Scene(secondView);
 
+
             Stage currentStage = (Stage) rootPane.getScene().getWindow();
+            currentStage.setTitle("Sign Up Page");
             currentStage.setScene(newScene);
         } catch (IOException e) {
             throw new RuntimeException(e);

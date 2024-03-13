@@ -64,6 +64,9 @@ public class SignUpController {
             }else{
                 emailValidation.setTextFill(Color.GREEN);
                 emptyCases("Sign Up Success! Press Sign In to continue.");
+                email_signup.setText("");
+                username_signup.setText("");
+                password_signup.setText("");
                 //clearText();
             }
             //emailValidation.setText("Email Recognized!");
@@ -116,6 +119,7 @@ public class SignUpController {
             Scene newScene = new Scene(secondView);
 
             Stage currentStage = (Stage) rootPane.getScene().getWindow();
+            currentStage.setTitle("Sign In page");
             currentStage.setScene(newScene);
         } catch (IOException e) {
             throw new RuntimeException(e);

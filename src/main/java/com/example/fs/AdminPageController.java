@@ -173,7 +173,7 @@ public class AdminPageController {
             timeline.play();
         } else {
 
-//            insertProductToDatabase();
+            insertProductToDatabase();
             successfulProductAddition();
 
 
@@ -219,7 +219,10 @@ public class AdminPageController {
             pst.setString(1, productName.getText());
             pst.setString(2, filePathInImagesDir);
             pst.setDouble(3, Double.parseDouble(productPrice.getText()) );
-            pst.setInt(4, (getLastProductId() + 1));
+            pst.setString(4,hexCodeTF.getText().replace("#",""));
+            pst.setInt(5, (getLastProductId() + 1));
+            pst.executeUpdate();
+            System.out.println("Successfully added a new product!");
         }
     }
 

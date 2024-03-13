@@ -15,7 +15,7 @@ public class SigninPage extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SigninPage.class.getResource("SigninPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Fauget Crochet Studio");
+        stage.setTitle("Sign In Page");
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();

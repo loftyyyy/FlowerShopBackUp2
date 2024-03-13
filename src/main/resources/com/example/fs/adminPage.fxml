@@ -116,7 +116,7 @@
                   <Font size="10.0" />
                </font>
             </Label>
-            <ImageView fx:id="logOutLogo" fitHeight="39.0" fitWidth="37.0" layoutX="765.0" layoutY="203.0" onMouseClicked="#setLogOutButton" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="logOutLogo" fitHeight="39.0" fitWidth="37.0" layoutX="747.0" layoutY="204.0" onMouseClicked="#setLogOutButton" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/logout.png" />
                </image>
