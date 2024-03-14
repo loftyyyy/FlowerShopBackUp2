@@ -20,6 +20,7 @@ import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.FileSystemException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.sql.*;
@@ -127,7 +128,7 @@ public class AdminPageController {
         }
     }
 
-    public void clickAddProduct(MouseEvent mouseEvent) throws SQLException {
+    public void clickAddProduct(MouseEvent mouseEvent) throws SQLException, FileSystemException {
         //playPumpAnimation(clickAddProduct);
         if (checkFields()) {
 
@@ -154,6 +155,22 @@ public class AdminPageController {
         }
 
     }
+
+//    public void refreshImageFolder() throws FileSystemException, org.apache.commons.vfs2.FileSystemException {
+//        FileSystemManager fsManager = VFS.getManager();
+//
+//        // Get file object for your image folder
+//        FileObject imageFolder = fsManager.resolveFile("C:\\Users\\Sean Rommel E\\Desktop\\FS\\src\\main\\resources\\images");
+//
+//        // Refresh the folder to ensure updated information
+//        imageFolder.refresh();
+//
+//        // Now you can access the folder contents with confidence
+//        FileObject[] images = imageFolder.getChildren();
+//        for (FileObject image : images) {
+//            System.out.println("Image: " + image.getName().getBaseName());
+//        }
+//    }
 
     public void checkImageView() throws SQLException {
         if (filePathInImagesDir.isEmpty()) {
@@ -219,7 +236,7 @@ public class AdminPageController {
             pst.setString(1, productName.getText());
             pst.setString(2, filePathInImagesDir);
             pst.setDouble(3, Double.parseDouble(productPrice.getText()) );
-            pst.setString(4,hexCodeTF.getText().replace("#",""));
+            pst.setString(4,String.format(toRGBCode(Color.valueOf(hexCodeTF.getText()))).substring(1));
             pst.setInt(5, (getLastProductId() + 1));
             pst.executeUpdate();
             System.out.println("Successfully added a new product!");
