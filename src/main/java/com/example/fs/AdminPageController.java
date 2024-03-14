@@ -247,13 +247,13 @@ public class AdminPageController {
         Stage stage = (Stage) logOutLogo.getScene().getWindow();
         stage.close();
 
-//        Stage stage1 = new Stage();
-//        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SigninPage.fxml"));
-//        Scene scene = new Scene(fxmlLoader.load());
-//        stage1.setTitle("Fauget Crochet Studio");
-//        stage1.setResizable(false);
-//        stage1.setScene(scene);
-//        stage1.show();
+        Stage stage1 = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SigninPage.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage1.setTitle("Fauget Crochet Studio");
+        stage1.setResizable(false);
+        stage1.setScene(scene);
+        stage1.show();
 
         //Parent root = FXMLLoader.load(getClass().getResource("SigninPage.fxml"));
 
