@@ -68,12 +68,12 @@ public class ItemController {
 
     public String getImagePath(String fileName){
 
-        String imageDir = "C:\\Users\\Sean Rommel E\\Desktop\\FS\\src\\main\\resources";
+        String resourceDir = "C:\\Users\\Sean Rommel E\\Desktop\\FS\\src\\main\\resources";
         String relativeDir = fileName;
         String absolutePath = "";
 
         // Create a File object for the image directory
-        File directory = new File(imageDir);
+        File directory = new File(resourceDir);
 
         // Check if the directory exists
         if (directory.exists()) {
