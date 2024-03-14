@@ -67,6 +67,10 @@ public class AboutUsController {
     @FXML
     private Label itemCount;
 
+    MarketController marketController = new MarketController();
+
+
+
 
     private int itemCounter = 0;
     private int currentIndexSet1 = 1;
@@ -77,7 +81,6 @@ public class AboutUsController {
     private final double zoomFactor = 1.2;
 
     private final int currentIndex = 1;
-
 
     @FXML
     void backSet1(ActionEvent event) {
@@ -197,10 +200,6 @@ public class AboutUsController {
         itemCounter += 1;
         itemCount.setText(String.valueOf(itemCounter));
     }
-
-    public void setMarketController(MarketController marketController) {
-    }
-
     @FXML
     private Button enterShopButton;
 
@@ -212,7 +211,6 @@ public class AboutUsController {
             scene.getStylesheets().add(all);
         }
     }
-
 
 }
 

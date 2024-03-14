@@ -4,6 +4,8 @@ package com.example.fs;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -136,6 +138,9 @@ public class MarketController implements Initializable {
     public MarketController getMarketController(){
         return marketController;
     }
+
+
+
 
 //    public void setMarketController(MarketController marketController) {
 //        this.marketController = marketController;
@@ -794,6 +799,8 @@ public class MarketController implements Initializable {
         comboBox.getItems().addAll(quantity);
         comboBox.getSelectionModel().select(0);
 
+        setupScrollListener();
+
     }
     @FXML
    private void clickCashIn (MouseEvent event) {
@@ -817,6 +824,42 @@ public class MarketController implements Initializable {
         timeline.play();
     }
 
+    private double previousScrollValue = 0;
+    public void setupScrollListener() {
+        mainScrollPane.vvalueProperty().addListener((observable, oldValue, newValue) -> {
+            double scrollValue = newValue.doubleValue();
+            if (scrollValue <= 0.1 || scrollValue >= 0.9) {
+                if (Math.abs(previousScrollValue - scrollValue) > 0.1) {
+                    softBounceScrollValue(scrollValue);
+                }
+            }
+            previousScrollValue = scrollValue;
+        });
+    }
+
+    public void softBounceScrollValue(double bounceValue) {
+        double middleValue = (bounceValue <= 0.1) ? 0.1 : 0.9;
+        double endValue = (bounceValue <= 0.1) ? 0.05 : 0.95;
+
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.ZERO, new KeyValue(mainScrollPane.vvalueProperty(), bounceValue)),
+                new KeyFrame(Duration.seconds(0.1), new KeyValue(mainScrollPane.vvalueProperty(), middleValue)),
+                new KeyFrame(Duration.seconds(0.2), new KeyValue(mainScrollPane.vvalueProperty(), endValue))
+        );
+        timeline.play();
+    }
+
+    public void startScrollListener() {
+        setupScrollListener();
+    }
+
+    public void stopScrollListener() {
+        mainScrollPane.vvalueProperty().removeListener((ChangeListener<? super Number>) this::setupScrollListener);
+    }
+
+    private void setupScrollListener(ObservableValue<? extends Number> observableValue, Number number, Number number1) {
+    }
+
 
 //    public void cartPage(Stage stage) throws IOException {
 //
@@ -825,4 +868,6 @@ public class MarketController implements Initializable {
 //        stage.setScene(new Scene(root));
 //        stage.show();
 //    }
+
+
 }
